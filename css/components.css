@@ -1,0 +1,93 @@
+/* ===========================
+   Buttons
+=========================== */
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: var(--text-color);
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(108, 99, 255, 0.35);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--text-color);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-color);
+    transform: translateY(-4px);
+}
+
+
+/* ===========================
+   Navbar
+=========================== */
+
+.header {
+    padding: 20px 0;
+}
+
+.navbar {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.logo {
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    color: var(--primary-color);
+}
+
+.nav-links {
+
+    display: flex;
+
+    gap: 30px;
+}
+
+.nav-links a {
+    position: relative;
+    transition: var(--transition);
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: var(--transition);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+
+    color: var(--primary-color);
+}

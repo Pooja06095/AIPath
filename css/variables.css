@@ -1,0 +1,32 @@
+/* ===========================
+   AIPath Design System
+   =========================== */
+
+:root {
+
+    /* Brand Colors */
+    --primary-color: #6C63FF;
+    --secondary-color: #00D4FF;
+
+    /* Background Colors */
+    --background-color: #0F172A;
+    --surface-color: #1E293B;
+
+    /* Text Colors */
+    --text-color: #FFFFFF;
+    --text-light: #CBD5E1;
+
+    /* Status Colors */
+    --success-color: #22C55E;
+    --warning-color: #F59E0B;
+    --danger-color: #EF4444;
+
+    /* Border */
+    --border-color: #334155;
+
+    /* Border Radius */
+    --border-radius: 12px;
+
+    /* Transition */
+    --transition: 0.3s ease;
+}
