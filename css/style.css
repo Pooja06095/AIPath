@@ -299,3 +299,352 @@ button {
     color: var(--text-light);
     margin-bottom: 25px;
 }
+
+/* ===========================
+   Features Section
+=========================== */
+
+.features {
+
+    padding: 100px 0;
+
+}
+
+.feature-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+}
+
+.feature-card {
+
+    background: rgba(30, 41, 59, 0.8);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 18px;
+
+    padding: 35px;
+
+    transition: 0.3s;
+
+}
+
+.feature-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 0 30px rgba(108, 99, 255, 0.2);
+
+}
+
+.feature-card h3 {
+
+    color: var(--primary-color);
+
+    margin-bottom: 15px;
+
+}
+
+.feature-card p {
+
+    color: var(--text-light);
+
+}
+
+/* ===========================
+   Roadmap
+=========================== */
+
+.roadmap {
+    padding: 100px 0;
+}
+
+.roadmap-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.roadmap-step {
+
+    background: rgba(30, 41, 59, 0.8);
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    transition: .3s;
+}
+
+.roadmap-step:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 0 35px rgba(108, 99, 255, .2);
+
+}
+
+.roadmap-step span {
+
+    width: 60px;
+
+    height: 60px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background: var(--primary-color);
+
+    color: white;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+}
+
+.roadmap-step h3 {
+
+    color: var(--primary-color);
+
+    margin-bottom: 10px;
+
+}
+
+.roadmap-step p {
+
+    color: var(--text-light);
+
+}
+
+/* ===========================
+   Courses Page
+=========================== */
+
+.courses-page {
+
+    padding: 100px 0;
+
+}
+
+/* ===========================
+   Dashboard
+=========================== */
+
+.dashboard {
+
+    display: flex;
+
+    min-height: 100vh;
+
+}
+
+.sidebar {
+
+    width: 280px;
+
+    background: #111827;
+
+    padding: 30px;
+
+    border-right: 1px solid rgba(255, 255, 255, .08);
+
+}
+
+.sidebar h2 {
+
+    color: var(--primary-color);
+
+    margin-bottom: 40px;
+
+}
+
+.sidebar ul {
+
+    list-style: none;
+
+}
+
+.sidebar li {
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    margin-bottom: 10px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.sidebar li:hover {
+
+    background: rgba(108, 99, 255, .2);
+
+}
+
+.content {
+
+    flex: 1;
+
+    padding: 60px;
+
+}
+
+/* Dashboard Header */
+
+.dashboard-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 40px;
+
+}
+
+.dashboard-header h1 {
+
+    font-size: 36px;
+
+    margin-bottom: 10px;
+
+}
+
+.dashboard-header p {
+
+    color: var(--text-light);
+
+}
+
+.search-box input {
+
+    width: 280px;
+
+    padding: 14px 18px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #1e293b;
+
+    color: white;
+
+    outline: none;
+
+}
+
+.quick-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+.quick-card {
+
+    background: #1e293b;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    transition: .3s;
+
+}
+
+.quick-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 0 25px rgba(108, 99, 255, .25);
+
+}
+
+.menu-item {
+
+    padding: 15px;
+
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+.menu-item:hover {
+
+    background: #2d3748;
+
+}
+
+.menu-item.active {
+
+    background: var(--primary-color);
+
+    color: white;
+
+    font-weight: bold;
+
+}
+
+#course-content {
+
+    margin-top: 50px;
+
+    background: #1e293b;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+}
+
+#course-content h2 {
+
+    margin-bottom: 15px;
+
+}
+
+#course-content ul {
+
+    margin: 20px 0;
+
+    padding-left: 20px;
+
+}
+
+#course-content li {
+
+    margin-bottom: 10px;
+
+}
