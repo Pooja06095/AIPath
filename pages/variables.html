@@ -136,6 +136,9 @@
             <p id="quiz-result"></p>
         
         </div>
+        <button class="btn btn-primary" id="complete-btn">
+            ✔ Mark as Completed
+        </button>
 
         <div class="lesson-navigation">
         
@@ -191,6 +194,22 @@
             });
 
         });
+
+        const completeBtn = document.getElementById("complete-btn");
+        if (localStorage.getItem("variablesCompleted") === "true") {
+                completeBtn.innerText = "✅ Completed";
+                completeBtn.disabled = true;
+            }
+            completeBtn.addEventListener("click", () => {
+
+                localStorage.setItem("variablesCompleted", "true");
+
+                completeBtn.innerText = "✅ Completed";
+                completeBtn.disabled = true;
+
+                alert("Lesson Completed Successfully!");
+
+            });
 </script>
 </body>
 

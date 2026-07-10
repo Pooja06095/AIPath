@@ -255,10 +255,22 @@ function loadCourse(courseName) {
             const lesson = btn.dataset.lesson;
 
             if (lesson === "Variables & Data Types") {
+
                 window.location.href = "pages/variables.html";
+
+            }
+            else if (lesson === "Operators") {
+
+                window.location.href = "pages/operators.html";
+
+            }
+            else if (lesson === "Conditional Statements") {
+                window.location.href = "pages/conditions.html";
             }
             else {
+
                 alert("Coming Soon 🚀");
+
             }
 
         });
@@ -276,6 +288,26 @@ function loadCourse(courseName) {
 // ===============================
 
 loadCourse("python");
+
+// Completed Lessons Counter
+
+let completed = 0;
+
+if (localStorage.getItem("variablesCompleted") === "true") {
+    completed++;
+}
+if (localStorage.getItem("operatorsCompleted") === "true") {
+    completed++;
+}
+if (localStorage.getItem("conditionsCompleted") === "true") {
+    completed++;
+}
+
+const completedCount = document.getElementById("completed-count");
+
+if (completedCount) {
+    completedCount.innerText = completed;
+}
 
 // ===============================
 // Course Search

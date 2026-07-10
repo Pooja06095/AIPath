@@ -561,10 +561,10 @@ button {
 
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 
-    gap: 25px;
-
+    gap: 20px;
+    
 }
 
 .quick-card {
@@ -577,6 +577,12 @@ button {
 
     transition: .3s;
 
+}
+
+.quick-card h2 {
+    font-size: 2rem;
+    margin: 15px 0;
+    color: #6c63ff;
 }
 
 .quick-card:hover {
