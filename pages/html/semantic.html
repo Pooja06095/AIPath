@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Semantic HTML | AIPath</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+
+</head>
+
+<body>
+
+    <div class="lesson-page">
+    
+        <a href="../../learn.html" class="btn btn-secondary">
+            ← Back to Dashboard
+        </a>
+    
+        <h1>🏗 Semantic HTML</h1>
+    
+        <div class="progress-section">
+    
+            <p>Course Progress</p>
+    
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 100%;"></div>
+            </div>
+    
+        </div>
+    
+        <p class="lesson-intro">
+            Semantic HTML uses meaningful tags that clearly describe the purpose of different parts of a webpage.
+        </p>
+    
+        <!-- What are HTML Semantic -->
+    
+        <div class="lesson-section">
+        
+            <h2>🏗 What is Semantic HTML?</h2>
+        
+            <p>
+                Semantic HTML uses meaningful tags that describe the purpose of the content.
+                These tags make webpages easier to understand for both browsers and developers.
+            </p>
+        
+        </div>
+    
+        <div class="lesson-section">
+        
+            <h2>📚 Common Semantic Tags</h2>
+        
+            <ul>
+        
+                <li><strong>&lt;header&gt;</strong> - Website Header</li>
+        
+                <li><strong>&lt;nav&gt;</strong> - Navigation Menu</li>
+        
+                <li><strong>&lt;main&gt;</strong> - Main Content</li>
+        
+                <li><strong>&lt;section&gt;</strong> - A Section of Content</li>
+        
+                <li><strong>&lt;article&gt;</strong> - Independent Article</li>
+        
+                <li><strong>&lt;footer&gt;</strong> - Website Footer</li>
+        
+            </ul>
+        
+        </div>
+        
+        <!-- Example -->
+    
+        <div class="lesson-section">
+    
+            <div class="code-header">
+    
+                <h2>💻 Example</h2>
+    
+                <button class="copy-btn">
+                    📋 Copy
+                </button>
+    
+            </div>
+    <pre><code id="html-code">
+    &lt;header&gt;
+        &lt;h1&gt;AIPath&lt;/h1&gt;
+    &lt;/header&gt;
+    
+    &lt;nav&gt;
+        Home | Courses | Contact
+    &lt;/nav&gt;
+    
+    &lt;main&gt;
+        &lt;section&gt;
+            Welcome to AIPath!
+        &lt;/section&gt;
+    &lt;/main&gt;
+    
+    &lt;footer&gt;
+        © 2026 AIPath
+    &lt;/footer&gt;
+    </code></pre>
+    
+    <a href="https://google.com">Visit Google</a>
+    </code></pre>
+    
+        </div>
+    
+        <!-- Output -->
+    
+        <div class="lesson-section">
+        
+            <h2>🖥 Output</h2>
+        
+            <div class="output-box">
+        
+                <h3>AIPath</h3>
+                <hr>
+        
+                <p>Home | Courses | Contact</p>
+        
+                <hr>
+        
+                <p>Welcome to AIPath!</p>
+        
+                <hr>
+        
+                <small>© 2026 AIPath</small>
+        
+            </div>
+        
+        </div>
+    
+        <!-- Key Points -->
+    <div class="lesson-section">
+    
+        <h2>💡 Key Points</h2>
+    
+        <ul>
+    
+            <li>Semantic HTML uses meaningful tags.</li>
+    
+            <li>It improves readability and code structure.</li>
+    
+            <li>It helps Search Engines understand your website.</li>
+    
+            <li>It improves accessibility for screen readers.</li>
+    
+        </ul>
+    
+    </div>
+    
+        <!-- Practice -->
+    
+        <div class="lesson-section">
+        
+            <h2>📝 Practice</h2>
+        
+            <p>Create a webpage using the following semantic tags:</p>
+        
+            <ul>
+        
+                <li>&lt;header&gt;</li>
+        
+                <li>&lt;nav&gt;</li>
+        
+                <li>&lt;main&gt;</li>
+        
+                <li>&lt;section&gt;</li>
+        
+                <li>&lt;footer&gt;</li>
+        
+            </ul>
+        
+        </div>
+    
+    
+        <!-- Quiz -->
+        <div class="lesson-section">
+        
+            <h2>🧠 Quick Quiz</h2>
+        
+            <p><strong>Q1.</strong> Which tag is used to create the main content of a webpage?</p>
+        
+            <div class="quiz-options">
+        
+                <button class="quiz-btn">&lt;footer&gt;</button>
+        
+                <button class="quiz-btn">&lt;header&gt;</button>
+        
+                <button class="quiz-btn" data-correct="true">&lt;main&gt;</button>
+        
+                <button class="quiz-btn">&lt;nav&gt;</button>
+        
+            </div>
+        
+            <p id="quiz-result"></p>
+        
+        </div>
+    
+        <!-- Complete Button -->
+    
+        <button class="btn btn-primary" id="complete-btn">
+            ✔ Mark as Completed
+        </button>
+    
+        <!-- Navigation -->
+    
+        <div class="lesson-navigation">
+    
+            <a href="tables.html" class="btn btn-secondary">
+                ← Previous Lesson
+            </a>
+    
+            <a href="../../learn.html" class="btn btn-primary">
+                Finish Course 🎉
+            </a>
+    
+        </div>
+    
+    </div>
+<script>
+
+    // Copy Button
+    const copyBtn = document.querySelector(".copy-btn");
+
+    copyBtn.addEventListener("click", () => {
+
+        const code = document.getElementById("html-code").innerText;
+
+        navigator.clipboard.writeText(code);
+
+        copyBtn.innerText = "✅ Copied!";
+
+        setTimeout(() => {
+
+            copyBtn.innerText = "📋 Copy";
+
+        }, 2000);
+
+    });
+
+    // Quiz
+    const quizButtons = document.querySelectorAll(".quiz-btn");
+    const result = document.getElementById("quiz-result");
+
+    quizButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            if (button.dataset.correct) {
+
+                result.innerHTML = "✅ Correct Answer!";
+                result.style.color = "#22c55e";
+
+            } else {
+
+                result.innerHTML = "❌ Wrong Answer!";
+                result.style.color = "#ef4444";
+
+            }
+
+        });
+
+    });
+
+    // Mark as Completed
+    const completeBtn = document.getElementById("complete-btn");
+
+    if(localStorage.getItem("semanticHtmlCompleted") === "true") {
+
+        completeBtn.innerText = "✅ Completed";
+        completeBtn.disabled = true;
+
+    }
+
+    completeBtn.addEventListener("click", () => {
+
+        localStorage.setItem("semanticHtmlCompleted", "true");
+
+        completeBtn.innerText = "✅ Completed";
+        completeBtn.disabled = true;
+
+        alert("Lesson Completed Successfully!");
+
+    });
+
+</script>
+</body>
+
+</html>

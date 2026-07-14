@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Tables | AIPath</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+
+</head>
+
+<body>
+
+    <div class="lesson-page">
+    
+        <a href="../../learn.html" class="btn btn-secondary">
+            ← Back to Dashboard
+        </a>
+    
+        <h1>📊 HTML Tables</h1>
+    
+        <div class="progress-section">
+    
+            <p>Course Progress</p>
+    
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 80%;"></div>
+            </div>
+    
+        </div>
+    
+        <p class="lesson-intro">
+            HTML Tables are used to organize data into rows and columns, making information easy to read and understand.
+        </p>
+    
+        <!-- What are HTML Tables -->
+    
+        <div class="lesson-section">
+        
+            <h2>📊 What are HTML Tables?</h2>
+        
+            <p>
+                HTML Tables are used to display data in rows and columns.
+                They are useful for showing structured information like marks, prices, schedules, and reports.
+            </p>
+        
+        </div>
+    
+        <div class="lesson-section">
+        
+            <h2>📚 Common Table Tags</h2>
+        
+            <ul>
+        
+                <li><strong>&lt;table&gt;</strong> - Creates a table</li>
+        
+                <li><strong>&lt;tr&gt;</strong> - Creates a table row</li>
+        
+                <li><strong>&lt;th&gt;</strong> - Creates a table heading</li>
+        
+                <li><strong>&lt;td&gt;</strong> - Creates a table data cell</li>
+        
+                <li><strong>&lt;caption&gt;</strong> - Adds a table title</li>
+        
+            </ul>
+        
+        </div>
+        
+        <!-- Example -->
+    
+        <div class="lesson-section">
+    
+            <div class="code-header">
+    
+                <h2>💻 Example</h2>
+    
+                <button class="copy-btn">
+                    📋 Copy
+                </button>
+    
+            </div>
+    
+            <pre><code id="html-code">
+            &lt;table border="1"&gt;
+            
+                &lt;tr&gt;
+                    &lt;th&gt;Name&lt;/th&gt;
+                    &lt;th&gt;Age&lt;/th&gt;
+                &lt;/tr&gt;
+            
+                &lt;tr&gt;
+                    &lt;td&gt;Pooja&lt;/td&gt;
+                    &lt;td&gt;20&lt;/td&gt;
+                &lt;/tr&gt;
+            
+                &lt;tr&gt;
+                    &lt;td&gt;Rahul&lt;/td&gt;
+                    &lt;td&gt;21&lt;/td&gt;
+                &lt;/tr&gt;
+            
+            &lt;/table&gt;
+            </code></pre>
+    
+    <a href="https://google.com">Visit Google</a>
+    </code></pre>
+    
+        </div>
+    
+        <!-- Output -->
+    
+        <div class="lesson-section">
+        
+            <h2>🖥 Output</h2>
+        
+            <div class="output-box">
+        
+                <table border="1" cellpadding="8">
+        
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                    </tr>
+        
+                    <tr>
+                        <td>Pooja</td>
+                        <td>20</td>
+                    </tr>
+        
+                    <tr>
+                        <td>Rahul</td>
+                        <td>21</td>
+                    </tr>
+        
+                </table>
+        
+            </div>
+        
+        </div>
+    
+        <!-- Key Points -->
+    
+        <div class="lesson-section">
+        
+            <h2>💡 Key Points</h2>
+        
+            <ul>
+        
+                <li>HTML Tables display data in rows and columns.</li>
+        
+                <li><strong>&lt;table&gt;</strong> creates the table.</li>
+        
+                <li><strong>&lt;tr&gt;</strong> creates a row.</li>
+        
+                <li><strong>&lt;th&gt;</strong> creates a heading cell.</li>
+        
+                <li><strong>&lt;td&gt;</strong> creates a data cell.</li>
+        
+            </ul>
+        
+        </div>
+    
+        <!-- Practice -->
+    
+        <div class="lesson-section">
+        
+            <h2>📝 Practice</h2>
+        
+            <p>Create a table that contains:</p>
+        
+            <ul>
+        
+                <li>Name</li>
+        
+                <li>Roll Number</li>
+        
+                <li>Marks</li>
+        
+            </ul>
+        
+        </div>
+    
+    
+        <!-- Quiz -->
+    
+        <div class="lesson-section">
+        
+            <h2>🧠 Quick Quiz</h2>
+        
+            <p><strong>Q1.</strong> Which HTML tag is used to create a table row?</p>
+        
+            <div class="quiz-options">
+        
+                <button class="quiz-btn">&lt;td&gt;</button>
+        
+                <button class="quiz-btn">&lt;th&gt;</button>
+        
+                <button class="quiz-btn" data-correct="true">&lt;tr&gt;</button>
+        
+                <button class="quiz-btn">&lt;table&gt;</button>
+        
+            </div>
+        
+            <p id="quiz-result"></p>
+        
+        </div>
+    
+        <!-- Complete Button -->
+    
+        <button class="btn btn-primary" id="complete-btn">
+            ✔ Mark as Completed
+        </button>
+    
+        <!-- Navigation -->
+    
+        <div class="lesson-navigation">
+    
+            <a href="forms.html" class="btn btn-secondary">
+                ← Previous Lesson
+            </a>
+    
+            <a href="semantic.html" class="btn btn-primary">
+                Next Lesson →
+            </a>
+    
+        </div>
+    
+    </div>
+<script>
+
+    // Copy Button
+    const copyBtn = document.querySelector(".copy-btn");
+
+    copyBtn.addEventListener("click", () => {
+
+        const code = document.getElementById("html-code").innerText;
+
+        navigator.clipboard.writeText(code);
+
+        copyBtn.innerText = "✅ Copied!";
+
+        setTimeout(() => {
+
+            copyBtn.innerText = "📋 Copy";
+
+        }, 2000);
+
+    });
+
+    // Quiz
+    const quizButtons = document.querySelectorAll(".quiz-btn");
+    const result = document.getElementById("quiz-result");
+
+    quizButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            if (button.dataset.correct) {
+
+                result.innerHTML = "✅ Correct Answer!";
+                result.style.color = "#22c55e";
+
+            } else {
+
+                result.innerHTML = "❌ Wrong Answer!";
+                result.style.color = "#ef4444";
+
+            }
+
+        });
+
+    });
+
+    // Mark as Completed
+    const completeBtn = document.getElementById("complete-btn");
+
+    if(localStorage.getItem("htmlTablesCompleted") === "true") {
+
+        completeBtn.innerText = "✅ Completed";
+        completeBtn.disabled = true;
+
+    }
+
+    completeBtn.addEventListener("click", () => {
+
+        localStorage.setItem("htmlTablesCompleted", "true");
+
+        completeBtn.innerText = "✅ Completed";
+        completeBtn.disabled = true;
+
+        alert("Lesson Completed Successfully!");
+
+    });
+
+</script>
+</body>
+
+</html>

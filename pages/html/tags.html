@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Tags | AIPath</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+
+</head>
+
+<body>
+
+    <div class="lesson-page">
+    
+        <a href="../../learn.html" class="btn btn-secondary">
+            ← Back to Dashboard
+        </a>
+    
+        <h1>🏷 HTML Tags</h1>
+    
+        <div class="progress-section">
+    
+            <p>Course Progress</p>
+    
+            <div class="progress-bar">
+                <div class="progress-fill" style="width:40%;"></div>
+            </div>
+    
+        </div>
+    
+        <p class="lesson-intro">
+            HTML Tags are the building blocks of every webpage. They tell the browser how to display content.
+        </p>
+    
+        <!-- What are HTML Tags -->
+    
+        <div class="lesson-section">
+    
+            <h2>🏷 What are HTML Tags?</h2>
+    
+            <p>
+                HTML Tags are special keywords enclosed in angle brackets (&lt; &gt;).
+                They define the structure and content of a webpage.
+            </p>
+    
+        </div>
+    
+        <!-- Common Tags -->
+    
+        <div class="lesson-section">
+    
+            <h2>📚 Common HTML Tags</h2>
+    
+            <ul>
+    
+                <li><strong>&lt;h1&gt;</strong> - Main Heading</li>
+    
+                <li><strong>&lt;p&gt;</strong> - Paragraph</li>
+    
+                <li><strong>&lt;a&gt;</strong> - Hyperlink</li>
+    
+                <li><strong>&lt;img&gt;</strong> - Image</li>
+    
+                <li><strong>&lt;ul&gt;</strong> - Unordered List</li>
+    
+                <li><strong>&lt;ol&gt;</strong> - Ordered List</li>
+    
+            </ul>
+    
+        </div>
+    
+        <!-- Example -->
+    
+        <div class="lesson-section">
+    
+            <div class="code-header">
+    
+                <h2>💻 Example</h2>
+    
+                <button class="copy-btn">
+                    📋 Copy
+                </button>
+    
+            </div>
+    
+            <pre><code id="html-code">
+    <h1>Welcome to AIPath</h1>
+    
+    <p>This is my first webpage.</p>
+    
+    <a href="https://google.com">Visit Google</a>
+    </code></pre>
+    
+        </div>
+    
+        <!-- Output -->
+    
+        <div class="lesson-section">
+    
+            <h2>🖥 Output</h2>
+    
+            <div class="output-box">
+    
+                <h1>Welcome to AIPath</h1>
+    
+                <p>This is my first webpage.</p>
+    
+                <a href="#">Visit Google</a>
+    
+            </div>
+    
+        </div>
+    
+        <!-- Key Points -->
+    
+        <div class="lesson-section">
+    
+            <h2>💡 Key Points</h2>
+    
+            <ul>
+    
+                <li>HTML Tags define the structure of a webpage.</li>
+    
+                <li>Most tags have opening and closing tags.</li>
+    
+                <li>Tags are written inside angle brackets (&lt; &gt;).</li>
+    
+                <li>Each tag has a specific purpose.</li>
+    
+            </ul>
+    
+        </div>
+    
+        <!-- Practice -->
+    
+        <div class="lesson-section">
+    
+            <h2>📝 Practice</h2>
+    
+            <p>Create a webpage using the following tags:</p>
+    
+            <pre><code>
+    <h1>My Website</h1>
+    
+    <p>Hello World!</p>
+    </code></pre>
+    
+        </div>
+    
+        <!-- Quiz -->
+    
+        <div class="lesson-section">
+    
+            <h2>🧠 Quick Quiz</h2>
+    
+            <p><strong>Q1.</strong> Which HTML tag is used to create a paragraph?</p>
+    
+            <div class="quiz-options">
+    
+                <button class="quiz-btn">&lt;h1&gt;</button>
+    
+                <button class="quiz-btn" data-correct="true">&lt;p&gt;</button>
+    
+                <button class="quiz-btn">&lt;img&gt;</button>
+    
+                <button class="quiz-btn">&lt;body&gt;</button>
+    
+            </div>
+    
+            <p id="quiz-result"></p>
+    
+        </div>
+    
+        <!-- Complete Button -->
+    
+        <button class="btn btn-primary" id="complete-btn">
+            ✔ Mark as Completed
+        </button>
+    
+        <!-- Navigation -->
+    
+        <div class="lesson-navigation">
+    
+            <a href="introduction.html" class="btn btn-secondary">
+                ← Previous Lesson
+            </a>
+    
+            <a href="forms.html" class="btn btn-primary">
+                Next Lesson →
+            </a>
+    
+        </div>
+    
+    </div>
+<script>
+
+    // Copy Button
+    const copyBtn = document.querySelector(".copy-btn");
+
+    copyBtn.addEventListener("click", () => {
+
+        const code = document.getElementById("html-code").innerText;
+
+        navigator.clipboard.writeText(code);
+
+        copyBtn.innerText = "✅ Copied!";
+
+        setTimeout(() => {
+
+            copyBtn.innerText = "📋 Copy";
+
+        }, 2000);
+
+    });
+
+    // Quiz
+    const quizButtons = document.querySelectorAll(".quiz-btn");
+    const result = document.getElementById("quiz-result");
+
+    quizButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            if (button.dataset.correct) {
+
+                result.innerHTML = "✅ Correct Answer!";
+                result.style.color = "#22c55e";
+
+            } else {
+
+                result.innerHTML = "❌ Wrong Answer!";
+                result.style.color = "#ef4444";
+
+            }
+
+        });
+
+    });
+
+    // Mark as Completed
+    const completeBtn = document.getElementById("complete-btn");
+
+    if (localStorage.getItem("htmltagsCompleted") === "true") {
+
+        completeBtn.innerText = "✅ Completed";
+        completeBtn.disabled = true;
+
+    }
+
+    completeBtn.addEventListener("click", () => {
+
+        localStorage.setItem("htmltagsCompleted", "true");
+
+        completeBtn.innerText = "✅ Completed";
+        completeBtn.disabled = true;
+
+        alert("Lesson Completed Successfully!");
+
+    });
+
+</script>
+</body>
+
+</html>

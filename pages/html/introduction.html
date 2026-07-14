@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Introduction to HTML | AIPath</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+</head>
+
+<body>
+
+    <div class="lesson-page">
+        <a href="../../learn.html" class="btn btn-secondary">
+            ← Back to Dashboard
+        </a>
+        
+        <div class="hero-card">
+        
+            <h1>🌐 Introduction to HTML</h1>
+        
+            <p>
+                HTML is the foundation of every website.
+                Start your Web Development journey with AIPath.
+            </p>
+        
+        </div>
+        <div class="progress-section">
+        
+            <p>Course Progress</p>
+        
+            <div class="progress-bar">
+        
+                <div class="progress-fill" style="width:20%;"></div>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🎯 What You'll Learn</h2>
+        
+            <ul>
+        
+                <li>What is HTML?</li>
+        
+                <li>Why HTML is important</li>
+        
+                <li>Structure of an HTML document</li>
+        
+                <li>Your first HTML program</li>
+        
+            </ul>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📖 What is HTML?</h2>
+        
+            <p>
+                HTML (HyperText Markup Language) is the standard markup language used
+                to create web pages. It provides the basic structure of every website
+                by using elements called <strong>HTML Tags</strong>.
+            </p>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🚀 Why Learn HTML?</h2>
+        
+            <div class="feature-grid">
+        
+                <div class="feature-card">
+                    <h3>🌐 Build Websites</h3>
+                    <p>Create beautiful webpages from scratch.</p>
+                </div>
+        
+                <div class="feature-card">
+                    <h3>💼 Career</h3>
+                    <p>HTML is the first step toward Web Development.</p>
+                </div>
+        
+                <div class="feature-card">
+                    <h3>⚡ Easy to Learn</h3>
+                    <p>Simple syntax makes it beginner friendly.</p>
+                </div>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <div class="code-header">
+        
+                <h2>💻 Your First HTML Program</h2>
+        
+                <button class="copy-btn">
+                    📋 Copy
+                </button>
+        
+            </div>
+        
+            <pre><code id="html-code">
+        <!DOCTYPE html>
+        <html>
+        
+        <head>
+            <title>My First Web Page</title>
+        </head>
+        
+        <body>
+        
+            <h1>Hello AIPath 🚀</h1>
+        
+            <p>Welcome to HTML!</p>
+        
+        </body>
+        
+        </html>
+        </code></pre>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🖥 Output</h2>
+        
+            <div class="output-box">
+        
+                <h1>Hello AIPath 🚀</h1>
+        
+                <p>Welcome to HTML!</p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>💡 Did You Know?</h2>
+        
+            <div class="info-card">
+        
+                <p>
+                    🌍 HTML was created by <strong>Tim Berners-Lee</strong> in 1991.
+                </p>
+        
+                <p>
+                    📌 HTML is a <strong>Markup Language</strong>, not a Programming Language.
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🧠 Quick Quiz</h2>
+        
+            <p><strong>Q1.</strong> What does HTML stand for?</p>
+        
+            <div class="quiz-options">
+        
+                <button class="quiz-btn">HighText Machine Language</button>
+        
+                <button class="quiz-btn" data-correct="true">
+                    HyperText Markup Language
+                </button>
+        
+                <button class="quiz-btn">Hyper Transfer Machine Language</button>
+        
+                <button class="quiz-btn">Home Tool Markup Language</button>
+        
+            </div>
+        
+            <p id="quiz-result"></p>
+        
+        </div>
+        <button class="btn btn-primary" id="complete-btn">
+            ✔ Mark as Completed
+        </button>
+        <div class="lesson-navigation">
+        
+            <a href="../learn.html" class="btn btn-secondary">
+                ← Dashboard
+            </a>
+        
+            <a href="tags.html" class="btn btn-primary">
+                Next Lesson →
+            </a>
+        
+        </div>
+    </div>
+<script>
+
+    // Copy Button
+    const copyBtn = document.querySelector(".copy-btn");
+
+    copyBtn.addEventListener("click", () => {
+
+        const code = document.getElementById("html-code").innerText;
+
+        navigator.clipboard.writeText(code);
+
+        copyBtn.innerText = "✅ Copied!";
+
+        setTimeout(() => {
+
+            copyBtn.innerText = "📋 Copy";
+
+        }, 2000);
+
+    });
+
+    // Quiz
+    const quizButtons = document.querySelectorAll(".quiz-btn");
+    const result = document.getElementById("quiz-result");
+
+    quizButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            if (button.dataset.correct) {
+
+                result.innerHTML = "✅ Correct Answer!";
+                result.style.color = "#22c55e";
+
+            } else {
+
+                result.innerHTML = "❌ Wrong Answer!";
+                result.style.color = "#ef4444";
+
+            }
+
+        });
+
+    });
+
+    // Mark as Completed
+    const completeBtn = document.getElementById("complete-btn");
+
+    if (localStorage.getItem("htmlIntroCompleted") === "true") {
+
+        completeBtn.innerText = "✅ Completed";
+        completeBtn.disabled = true;
+
+    }
+
+    completeBtn.addEventListener("click", () => {
+
+        localStorage.setItem("htmlIntroCompleted", "true");
+
+        completeBtn.innerText = "✅ Completed";
+        completeBtn.disabled = true;
+
+        alert("Lesson Completed Successfully!");
+
+    });
+
+</script>
+</body>
+
+</html>

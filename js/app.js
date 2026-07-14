@@ -56,33 +56,34 @@ const courses = {
         description: "Learn the structure of web pages.",
 
         lessons: [
+            "Introduction to HTML",
 
-            "Introduction",
-            "Tags",
-            "Forms",
-            "Tables",
+            "HTML Tags",
+
+            "HTML Forms",
+
+            "HTML Tables",
+
             "Semantic HTML"
+            
 
         ]
 
     },
 
     css: {
-
-        title: "🎨 CSS",
-
-        description: "Design beautiful responsive websites.",
-
+        title: "🎨 CSS Course",
+        description: "Learn CSS from beginner to advanced and design beautiful websites.",
         lessons: [
-
-            "Selectors",
+            "Introduction to CSS",
+            "CSS Selectors",
+            "Colors & Backgrounds",
+            "Box Model",
             "Flexbox",
             "Grid",
-            "Animation",
-            "Responsive Design"
-
+            "Responsive Design",
+            "CSS Projects"
         ]
-
     },
 
     javascript: {
@@ -204,7 +205,41 @@ const courses = {
 // ===============================
 // Load Course
 // ===============================
+function updateCompletedCount(courseName) {
 
+    let completed = 0;
+
+    if (courseName === "python") {
+
+        if (localStorage.getItem("variablesCompleted") === "true") completed++;
+        if (localStorage.getItem("operatorsCompleted") === "true") completed++;
+        if (localStorage.getItem("conditionsCompleted") === "true") completed++;
+        if (localStorage.getItem("loopsCompleted") === "true") completed++;
+        if (localStorage.getItem("functionsCompleted") === "true") completed++;
+        if (localStorage.getItem("oopCompleted") === "true") completed++;
+        if (localStorage.getItem("filehandlingCompleted") === "true") completed++;
+        if (localStorage.getItem("pythonprojectsCompleted") === "true") completed++;
+    }
+
+    else if (courseName === "html") {
+
+        if (localStorage.getItem("htmlIntroCompleted") === "true") completed++;
+        if (localStorage.getItem("htmltagsCompleted") === "true") completed++;
+        if (localStorage.getItem("htmlFormsCompleted") === "true") completed++;
+        if (localStorage.getItem("htmlTablesCompleted") === "true") completed++;
+        if (localStorage.getItem("semanticHtmlCompleted") === "true") completed++;
+
+    }
+
+    else if (courseName === "css") {
+
+        if (localStorage.getItem("cssIntroCompleted") === "true") completed++;
+
+    }
+
+    document.getElementById("completed-count").innerText = completed;
+
+}
 function loadCourse(courseName) {
 
     const course = courses[courseName];
@@ -267,6 +302,39 @@ function loadCourse(courseName) {
             else if (lesson === "Conditional Statements") {
                 window.location.href = "pages/conditions.html";
             }
+            else if (lesson === "Loops") {
+                window.location.href = "pages/loops.html";
+            }
+            else if (lesson === "Functions") {
+                window.location.href = "pages/functions.html";
+            }
+            else if (lesson === "Object Oriented Programming") {
+                window.location.href = "pages/oop.html";
+            }
+            else if (lesson === "File Handling") {
+                window.location.href = "pages/filehandling.html";
+            }
+            // HTML Course
+            else if (lesson === "Introduction to HTML") {
+                window.location.href = "pages/html/introduction.html";
+            }
+            else if (lesson === "HTML Tags") {
+                window.location.href = "pages/html/tags.html";
+            }
+            else if (lesson === "HTML Forms") {
+                window.location.href = "pages/html/forms.html";
+            }
+            else if (lesson === "HTML Tables") {
+                window.location.href = "pages/html/tables.html";
+            }
+            else if (lesson === "Semantic HTML") {
+                window.location.href = "pages/html/semantic.html";
+            }
+            // CSS Course
+            else if (lesson === "Introduction to CSS") {
+                window.location.href = "pages/css/introduction.html";
+            }
+
             else {
 
                 alert("Coming Soon 🚀");
@@ -276,7 +344,7 @@ function loadCourse(courseName) {
         });
 
     });
-
+    updateCompletedCount(courseName);
 
 }
 
@@ -288,26 +356,6 @@ function loadCourse(courseName) {
 // ===============================
 
 loadCourse("python");
-
-// Completed Lessons Counter
-
-let completed = 0;
-
-if (localStorage.getItem("variablesCompleted") === "true") {
-    completed++;
-}
-if (localStorage.getItem("operatorsCompleted") === "true") {
-    completed++;
-}
-if (localStorage.getItem("conditionsCompleted") === "true") {
-    completed++;
-}
-
-const completedCount = document.getElementById("completed-count");
-
-if (completedCount) {
-    completedCount.innerText = completed;
-}
 
 // ===============================
 // Course Search

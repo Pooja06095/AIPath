@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Conditional Statements | AIPath</title>
+    <title>Python File Handling | AIPath</title>
 
     <link rel="stylesheet" href="../css/variables.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -21,28 +21,29 @@
             ← Back to Dashboard
         </a>
     
-        <h1>🔀 Conditional Statements</h1>
+        <h1>📂 Python File Handling</h1>
     
         <div class="progress-section">
     
             <p>Lesson Progress</p>
     
             <div class="progress-bar">
-                <div class="progress-fill" style="width:37%;"></div>
+                <div class="progress-fill" style="width:87%;"></div>
             </div>
     
         </div>
     
-        <p class="lesson-intro">
-            Conditional statements help us make decisions in Python.
-        </p>
+            <p class="lesson-intro">
+                File Handling allows us to create, read, write and modify files using Python.
+            </p>
 
         <div class="lesson-section">
         
-            <h2>What are Conditional Statements?</h2>
+            <h2>What is File Handling?</h2>
             
             <p>
-                Conditional statements allow a program to make decisions based on different conditions.
+                File Handling is used to store data permanently in files. Python provides built-in functions to create, read, write
+                and append files.
             </p>
         
         </div>
@@ -60,12 +61,11 @@
             </div>
         
             <pre><code id="python-code">
-        age = 18
+        file = open("demo.txt", "w")
         
-        if age >= 18:
-            print("Eligible to Vote")
-        else:
-        print("Not Eligible")
+        file.write("Welcome to AIPath")
+        
+        file.close()
             </code></pre>
         
         </div>
@@ -75,7 +75,7 @@
             <h2>Output</h2>
         
             <pre><code>
-        Eligible to Vote
+        A file named demo.txt is created successfully.
             </code></pre>
         
         </div>
@@ -85,19 +85,15 @@
             <h2>💡 Key Points</h2>
         
             <ul>
-        
-                <ul>
-                
-                    <li>Use <strong>if</strong> to check a condition.</li>
-                
-                    <li>Use <strong>else</strong> when the condition is false.</li>
-                
-                    <li>Use <strong>elif</strong> to check multiple conditions.</li>
-                
-                    <li>Indentation is mandatory in Python.</li>
-                
-                </ul>
-        
+            
+                <li>open() is used to open a file.</li>
+            
+                <li>"r" is Read Mode.</li>
+            
+                <li>"w" is Write Mode.</li>
+            
+                <li>Always close the file after use.</li>
+            
             </ul>
         
         </div>
@@ -107,16 +103,15 @@
             <h2>📝 Practice</h2>
         
             <p>
-                Write a Python program to check whether a student is Pass or Fail.
+                Create a file named <strong>student.txt</strong> and write your name into it.
             </p>
         
             <pre><code>
-        marks = 75
+        file = open("student.txt", "w")
         
-        if marks >= 40:
-        print("Pass")
-        else:
-        print("Fail")
+        file.write("Pooja")
+        
+        file.close()
             </code></pre>
         
         </div>
@@ -125,17 +120,17 @@
         
             <h2>🧠 Quick Quiz</h2>
         
-            <p><strong>Q1.</strong> Which keyword is used to check a condition in Python?</p>
-        
+            <p><strong>Q1.</strong> Which function is used to open a file in Python?</p>
+             
             <div class="quiz-options">
             
-                <button class="quiz-btn" data-correct="true">if</button>
+                <button class="quiz-btn" data-correct="true">open()</button>
             
-                <button class="quiz-btn">for</button>
+                <button class="quiz-btn">file()</button>
             
-                <button class="quiz-btn">while</button>
+                <button class="quiz-btn">read()</button>
             
-                <button class="quiz-btn">print</button>
+                <button class="quiz-btn">create()</button>
             
             </div>
         
@@ -149,11 +144,11 @@
         
         <div class="lesson-navigation">
         
-            <a href="operators.html" class="btn btn-secondary">
+            <a href="oop.html" class="btn btn-secondary">
                 ← Previous Lesson
             </a>
         
-            <a href="loops.html" class="btn btn-primary">
+            <a href="python-projects.html" class="btn btn-primary">
                 Next Lesson →
             </a>
         
@@ -211,7 +206,7 @@
 
     const completeBtn = document.getElementById("complete-btn");
 
-    if (localStorage.getItem("conditionsCompleted") === "true") {
+    if (localStorage.getItem("filehandlingCompleted") === "true") {
 
         completeBtn.innerText = "✅ Completed";
         completeBtn.disabled = true;
@@ -220,7 +215,7 @@
 
     completeBtn.addEventListener("click", () => {
 
-        localStorage.setItem("conditionsCompleted", "true");
+        localStorage.setItem("filehandlingCompleted", "true");
 
         completeBtn.innerText = "✅ Completed";
         completeBtn.disabled = true;

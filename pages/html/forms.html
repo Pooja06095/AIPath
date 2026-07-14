@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Forms | AIPath</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+
+</head>
+
+<body>
+
+    <div class="lesson-page">
+    
+        <a href="../../learn.html" class="btn btn-secondary">
+            ← Back to Dashboard
+        </a>
+    
+        <h1>📝 HTML Forms</h1>
+    
+        <div class="progress-section">
+    
+            <p>Course Progress</p>
+    
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 60%;"></div>
+            </div>
+    
+        </div>
+    
+        <p class="lesson-intro">
+            HTML Forms are used to collect information from users such as names, emails, passwords and more.
+        </p>
+    
+        <!-- What are HTML Forms -->
+    
+        <div class="lesson-section">
+        
+            <h2>📝 What are HTML Forms?</h2>
+        
+            <p>
+                HTML Forms are used to collect information from users.
+                They allow users to enter data such as names, emails, passwords, phone numbers, and more.
+            </p>
+        
+        </div>
+    
+        <!-- Common Tags -->
+        <div class="lesson-section">
+        
+            <h2>📚 Common Form Elements</h2>
+        
+            <ul>
+        
+                <li><strong>&lt;form&gt;</strong> - Creates a form</li>
+        
+                <li><strong>&lt;input&gt;</strong> - Takes user input</li>
+        
+                <li><strong>&lt;label&gt;</strong> - Defines a label</li>
+        
+                <li><strong>&lt;textarea&gt;</strong> - Multi-line input</li>
+        
+                <li><strong>&lt;select&gt;</strong> - Drop-down list</li>
+        
+                <li><strong>&lt;button&gt;</strong> - Creates a button</li>
+        
+            </ul>
+        
+        </div>
+        
+        <!-- Example -->
+    
+        <div class="lesson-section">
+    
+            <div class="code-header">
+    
+                <h2>💻 Example</h2>
+    
+                <button class="copy-btn">
+                    📋 Copy
+                </button>
+    
+            </div>
+    
+            <pre><code id="html-code">
+    <pre><code id="html-code">
+    &lt;form&gt;
+    
+        &lt;label&gt;Name:&lt;/label&gt;
+        &lt;input type="text"&gt;
+    
+        &lt;br&gt;&lt;br&gt;
+    
+        &lt;label&gt;Email:&lt;/label&gt;
+        &lt;input type="email"&gt;
+    
+        &lt;br&gt;&lt;br&gt;
+    
+        &lt;button&gt;Submit&lt;/button&gt;
+    
+    &lt;/form&gt;
+    </code></pre>
+    
+    <a href="https://google.com">Visit Google</a>
+    </code></pre>
+    
+        </div>
+    
+        <!-- Output -->
+    
+        <div class="lesson-section">
+        
+            <h2>🖥 Output</h2>
+        
+            <div class="output-box">
+        
+                <label>Name:</label><br>
+                <input type="text" placeholder="Enter your name">
+        
+                <br><br>
+        
+                <label>Email:</label><br>
+                <input type="email" placeholder="Enter your email">
+        
+                <br><br>
+        
+                <button>Submit</button>
+        
+            </div>
+        
+        </div>
+    
+        <!-- Key Points -->
+    
+        <div class="lesson-section">
+        
+            <h2>💡 Key Points</h2>
+        
+            <ul>
+        
+                <li>HTML Forms are used to collect user information.</li>
+        
+                <li>The <strong>&lt;form&gt;</strong> tag creates a form.</li>
+        
+                <li>The <strong>&lt;input&gt;</strong> tag is used to take user input.</li>
+        
+                <li>Forms can include text fields, email fields, passwords, checkboxes, radio buttons, and buttons.</li>
+        
+            </ul>
+        
+        </div>
+    
+        <!-- Practice -->
+    
+        <div class="lesson-section">
+        
+            <h2>📝 Practice</h2>
+        
+            <p>Create an HTML form that contains:</p>
+        
+            <ul>
+        
+                <li>Name Field</li>
+        
+                <li>Email Field</li>
+        
+                <li>Password Field</li>
+        
+                <li>Submit Button</li>
+        
+            </ul>
+        
+        </div>
+    
+    
+        <!-- Quiz -->
+    
+        <div class="lesson-section">
+        
+            <h2>🧠 Quick Quiz</h2>
+        
+            <p><strong>Q1.</strong> Which HTML tag is used to create a form?</p>
+        
+            <div class="quiz-options">
+        
+                <button class="quiz-btn">&lt;input&gt;</button>
+        
+                <button class="quiz-btn">&lt;button&gt;</button>
+        
+                <button class="quiz-btn" data-correct="true">&lt;form&gt;</button>
+        
+                <button class="quiz-btn">&lt;label&gt;</button>
+        
+            </div>
+        
+            <p id="quiz-result"></p>
+        
+        </div>
+    
+        <!-- Complete Button -->
+    
+        <button class="btn btn-primary" id="complete-btn">
+            ✔ Mark as Completed
+        </button>
+    
+        <!-- Navigation -->
+    
+        <div class="lesson-navigation">
+    
+            <a href="tags.html" class="btn btn-secondary">
+                ← Previous Lesson
+            </a>
+    
+            <a href="tables.html" class="btn btn-primary">
+                Next Lesson →
+            </a>
+    
+        </div>
+    
+    </div>
+<script>
+
+    // Copy Button
+    const copyBtn = document.querySelector(".copy-btn");
+
+    copyBtn.addEventListener("click", () => {
+
+        const code = document.getElementById("html-code").innerText;
+
+        navigator.clipboard.writeText(code);
+
+        copyBtn.innerText = "✅ Copied!";
+
+        setTimeout(() => {
+
+            copyBtn.innerText = "📋 Copy";
+
+        }, 2000);
+
+    });
+
+    // Quiz
+    const quizButtons = document.querySelectorAll(".quiz-btn");
+    const result = document.getElementById("quiz-result");
+
+    quizButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            if (button.dataset.correct) {
+
+                result.innerHTML = "✅ Correct Answer!";
+                result.style.color = "#22c55e";
+
+            } else {
+
+                result.innerHTML = "❌ Wrong Answer!";
+                result.style.color = "#ef4444";
+
+            }
+
+        });
+
+    });
+
+    // Mark as Completed
+    const completeBtn = document.getElementById("complete-btn");
+
+    if(localStorage.getItem("htmlFormsCompleted") === "true") {
+
+        completeBtn.innerText = "✅ Completed";
+        completeBtn.disabled = true;
+
+    }
+
+    completeBtn.addEventListener("click", () => {
+
+        localStorage.setItem("htmlFormsCompleted", "true");
+
+        completeBtn.innerText = "✅ Completed";
+        completeBtn.disabled = true;
+
+        alert("Lesson Completed Successfully!");
+
+    });
+
+</script>
+</body>
+
+</html>

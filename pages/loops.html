@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Conditional Statements | AIPath</title>
+    <title>Python Loops | AIPath</title>
 
     <link rel="stylesheet" href="../css/variables.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -21,28 +21,30 @@
             ← Back to Dashboard
         </a>
     
-        <h1>🔀 Conditional Statements</h1>
+        <h1>🔁 Python Loops</h1>
     
         <div class="progress-section">
     
             <p>Lesson Progress</p>
     
             <div class="progress-bar">
-                <div class="progress-fill" style="width:37%;"></div>
+                <div class="progress-fill" style="width:50%;"></div>
             </div>
     
         </div>
     
         <p class="lesson-intro">
-            Conditional statements help us make decisions in Python.
+            <p class="lesson-intro">
+                Loops are used to execute a block of code repeatedly until a condition is met.
+            </p>
         </p>
 
         <div class="lesson-section">
         
-            <h2>What are Conditional Statements?</h2>
+            <h2>What are Loops?</h2>
             
             <p>
-                Conditional statements allow a program to make decisions based on different conditions.
+                Loops help us repeat the same block of code multiple times without writing it again and again.
             </p>
         
         </div>
@@ -60,12 +62,8 @@
             </div>
         
             <pre><code id="python-code">
-        age = 18
-        
-        if age >= 18:
-            print("Eligible to Vote")
-        else:
-        print("Not Eligible")
+        for i in range(1, 6):
+        print(i)
             </code></pre>
         
         </div>
@@ -75,7 +73,11 @@
             <h2>Output</h2>
         
             <pre><code>
-        Eligible to Vote
+        1
+        2
+        3
+        4
+        5
             </code></pre>
         
         </div>
@@ -84,21 +86,18 @@
         
             <h2>💡 Key Points</h2>
         
-            <ul>
-        
                 <ul>
                 
-                    <li>Use <strong>if</strong> to check a condition.</li>
+                    <li>Loops are used to repeat a block of code.</li>
                 
-                    <li>Use <strong>else</strong> when the condition is false.</li>
+                    <li>Python mainly provides <strong>for</strong> and <strong>while</strong> loops.</li>
                 
-                    <li>Use <strong>elif</strong> to check multiple conditions.</li>
+                    <li><strong>range()</strong> is commonly used with for loops.</li>
                 
-                    <li>Indentation is mandatory in Python.</li>
+                    <li>Proper indentation is required inside loops.</li>
                 
                 </ul>
         
-            </ul>
         
         </div>
         
@@ -107,16 +106,12 @@
             <h2>📝 Practice</h2>
         
             <p>
-                Write a Python program to check whether a student is Pass or Fail.
+                Write a Python program to print numbers from 1 to 10 using a for loop.
             </p>
         
             <pre><code>
-        marks = 75
-        
-        if marks >= 40:
-        print("Pass")
-        else:
-        print("Fail")
+        for i in range(1, 11):
+        print(i)
             </code></pre>
         
         </div>
@@ -125,17 +120,17 @@
         
             <h2>🧠 Quick Quiz</h2>
         
-            <p><strong>Q1.</strong> Which keyword is used to check a condition in Python?</p>
+            <p><strong>Q1.</strong> Which loop is mainly used to iterate over a sequence in Python?</p>
         
             <div class="quiz-options">
             
-                <button class="quiz-btn" data-correct="true">if</button>
+                <button class="quiz-btn" data-correct="true">for</button>
             
-                <button class="quiz-btn">for</button>
+                <button class="quiz-btn">switch</button>
             
-                <button class="quiz-btn">while</button>
+                <button class="quiz-btn">case</button>
             
-                <button class="quiz-btn">print</button>
+                <button class="quiz-btn">goto</button>
             
             </div>
         
@@ -149,11 +144,11 @@
         
         <div class="lesson-navigation">
         
-            <a href="operators.html" class="btn btn-secondary">
+            <a href="conditions.html" class="btn btn-secondary">
                 ← Previous Lesson
             </a>
         
-            <a href="loops.html" class="btn btn-primary">
+            <a href="functions.html" class="btn btn-primary">
                 Next Lesson →
             </a>
         
@@ -211,7 +206,7 @@
 
     const completeBtn = document.getElementById("complete-btn");
 
-    if (localStorage.getItem("conditionsCompleted") === "true") {
+    if (localStorage.getItem("loopsCompleted") === "true") {
 
         completeBtn.innerText = "✅ Completed";
         completeBtn.disabled = true;
@@ -220,7 +215,7 @@
 
     completeBtn.addEventListener("click", () => {
 
-        localStorage.setItem("conditionsCompleted", "true");
+        localStorage.setItem("loopsCompleted", "true");
 
         completeBtn.innerText = "✅ Completed";
         completeBtn.disabled = true;
