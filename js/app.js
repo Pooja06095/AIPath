@@ -228,13 +228,19 @@ function updateCompletedCount(courseName) {
         if (localStorage.getItem("htmlFormsCompleted") === "true") completed++;
         if (localStorage.getItem("htmlTablesCompleted") === "true") completed++;
         if (localStorage.getItem("semanticHtmlCompleted") === "true") completed++;
-
+        
     }
 
     else if (courseName === "css") {
 
         if (localStorage.getItem("cssIntroCompleted") === "true") completed++;
-
+        if (localStorage.getItem("cssSelectorsCompleted") === "true") completed++;
+        if (localStorage.getItem("cssColorsCompleted") === "true") completed++;
+        if (localStorage.getItem("cssBoxModelCompleted") === "true") completed++;
+        if (localStorage.getItem("cssFlexboxCompleted") === "true") completed++;
+        if (localStorage.getItem("cssGridCompleted") === "true") completed++;
+        if (localStorage.getItem("cssResponsiveCompleted") === "true") completed++;
+        if (localStorage.getItem("cssProjectsCompleted") === "true") completed++;
     }
 
     document.getElementById("completed-count").innerText = completed;
@@ -333,6 +339,27 @@ function loadCourse(courseName) {
             // CSS Course
             else if (lesson === "Introduction to CSS") {
                 window.location.href = "pages/css/introduction.html";
+            }
+            else if (lesson === "CSS Selectors") {
+                window.location.href = "pages/css/selectors.html";
+            }
+            else if (lesson === "Colors & Backgrounds") {
+                window.location.href = "pages/css/colors.html";
+            }
+            else if (lesson === "Box Model") {
+                window.location.href = "pages/css/boxmodel.html";
+            }
+            else if (lesson === "Flexbox") {
+                window.location.href = "pages/css/flexbox.html";
+            }
+            else if (lesson === "CSS Grid") {
+                window.location.href = "pages/css/grid.html";
+            }
+            else if (lesson === "Responsive Design") {
+                window.location.href = "pages/css/responsive.html";
+            }
+            else if (lesson === "CSS Projects") {
+                window.location.href = "pages/css/projects.html";
             }
 
             else {

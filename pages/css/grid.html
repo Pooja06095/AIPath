@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Grid | AIPath</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+
+</head>
+
+<body>
+
+    <div class="lesson-page">
+    
+        <a href="../../learn.html" class="btn btn-secondary">
+            ← Back to Dashboard
+        </a>
+    
+        <h1>🟦 CSS Grid</h1>
+        <div class="progress-section">
+    
+            <p>Course Progress</p>
+    
+            <div class="progress-bar">
+                <div class="progress-fill" style="width:75%;"></div>
+            </div>
+    
+        </div>
+    
+        <p class="lesson-intro">
+            CSS Grid is a two-dimensional layout system that helps arrange elements into rows and columns. It is perfect for
+            building modern website layouts.
+        </p>
+    
+        <!-- What are CSS Selectors -->
+    
+        <div class="lesson-section">
+        
+            <h2>🟦 What is CSS Grid?</h2>
+        
+            <p>
+                CSS Grid is a layout system that allows you to create complex webpage layouts
+                using rows and columns. It provides better control over positioning elements.
+            </p>
+        
+        </div>
+    
+        <div class="lesson-section">
+        
+            <h2>📚 Important Grid Properties</h2>
+        
+            <ul>
+        
+                <li><strong>display: grid</strong> → Creates a Grid Container.</li>
+        
+                <li><strong>grid-template-columns</strong> → Defines columns.</li>
+        
+                <li><strong>grid-template-rows</strong> → Defines rows.</li>
+        
+                <li><strong>gap</strong> → Adds spacing between grid items.</li>
+        
+                <li><strong>grid-column</strong> → Controls column span.</li>
+        
+                <li><strong>grid-row</strong> → Controls row span.</li>
+        
+            </ul>
+        
+        </div>
+
+        <div class="lesson-section">
+        
+            <h2>📊 Grid Example</h2>
+        
+            <div class="output-box" style="
+                    display:grid;
+                    grid-template-columns:repeat(3,1fr);
+                    gap:15px;
+                ">
+        
+                <div class="feature-card">1</div>
+        
+                <div class="feature-card">2</div>
+        
+                <div class="feature-card">3</div>
+        
+                <div class="feature-card">4</div>
+        
+                <div class="feature-card">5</div>
+        
+                <div class="feature-card">6</div>
+        
+            </div>
+        
+        </div>
+        
+        <!-- Example -->
+    
+        <div class="lesson-section">
+        
+            <div class="code-header">
+        
+                <h2>💻 Example</h2>
+        
+                <button class="copy-btn">
+                    📋 Copy
+                </button>
+        
+            </div>
+        
+            <pre><code id="html-code">
+        .container{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:20px;
+        }
+        
+        .box{
+            background:#2563eb;
+            color:white;
+            padding:20px;
+            text-align:center;
+        }
+        </code></pre>
+        
+        </div>
+
+    
+    <a href="https://google.com">Visit Google</a>
+    </code></pre>
+    
+        </div>
+    
+        <!-- Output -->
+    <div class="lesson-section">
+    
+        <h2>🖥 Output</h2>
+    
+        <div class="output-box" style="
+                display:grid;
+                grid-template-columns:repeat(3,1fr);
+                gap:15px;
+            ">
+    
+            <div style="background:#2563eb;color:white;padding:20px;border-radius:8px;">1</div>
+            <div style="background:#2563eb;color:white;padding:20px;border-radius:8px;">2</div>
+            <div style="background:#2563eb;color:white;padding:20px;border-radius:8px;">3</div>
+            <div style="background:#2563eb;color:white;padding:20px;border-radius:8px;">4</div>
+            <div style="background:#2563eb;color:white;padding:20px;border-radius:8px;">5</div>
+            <div style="background:#2563eb;color:white;padding:20px;border-radius:8px;">6</div>
+    
+        </div>
+    
+    </div>
+    
+            
+    <div class="lesson-section">
+    
+        <h2>💡 Key Points</h2>
+    
+        <ul>
+    
+            <li>Grid is a two-dimensional layout system.</li>
+    
+            <li>It arranges elements in rows and columns.</li>
+    
+            <li>display:grid creates a Grid Container.</li>
+    
+            <li>grid-template-columns defines the number of columns.</li>
+    
+            <li>gap adds spacing between grid items.</li>
+    
+        </ul>
+    
+    </div>
+        <!-- Practice -->
+        <div class="lesson-section">
+        
+            <h2>📝 Practice</h2>
+        
+            <p>Create a Grid Layout with:</p>
+        
+            <ul>
+        
+                <li>3 Columns</li>
+        
+                <li>6 Grid Items</li>
+        
+                <li>Gap of 20px</li>
+        
+                <li>Blue Background Boxes</li>
+        
+            </ul>
+        
+        </div>
+    
+    
+        <!-- Quiz -->
+        <div class="lesson-section">
+        
+            <h2>🧠 Quick Quiz</h2>
+        
+            <p><strong>Q1.</strong> Which property creates a Grid Container?</p>
+        
+            <div class="quiz-options">
+        
+                <button class="quiz-btn">display:flex</button>
+        
+                <button class="quiz-btn" data-correct="true">
+                    display:grid
+                </button>
+        
+                <button class="quiz-btn">grid-layout</button>
+        
+                <button class="quiz-btn">display:block</button>
+        
+            </div>
+        
+            <p id="quiz-result"></p>
+        
+        </div>
+        
+           
+        <!-- Complete Button -->
+    
+        <button class="btn btn-primary" id="complete-btn">
+            ✔ Mark as Completed
+        </button>
+    
+        <!-- Navigation -->
+    
+        <div class="lesson-navigation">
+    
+            <a href="flexbox.html" class="btn btn-secondary">
+                ← Previous Lesson
+            </a>
+    
+            <a href="responsive.html" class="btn btn-primary">
+                Next Lesson →
+            </a>
+        </div>
+    
+    </div>
+<script>
+
+    // Copy Button
+    const copyBtn = document.querySelector(".copy-btn");
+
+    copyBtn.addEventListener("click", () => {
+
+        const code = document.getElementById("html-code").innerText;
+
+        navigator.clipboard.writeText(code);
+
+        copyBtn.innerText = "✅ Copied!";
+
+        setTimeout(() => {
+
+            copyBtn.innerText = "📋 Copy";
+
+        }, 2000);
+
+    });
+
+    // Quiz
+    const quizButtons = document.querySelectorAll(".quiz-btn");
+    const result = document.getElementById("quiz-result");
+
+    quizButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            if (button.dataset.correct) {
+
+                result.innerHTML = "✅ Correct Answer!";
+                result.style.color = "#22c55e";
+
+            } else {
+
+                result.innerHTML = "❌ Wrong Answer!";
+                result.style.color = "#ef4444";
+
+            }
+
+        });
+
+    });
+
+    // Mark as Completed
+    const completeBtn = document.getElementById("complete-btn");
+
+    if (localStorage.getItem("cssGridCompleted") === "true") {
+
+            completeBtn.innerText = "✅ Completed";
+            completeBtn.disabled = true;
+
+        }
+
+    completeBtn.addEventListener("click", () => {
+
+        localStorage.setItem("cssGridCompleted", "true");
+
+        completeBtn.innerText = "✅ Completed";
+        completeBtn.disabled = true;
+
+        alert("Lesson Completed Successfully!");
+
+    });
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Mini Projects | AIPath</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+
+</head>
+
+<body>
+
+    <div class="lesson-page">
+    
+        <a href="../../learn.html" class="btn btn-secondary">
+            ← Back to Dashboard
+        </a>
+    
+        <h1>🚀 CSS Mini Projects</h1>
+        <div class="progress-section">
+    
+            <p>Course Progress</p>
+    
+            <div class="progress-bar">
+                <div class="progress-fill" style="width:100%;"></div>
+            </div>
+    
+        </div>
+    
+        <p class="lesson-intro">
+            Congratulations! Now it's time to apply everything you've learned by building small CSS projects. Practice is the
+            key to becoming a great web designer.
+        </p>
+    
+        <!-- What are CSS Selectors -->
+    
+        <div class="lesson-section">
+        
+            <h2>🚀 Why Build Projects?</h2>
+        
+            <p>
+                Building projects helps you improve your CSS skills. It teaches you
+                how to combine layouts, colors, Flexbox, Grid and Responsive Design
+                into real websites.
+            </p>
+        
+        </div>
+    
+        <div class="lesson-section">
+        
+            <h2>📚 Mini Project Ideas</h2>
+        
+            <ul>
+        
+                <li>🎨 Personal Portfolio Card</li>
+        
+                <li>📱 Responsive Navigation Bar</li>
+        
+                <li>🛍 Product Card</li>
+        
+                <li>📋 Login Form</li>
+        
+                <li>🌐 Landing Page</li>
+        
+                <li>🖼 Image Gallery</li>
+        
+            </ul>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>💼 Sample Project</h2>
+        
+            <div class="feature-grid">
+        
+                <div class="feature-card">
+        
+                    <h3>👩 John Doe</h3>
+        
+                    <p>Frontend Developer</p>
+        
+                    <button class="btn btn-primary">
+                        View Profile
+                    </button>
+        
+                </div>
+        
+            </div>
+        
+        </div>
+        
+        <!-- Example -->
+    
+        <div class="lesson-section">
+        
+            <div class="code-header">
+        
+                <h2>💻 Sample Project Code</h2>
+        
+                <button class="copy-btn">
+                    📋 Copy
+                </button>
+        
+            </div>
+        
+            <pre><code id="html-code">
+        .card{
+            width:250px;
+            padding:20px;
+            border-radius:12px;
+            background:#ffffff;
+            box-shadow:0 5px 15px rgba(0,0,0,0.2);
+            text-align:center;
+        }
+        
+        button{
+            background:#2563eb;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius:8px;
+        }
+        </code></pre>
+        
+        </div>
+
+    
+    <a href="https://google.com">Visit Google</a>
+    </code></pre>
+    
+        </div>
+    
+        <!-- Output -->
+    <div class="lesson-section">
+    
+        <h2>🖥 Output</h2>
+    
+        <div class="output-box">
+    
+            <div style="
+                width:250px;
+                margin:auto;
+                background:white;
+                padding:20px;
+                border-radius:12px;
+                box-shadow:0 5px 15px rgba(0,0,0,0.2);
+                text-align:center;
+            ">
+    
+                <h3>👩 John Doe</h3>
+    
+                <p>Frontend Developer</p>
+    
+                <button class="btn btn-primary">
+                    View Profile
+                </button>
+    
+            </div>
+    
+        </div>
+    
+    </div>
+    
+            
+    <div class="lesson-section">
+    
+        <h2>💡 Key Points</h2>
+    
+        <ul>
+    
+            <li>Projects improve your practical skills.</li>
+    
+            <li>Use Flexbox and Grid together.</li>
+    
+            <li>Make every project responsive.</li>
+    
+            <li>Choose consistent colors and fonts.</li>
+    
+            <li>Practice regularly to improve.</li>
+    
+        </ul>
+    
+    </div>
+
+    <div class="lesson-section">
+    
+        <h2>🏆 Final Challenge</h2>
+    
+        <p>Create a complete Portfolio Website using everything you learned in CSS.</p>
+    
+        <ul>
+    
+            <li>Responsive Layout</li>
+    
+            <li>Navigation Bar</li>
+    
+            <li>Hero Section</li>
+    
+            <li>Projects Section</li>
+    
+            <li>Contact Section</li>
+    
+        </ul>
+    
+    </div>
+        
+        <!-- Quiz -->
+        <div class="lesson-section">
+        
+            <h2>🧠 Final Quiz</h2>
+        
+            <p><strong>Q1.</strong> What is the best way to improve your CSS skills?</p>
+        
+            <div class="quiz-options">
+        
+                <button class="quiz-btn">Reading only</button>
+        
+                <button class="quiz-btn">Watching videos only</button>
+        
+                <button class="quiz-btn" data-correct="true">
+                    Building Projects
+                </button>
+        
+                <button class="quiz-btn">Memorizing Syntax</button>
+        
+            </div>
+        
+            <p id="quiz-result"></p>
+        
+        </div>
+            
+        <!-- Complete Button -->
+    
+        <button class="btn btn-primary" id="complete-btn">
+            ✔ Mark as Completed
+        </button>
+    
+        <!-- Navigation -->
+    
+        <div class="lesson-navigation">
+    
+            <a href="responsive.html" class="btn btn-secondary">
+                ← Previous Lesson
+            </a>
+    
+            <a href="../../learn.html" class="btn btn-primary">
+                🎉 Finish CSS Course
+            </a>
+        </div>
+    
+    </div>
+<script>
+
+    // Copy Button
+    const copyBtn = document.querySelector(".copy-btn");
+
+    copyBtn.addEventListener("click", () => {
+
+        const code = document.getElementById("html-code").innerText;
+
+        navigator.clipboard.writeText(code);
+
+        copyBtn.innerText = "✅ Copied!";
+
+        setTimeout(() => {
+
+            copyBtn.innerText = "📋 Copy";
+
+        }, 2000);
+
+    });
+
+    // Quiz
+    const quizButtons = document.querySelectorAll(".quiz-btn");
+    const result = document.getElementById("quiz-result");
+
+    quizButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            if (button.dataset.correct) {
+
+                result.innerHTML = "✅ Correct Answer!";
+                result.style.color = "#22c55e";
+
+            } else {
+
+                result.innerHTML = "❌ Wrong Answer!";
+                result.style.color = "#ef4444";
+
+            }
+
+        });
+
+    });
+
+    // Mark as Completed
+    const completeBtn = document.getElementById("complete-btn");
+
+    if (localStorage.getItem("cssProjectsCompleted") === "true") {
+
+            completeBtn.innerText = "✅ Completed";
+            completeBtn.disabled = true;
+
+        }
+
+    completeBtn.addEventListener("click", () => {
+
+        localStorage.setItem("cssProjectsCompleted", "true");
+
+        completeBtn.innerText = "✅ Completed";
+        completeBtn.disabled = true;
+
+        alert("Lesson Completed Successfully!");
+
+    });
+
+</script>
+</body>
+
+</html>

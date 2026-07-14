@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Selectors | AIPath</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+
+</head>
+
+<body>
+
+    <div class="lesson-page">
+    
+        <a href="../../learn.html" class="btn btn-secondary">
+            ← Back to Dashboard
+        </a>
+    
+        <h1>🎯 CSS Selectors</h1>
+    
+        <div class="progress-section">
+    
+            <p>Course Progress</p>
+    
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 25%;"></div>
+            </div>
+    
+        </div>
+    
+        <p class="lesson-intro">
+            CSS Selectors are used to select HTML elements so that CSS styles can be applied to them.
+        </p>
+    
+        <!-- What are HTML Semantic -->
+    
+        <div class="lesson-section">
+        
+            <h2>🎯 What are CSS Selectors?</h2>
+        
+            <p>
+                CSS Selectors are used to select HTML elements so that styles can be
+                applied to them. They help target specific elements on a webpage.
+            </p>
+        
+        </div>
+    
+        <div class="lesson-section">
+        
+            <h2>📚 Types of CSS Selectors</h2>
+        
+            <ul>
+        
+                <li><strong>Element Selector</strong> - Selects HTML tags.</li>
+        
+                <li><strong>Class Selector (.class)</strong> - Selects elements with a class.</li>
+        
+                <li><strong>ID Selector (#id)</strong> - Selects one unique element.</li>
+        
+                <li><strong>Universal Selector (*)</strong> - Selects all elements.</li>
+        
+                <li><strong>Group Selector (,)</strong> - Selects multiple elements.</li>
+        
+            </ul>
+        
+        </div>
+        
+        <!-- Example -->
+    
+        <div class="lesson-section">
+        
+            <div class="code-header">
+        
+                <h2>💻 Example</h2>
+        
+                <button class="copy-btn">
+                    📋 Copy
+                </button>
+        
+            </div>
+        
+            <pre><code id="html-code">
+        h1{
+            color:blue;
+        }
+        
+        .red{
+            color:red;
+        }
+        
+        #title{
+            font-size:30px;
+        }
+        </code></pre>
+        
+        </div>
+    
+    <a href="https://google.com">Visit Google</a>
+    </code></pre>
+    
+        </div>
+    
+        <!-- Output -->
+    
+        <div class="lesson-section">
+        
+            <h2>🖥 Output</h2>
+        
+            <div class="output-box">
+        
+                <h1 style="color:blue;">Welcome</h1>
+        
+                <p style="color:red;">This is a paragraph.</p>
+        
+                <h2 style="font-size:30px;">AIPath</h2>
+        
+            </div>
+        
+        </div>
+    
+        <div class="lesson-section">
+        
+            <h2>💡 Key Points</h2>
+        
+            <ul>
+        
+                <li>Selectors are used to target HTML elements.</li>
+        
+                <li>Element Selector targets HTML tags.</li>
+        
+                <li>Class Selector starts with <strong>.</strong></li>
+        
+                <li>ID Selector starts with <strong>#</strong></li>
+        
+                <li>Universal Selector uses <strong>*</strong></li>
+        
+            </ul>
+        
+        </div>
+        <!-- Practice -->
+    
+    <div class="lesson-section">
+    
+        <h2>📝 Practice</h2>
+    
+        <p>Write CSS using the following selectors:</p>
+    
+        <ul>
+    
+            <li>Element Selector</li>
+    
+            <li>Class Selector</li>
+    
+            <li>ID Selector</li>
+    
+            <li>Universal Selector</li>
+    
+        </ul>
+    
+    </div>
+    
+    
+        <!-- Quiz -->
+        <div class="lesson-section">
+        
+            <h2>🧠 Quick Quiz</h2>
+        
+            <p><strong>Q1.</strong> Which symbol is used for a Class Selector?</p>
+        
+            <div class="quiz-options">
+        
+                <button class="quiz-btn">#</button>
+        
+                <button class="quiz-btn" data-correct="true">.</button>
+        
+                <button class="quiz-btn">*</button>
+        
+                <button class="quiz-btn">@</button>
+        
+            </div>
+        
+            <p id="quiz-result"></p>
+        
+        </div>
+        <!-- Complete Button -->
+    
+        <button class="btn btn-primary" id="complete-btn">
+            ✔ Mark as Completed
+        </button>
+    
+        <!-- Navigation -->
+    
+        <div class="lesson-navigation">
+    
+            <a href="introduction.html" class="btn btn-secondary">
+                ← Previous Lesson
+            </a>
+    
+            <a href="colors.html" class="btn btn-primary">
+                Next Lesson →
+            </a>
+    
+        </div>
+    
+    </div>
+<script>
+
+    // Copy Button
+    const copyBtn = document.querySelector(".copy-btn");
+
+    copyBtn.addEventListener("click", () => {
+
+        const code = document.getElementById("html-code").innerText;
+
+        navigator.clipboard.writeText(code);
+
+        copyBtn.innerText = "✅ Copied!";
+
+        setTimeout(() => {
+
+            copyBtn.innerText = "📋 Copy";
+
+        }, 2000);
+
+    });
+
+    // Quiz
+    const quizButtons = document.querySelectorAll(".quiz-btn");
+    const result = document.getElementById("quiz-result");
+
+    quizButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            if (button.dataset.correct) {
+
+                result.innerHTML = "✅ Correct Answer!";
+                result.style.color = "#22c55e";
+
+            } else {
+
+                result.innerHTML = "❌ Wrong Answer!";
+                result.style.color = "#ef4444";
+
+            }
+
+        });
+
+    });
+
+    // Mark as Completed
+    const completeBtn = document.getElementById("complete-btn");
+
+    if (localStorage.getItem("cssSelectorsCompleted") === "true") {
+
+            completeBtn.innerText = "✅ Completed";
+            completeBtn.disabled = true;
+
+        }
+
+    completeBtn.addEventListener("click", () => {
+
+        localStorage.setItem("cssSelectorsCompleted", "true");
+
+        completeBtn.innerText = "✅ Completed";
+        completeBtn.disabled = true;
+
+        alert("Lesson Completed Successfully!");
+
+    });
+
+</script>
+</body>
+
+</html>

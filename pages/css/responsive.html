@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Design | AIPath</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+
+</head>
+
+<body>
+
+    <div class="lesson-page">
+    
+        <a href="../../learn.html" class="btn btn-secondary">
+            ← Back to Dashboard
+        </a>
+    
+        <h1>📱 Responsive Design</h1>
+        <div class="progress-section">
+    
+            <p>Course Progress</p>
+    
+            <div class="progress-bar">
+                <div class="progress-fill" style="width:87.5%;"></div>
+            </div>
+    
+        </div>
+    
+        <p class="lesson-intro">
+            Responsive Design ensures that your website looks good on all devices such as mobiles, tablets, laptops, and
+            desktops.
+        </p>
+    
+        <!-- What are CSS Selectors -->
+    
+        <div class="lesson-section">
+        
+            <h2>📱 What is Responsive Design?</h2>
+        
+            <p>
+                Responsive Design is a web design approach that makes websites automatically adjust to different screen sizes
+                and devices.
+            </p>
+        
+        </div>
+    
+        <div class="lesson-section">
+        
+            <h2>📚 Responsive Design Techniques</h2>
+        
+            <ul>
+        
+                <li><strong>Media Queries</strong> → Apply CSS based on screen size.</li>
+        
+                <li><strong>Flexible Layouts</strong> → Use Flexbox and Grid.</li>
+        
+                <li><strong>Relative Units</strong> → %, rem, em, vw, vh.</li>
+        
+                <li><strong>Responsive Images</strong> → Images resize automatically.</li>
+        
+                <li><strong>Mobile First Design</strong> → Design for mobile first.</li>
+        
+            </ul>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📱 Responsive Layout</h2>
+        
+            <div class="output-box">
+        
+                <div style="
+                    display:flex;
+                    flex-wrap:wrap;
+                    gap:15px;
+                ">
+        
+                    <div class="feature-card" style="flex:1;min-width:180px;">Mobile</div>
+        
+                    <div class="feature-card" style="flex:1;min-width:180px;">Tablet</div>
+        
+                    <div class="feature-card" style="flex:1;min-width:180px;">Desktop</div>
+        
+                </div>
+        
+            </div>
+        
+        </div>
+        
+        <!-- Example -->
+    
+        <div class="lesson-section">
+        
+            <div class="code-header">
+        
+                <h2>💻 Example</h2>
+        
+                <button class="copy-btn">
+                    📋 Copy
+                </button>
+        
+            </div>
+        
+            <pre><code id="html-code">
+        .container{
+            display:flex;
+            gap:20px;
+        }
+        
+        @media (max-width:768px){
+        
+            .container{
+                flex-direction:column;
+            }
+        
+        }
+        </code></pre>
+        
+        </div>
+
+    
+    <a href="https://google.com">Visit Google</a>
+    </code></pre>
+    
+        </div>
+    
+        <!-- Output -->
+    <div class="lesson-section">
+    
+        <h2>🖥 Output</h2>
+    
+        <div class="output-box">
+    
+            <div style="
+                display:flex;
+                gap:15px;
+                flex-wrap:wrap;
+            ">
+    
+                <div style="
+                    flex:1;
+                    min-width:180px;
+                    background:#2563eb;
+                    color:white;
+                    padding:20px;
+                    border-radius:8px;
+                    text-align:center;
+                ">
+                    Box 1
+                </div>
+    
+                <div style="
+                    flex:1;
+                    min-width:180px;
+                    background:#22c55e;
+                    color:white;
+                    padding:20px;
+                    border-radius:8px;
+                    text-align:center;
+                ">
+                    Box 2
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    </div>
+    
+            
+    <div class="lesson-section">
+    
+        <h2>💡 Key Points</h2>
+    
+        <ul>
+    
+            <li>Responsive websites work on all devices.</li>
+    
+            <li>Media Queries apply different styles for different screen sizes.</li>
+    
+            <li>Use Flexbox and Grid for responsive layouts.</li>
+    
+            <li>Prefer relative units like %, rem and vw.</li>
+    
+            <li>Always test your website on mobile devices.</li>
+    
+        </ul>
+    
+    </div>
+        <!-- Practice -->
+        <div class="lesson-section">
+        
+            <h2>📝 Practice</h2>
+        
+            <p>Create a responsive layout that:</p>
+        
+            <ul>
+        
+                <li>Shows 2 boxes on Desktop.</li>
+        
+                <li>Shows 1 box below another on Mobile.</li>
+        
+                <li>Uses a Media Query.</li>
+        
+            </ul>
+        
+        </div>
+    
+    
+        <!-- Quiz -->
+        <div class="lesson-section">
+        
+            <h2>🧠 Quick Quiz</h2>
+        
+            <p><strong>Q1.</strong> Which CSS feature is mainly used for Responsive Design?</p>
+        
+            <div class="quiz-options">
+        
+                <button class="quiz-btn">Animations</button>
+        
+                <button class="quiz-btn" data-correct="true">
+                    Media Queries
+                </button>
+        
+                <button class="quiz-btn">Transitions</button>
+        
+                <button class="quiz-btn">Transform</button>
+        
+            </div>
+        
+            <p id="quiz-result"></p>
+        
+        </div>
+        
+            
+        <!-- Complete Button -->
+    
+        <button class="btn btn-primary" id="complete-btn">
+            ✔ Mark as Completed
+        </button>
+    
+        <!-- Navigation -->
+    
+        <div class="lesson-navigation">
+    
+            <a href="grid.html" class="btn btn-secondary">
+                ← Previous Lesson
+            </a>
+    
+            <a href="projects.html" class="btn btn-primary">
+                Next Lesson →
+            </a>
+        </div>
+    
+    </div>
+<script>
+
+    // Copy Button
+    const copyBtn = document.querySelector(".copy-btn");
+
+    copyBtn.addEventListener("click", () => {
+
+        const code = document.getElementById("html-code").innerText;
+
+        navigator.clipboard.writeText(code);
+
+        copyBtn.innerText = "✅ Copied!";
+
+        setTimeout(() => {
+
+            copyBtn.innerText = "📋 Copy";
+
+        }, 2000);
+
+    });
+
+    // Quiz
+    const quizButtons = document.querySelectorAll(".quiz-btn");
+    const result = document.getElementById("quiz-result");
+
+    quizButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            if (button.dataset.correct) {
+
+                result.innerHTML = "✅ Correct Answer!";
+                result.style.color = "#22c55e";
+
+            } else {
+
+                result.innerHTML = "❌ Wrong Answer!";
+                result.style.color = "#ef4444";
+
+            }
+
+        });
+
+    });
+
+    // Mark as Completed
+    const completeBtn = document.getElementById("complete-btn");
+
+    if (localStorage.getItem("cssResponsiveCompleted") === "true") {
+
+            completeBtn.innerText = "✅ Completed";
+            completeBtn.disabled = true;
+
+        }
+
+    completeBtn.addEventListener("click", () => {
+
+        localStorage.setItem("cssResponsiveCompleted", "true");
+
+        completeBtn.innerText = "✅ Completed";
+        completeBtn.disabled = true;
+
+        alert("Lesson Completed Successfully!");
+
+    });
+
+</script>
+</body>
+
+</html>

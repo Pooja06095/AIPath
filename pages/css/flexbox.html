@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Flexbox | AIPath</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+
+</head>
+
+<body>
+
+    <div class="lesson-page">
+    
+        <a href="../../learn.html" class="btn btn-secondary">
+            ← Back to Dashboard
+        </a>
+    
+        <h1>📐 CSS Flexbox</h1>
+
+        <div class="progress-section">
+    
+            <p>Course Progress</p>
+    
+            <div class="progress-bar">
+                <div class="progress-fill" style="width:62.5%;"></div>
+            </div>
+    
+        </div>
+    
+        <p class="lesson-intro">
+            CSS Flexbox is a one-dimensional layout system used to arrange elements
+            in rows or columns with proper spacing and alignment.
+        </p>
+    
+        <!-- What are CSS Selectors -->
+    
+        <div class="lesson-section">
+        
+            <h2>📐 What is Flexbox?</h2>
+        
+            <p>
+                Flexbox is a CSS layout model that helps align and distribute
+                space among items inside a container. It makes responsive layouts
+                much easier to build.
+            </p>
+        
+        </div>
+    
+        <div class="lesson-section">
+        
+            <h2>📚 Important Flexbox Properties</h2>
+        
+            <ul>
+        
+                <li><strong>display: flex</strong> → Makes a flex container.</li>
+        
+                <li><strong>justify-content</strong> → Horizontal alignment.</li>
+        
+                <li><strong>align-items</strong> → Vertical alignment.</li>
+        
+                <li><strong>flex-direction</strong> → Row or Column layout.</li>
+        
+                <li><strong>gap</strong> → Space between items.</li>
+        
+            </ul>
+        
+        </div>
+
+        <div class="lesson-section">
+        
+            <h2>📊 Flexbox Example</h2>
+        
+            <div class="output-box" style="
+                    display:flex;
+                    justify-content:space-around;
+                    gap:15px;
+                ">
+        
+                <div class="feature-card">Box 1</div>
+        
+                <div class="feature-card">Box 2</div>
+        
+                <div class="feature-card">Box 3</div>
+        
+            </div>
+        
+        </div>
+        
+        <!-- Example -->
+    
+        <div class="lesson-section">
+        
+            <div class="code-header">
+        
+                <h2>💻 Example</h2>
+        
+                <button class="copy-btn">
+                    📋 Copy
+                </button>
+        
+            </div>
+        
+            <pre><code id="html-code">
+        .container{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            gap:20px;
+        }
+        
+        .box{
+            background:#2563eb;
+            color:white;
+            padding:20px;
+        }
+        </code></pre>
+        
+        </div>
+
+    
+    <a href="https://google.com">Visit Google</a>
+    </code></pre>
+    
+        </div>
+    
+        <!-- Output -->
+    <div class="lesson-section">
+    
+        <h2>🖥 Output</h2>
+    
+        <div class="output-box" style="
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+                gap:15px;
+            ">
+    
+            <div style="
+                background:#2563eb;
+                color:white;
+                padding:20px;
+                border-radius:8px;
+            ">
+                Box 1
+            </div>
+    
+            <div style="
+                background:#2563eb;
+                color:white;
+                padding:20px;
+                border-radius:8px;
+            ">
+                Box 2
+            </div>
+    
+            <div style="
+                background:#2563eb;
+                color:white;
+                padding:20px;
+                border-radius:8px;
+            ">
+                Box 3
+            </div>
+    
+        </div>
+    
+    </div>
+    <div class="lesson-section">
+    
+        <h2>💡 Key Points</h2>
+    
+        <ul>
+    
+            <li>Flexbox creates flexible layouts.</li>
+    
+            <li>display:flex converts an element into a flex container.</li>
+    
+            <li>justify-content aligns items horizontally.</li>
+    
+            <li>align-items aligns items vertically.</li>
+    
+            <li>gap adds spacing between flex items.</li>
+    
+        </ul>
+    
+    </div>
+        <!-- Practice -->
+    
+        <div class="lesson-section">
+        
+            <h2>📝 Practice</h2>
+        
+            <p>Create a Flexbox layout that contains three boxes.</p>
+        
+            <ul>
+        
+                <li>Use <strong>display:flex</strong>.</li>
+        
+                <li>Add <strong>gap:20px</strong>.</li>
+        
+                <li>Center all items.</li>
+        
+                <li>Give each box a blue background.</li>
+        
+            </ul>
+        
+        </div>
+    
+    
+        <!-- Quiz -->
+        <div class="lesson-section">
+        
+            <h2>🧠 Quick Quiz</h2>
+        
+            <p><strong>Q1.</strong> Which property makes an element a Flex Container?</p>
+        
+            <div class="quiz-options">
+        
+                <button class="quiz-btn">display:block</button>
+        
+                <button class="quiz-btn" data-correct="true">
+                    display:flex
+                </button>
+        
+                <button class="quiz-btn">position:flex</button>
+        
+                <button class="quiz-btn">flex-container</button>
+        
+            </div>
+        
+            <p id="quiz-result"></p>
+        
+        </div>
+        
+            
+        <!-- Complete Button -->
+    
+        <button class="btn btn-primary" id="complete-btn">
+            ✔ Mark as Completed
+        </button>
+    
+        <!-- Navigation -->
+    
+        <div class="lesson-navigation">
+    
+            <a href="boxmodel.html" class="btn btn-secondary">
+                ← Previous Lesson
+            </a>
+    
+            <a href="grid.html" class="btn btn-primary">
+                Next Lesson →
+            </a>
+        </div>
+    
+    </div>
+<script>
+
+    // Copy Button
+    const copyBtn = document.querySelector(".copy-btn");
+
+    copyBtn.addEventListener("click", () => {
+
+        const code = document.getElementById("html-code").innerText;
+
+        navigator.clipboard.writeText(code);
+
+        copyBtn.innerText = "✅ Copied!";
+
+        setTimeout(() => {
+
+            copyBtn.innerText = "📋 Copy";
+
+        }, 2000);
+
+    });
+
+    // Quiz
+    const quizButtons = document.querySelectorAll(".quiz-btn");
+    const result = document.getElementById("quiz-result");
+
+    quizButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            if (button.dataset.correct) {
+
+                result.innerHTML = "✅ Correct Answer!";
+                result.style.color = "#22c55e";
+
+            } else {
+
+                result.innerHTML = "❌ Wrong Answer!";
+                result.style.color = "#ef4444";
+
+            }
+
+        });
+
+    });
+
+    // Mark as Completed
+    const completeBtn = document.getElementById("complete-btn");
+
+    if (localStorage.getItem("cssFlexboxCompleted") === "true") {
+
+            completeBtn.innerText = "✅ Completed";
+            completeBtn.disabled = true;
+
+        }
+
+    completeBtn.addEventListener("click", () => {
+
+        localStorage.setItem("cssFlexboxCompleted", "true");
+
+        completeBtn.innerText = "✅ Completed";
+        completeBtn.disabled = true;
+
+        alert("Lesson Completed Successfully!");
+
+    });
+
+</script>
+</body>
+
+</html>
