@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculator Project | AIPath</title>
+
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/variables.css">
+
+</head>
+
+<body>
+    <div class="lesson-page">
+
+        <a href="../mini-project.html" class="btn btn-secondary">
+
+            ← Back to Projects
+
+        </a>
+
+        <h1>🧮 Simple Calculator</h1>
+
+        <p class="lesson-intro">
+
+            Build a simple calculator using HTML, CSS and JavaScript.
+
+        </p>
+        <div class="lesson-section">
+
+            <h2>📌 Project Objective</h2>
+
+            <p>
+
+                In this project, you will build a simple calculator using
+                HTML, CSS and JavaScript.
+
+                It can perform addition, subtraction, multiplication
+                and division.
+
+            </p>
+
+        
+        <div class="lesson-section">
+
+            <h2>✨ Features</h2>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    ➕ Addition
+                </div>
+
+                <div class="feature-card">
+                    ➖ Subtraction
+                </div>
+
+                <div class="feature-card">
+                    ✖ Multiplication
+                </div>
+
+                <div class="feature-card">
+                    ➗ Division
+                </div>
+
+            </div>
+
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🧠 Algorithm</h2>
+        
+            <ol>
+        
+                <li>Enter the first number.</li>
+        
+                <li>Enter the second number.</li>
+        
+                <li>Choose an arithmetic operation (+, −, ×, ÷).</li>
+        
+                <li>JavaScript performs the calculation.</li>
+        
+                <li>The result is displayed on the screen.</li>
+        
+            </ol>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <div class="code-header">
+        
+                <h2>💻 Source Code</h2>
+        
+                <button class="copy-btn">
+        
+                    📋 Copy
+        
+                </button>
+        
+            </div>
+        
+            <pre><code id="html-code">
+        // Calculator JavaScript Code
+        // (We'll add the complete code later)
+        
+        </code></pre>
+        
+        </div>
+        <div class="lesson-section">
+
+            <h2>🧮 Try the Calculator</h2>
+
+            <div class="feature-card">
+
+                <input type="number" id="num1" placeholder="Enter First Number">
+
+                <br><br>
+
+                <input type="number" id="num2" placeholder="Enter Second Number">
+
+                <br><br>
+
+                <button class="btn btn-primary" onclick="calculate('+')">+</button>
+
+                <button class="btn btn-primary" onclick="calculate('-')">−</button>
+
+                <button class="btn btn-primary" onclick="calculate('*')">×</button>
+
+                <button class="btn btn-primary" onclick="calculate('/')">÷</button>
+                <button class="btn btn-secondary" onclick="clearCalculator()">
+                    🗑 Clear
+                </button>
+
+                <br><br>
+
+                <h2 id="result" style="color:#111827;">
+                    Result : 0
+                </h2>
+
+            </div>
+
+        </div>
+
+    
+    <div class="lesson-section">
+    
+        <h2>💡 How It Works</h2>
+    
+        <div class="feature-card">
+    
+            <p>
+    
+                JavaScript reads the values entered in the input fields using
+                <strong>getElementById()</strong>.
+    
+            </p>
+    
+            <p>
+    
+                The selected operation is passed to the
+                <strong>calculate()</strong> function.
+    
+            </p>
+    
+            <p>
+    
+                The function performs the calculation and updates the result
+                dynamically without reloading the page.
+    
+            </p>
+    
+        </div>
+    
+    </div>
+    <div class="lesson-section">
+    
+        <h2>📝 Challenge</h2>
+    
+        <p>Improve this calculator by adding:</p>
+    
+        <ul>
+    
+            <li>A <strong>Clear</strong> button.</li>
+    
+            <li>Keyboard support.</li>
+    
+            <li>Decimal number calculations.</li>
+    
+            <li>A calculation history section.</li>
+    
+        </ul>
+    
+    </div>
+    <button class="btn btn-primary" id="complete-btn">
+    
+        ✔ Mark as Completed
+    
+    </button>
+    <div class="lesson-navigation">
+    
+        <a href="../mini-project.html" class="btn btn-secondary">
+    
+            ← Back to Projects
+    
+        </a>
+    
+        <a href="color-changer.html" class="btn btn-primary">
+    
+            Next Project →
+    
+        </a>
+    
+    </div>
+    </div>
+    <script>
+
+        // Copy Button
+
+        const copyBtn = document.querySelector(".copy-btn");
+
+        if (copyBtn) {
+
+            copyBtn.addEventListener("click", () => {
+
+                const code = document.getElementById("html-code").innerText;
+
+                navigator.clipboard.writeText(code);
+
+                copyBtn.innerText = "✅ Copied!";
+
+                setTimeout(() => {
+
+                    copyBtn.innerText = "📋 Copy";
+
+                }, 2000);
+
+            });
+
+        }
+
+        // Complete Button
+
+        const completeBtn = document.getElementById("complete-btn");
+
+        if (localStorage.getItem("calculatorProjectCompleted") === "true") {
+
+            completeBtn.innerText = "✅ Completed";
+
+            completeBtn.disabled = true;
+
+        }
+
+        completeBtn.addEventListener("click", () => {
+
+            localStorage.setItem("calculatorProjectCompleted", "true");
+
+            completeBtn.innerText = "✅ Completed";
+
+            completeBtn.disabled = true;
+
+            alert("🎉 Calculator Project Completed Successfully!");
+
+        });
+
+        // Calculator Logic
+
+        function calculate(operator) {
+
+            const value1 = document.getElementById("num1").value;
+
+            const value2 = document.getElementById("num2").value;
+        
+        function clearCalculator() {
+
+                document.getElementById("num1").value = "";
+
+                document.getElementById("num2").value = "";
+
+                document.getElementById("result").innerHTML = "Result : 0";
+
+            }
+
+            // Validation
+
+            if (value1 === "" || value2 === "") {
+
+                document.getElementById("result").innerHTML =
+                    "⚠ Please enter both numbers.";
+
+                return;
+
+            }
+
+            const num1 = Number(value1);
+
+            const num2 = Number(value2);
+
+            let result = 0;
+
+            switch (operator) {
+
+                case "+":
+
+                    result = num1 + num2;
+
+                    break;
+
+                case "-":
+
+                    result = num1 - num2;
+
+                    break;
+
+                case "*":
+
+                    result = num1 * num2;
+
+                    break;
+
+                case "/":
+
+                    if (num2 === 0) {
+
+                        document.getElementById("result").innerHTML =
+                            "❌ Cannot divide by zero";
+
+                        return;
+
+                    }
+
+                    result = num1 / num2;
+
+                    break;
+
+            }
+
+            document.getElementById("result").innerHTML =
+                "Result : " + result;
+
+        }
+
+        // Clear Calculator
+
+        function clearCalculator() {
+
+            document.getElementById("num1").value = "";
+
+            document.getElementById("num2").value = "";
+
+            document.getElementById("result").innerHTML = "Result : 0";
+
+        }
+
+    </script>
+        
+</body>
+
+</html>

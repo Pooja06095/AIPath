@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Color Changer Project | AIPath</title>
+
+<link rel="stylesheet" href="../../../css/style.css">
+<link rel="stylesheet" href="../../../css/components.css">
+<link rel="stylesheet" href="../../../css/variables.css">
+</head>
+<body>
+<div class="lesson-page">
+
+    <a href="../mini-project.html" class="btn btn-secondary">
+
+        ← Back to Projects
+
+    </a>
+
+    <h1>🎨 Color Changer</h1>
+
+    <p class="lesson-intro">
+
+        Build a simple Color Changer using HTML, CSS and JavaScript.
+
+    </p>
+    <div class="lesson-section">
+    
+        <h2>📌 Project Objective</h2>
+    
+        <p>
+    
+            In this project, you will create a webpage that changes its background color
+            when different buttons are clicked.
+    
+        </p>
+    
+    </div>
+    <div class="lesson-section">
+    
+        <h2>✨ Features</h2>
+    
+        <div class="feature-grid">
+    
+            <div class="feature-card">
+                🔴 Red Theme
+            </div>
+    
+            <div class="feature-card">
+                🟢 Green Theme
+            </div>
+    
+            <div class="feature-card">
+                🔵 Blue Theme
+            </div>
+    
+            <div class="feature-card">
+                ⚫ Dark Theme
+            </div>
+    
+        </div>
+    
+    </div>
+    <div class="lesson-section">
+    
+        <h2>🧠 Algorithm</h2>
+    
+        <ol>
+    
+            <li>User clicks a color button.</li>
+    
+            <li>JavaScript receives the selected color.</li>
+    
+            <li>The webpage background color changes.</li>
+    
+            <li>The selected color name is displayed.</li>
+    
+        </ol>
+    
+    </div>
+    <div class="lesson-section">
+    
+        <div class="code-header">
+    
+            <h2>💻 Source Code</h2>
+    
+            <button class="copy-btn">
+    
+                📋 Copy
+    
+            </button>
+    
+        </div>
+    
+        <pre><code id="html-code">
+    // Color Changer JavaScript Code
+    // (We'll add the complete code later)
+    
+    </code></pre>
+    
+    </div>
+    <div class="lesson-section">
+    
+        <h2>🎨 Try the Color Changer</h2>
+    
+        <div class="feature-card">
+    
+            <h3 id="color-name">
+    
+                Current Color : Default
+    
+            </h3>
+            <div id="color-preview" class="color-preview">
+            
+                Color Preview
+            
+            </div>
+            
+    
+            <br>
+    
+            <button class="btn btn-primary" onclick="changeColor('#ef4444')">
+    
+                🔴 Red
+    
+            </button>
+    
+            <button class="btn btn-primary" onclick="changeColor('#22c55e')">
+    
+                🟢 Green
+    
+            </button>
+    
+            <button class="btn btn-primary" onclick="changeColor('#3b82f6')">
+    
+                🔵 Blue
+    
+            </button>
+    
+            <button class="btn btn-secondary" onclick="resetColor()">
+    
+                🔄 Reset
+    
+            </button>
+    
+        </div>
+    
+    </div>
+    <div class="lesson-section">
+    
+        <h2>💡 How It Works</h2>
+    
+        <div class="feature-card">
+    
+            <p>
+                JavaScript listens for button clicks.
+            </p>
+    
+            <p>
+                The selected color is passed to the
+                <strong>changeColor()</strong> function.
+            </p>
+    
+            <p>
+                The preview box updates instantly without refreshing the page.
+            </p>
+    
+        </div>
+    
+    </div>
+    <div class="lesson-section">
+    
+        <h2>🎯 Challenge</h2>
+    
+        <div class="feature-card">
+    
+            <ul>
+    
+                <li>Add more colors.</li>
+    
+                <li>Create a Random Color button.</li>
+    
+                <li>Show the HEX color code.</li>
+    
+            </ul>
+    
+        </div>
+    
+    </div>
+    <button class="btn btn-primary" id="complete-btn">
+        ✔ Mark as Completed
+    </button>
+    <div class="lesson-navigation">
+    
+        <a href="calculator.html" class="btn btn-secondary">
+            ← Previous Project
+        </a>
+    
+        <a href="digital-clock.html" class="btn btn-primary">
+            Next Project →
+        </a>
+    
+    </div>
+    <script>
+
+        function changeColor(color) {
+
+            document.getElementById("color-preview").style.backgroundColor = color;
+
+            const colorName = document.getElementById("color-name");
+
+            switch (color) {
+
+                case "#ef4444":
+                    colorName.innerHTML = "Current Color : Red 🔴";
+                    break;
+
+                case "#22c55e":
+                    colorName.innerHTML = "Current Color : Green 🟢";
+                    break;
+
+                case "#3b82f6":
+                    colorName.innerHTML = "Current Color : Blue 🔵";
+                    break;
+
+            }
+
+        }
+
+        function resetColor() {
+
+            document.getElementById("color-preview").style.backgroundColor = "#e5e7eb";
+
+            document.getElementById("color-name").innerHTML =
+                "Current Color : Default";
+
+        }
+
+    </script>
+</body>
+</html>

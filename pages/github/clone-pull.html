@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clone & Pull | AIPath</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+
+</head>
+
+<body>
+    <div class="lesson-page">
+    
+        <a href="../../learn.html" class="btn btn-secondary">
+    
+            ← Back
+    
+        </a>
+    
+        <h1>📥 Clone & Pull</h1>
+    
+        <p class="lesson-intro">
+    
+            Learn how to download GitHub repositories and keep your local project updated.
+    
+        </p>
+    
+        <div class="progress-section">
+    
+            <p>Lesson 6 of 8</p>
+    
+            <div class="progress-bar">
+    
+                <div class="progress-fill" style="width:75%;"></div>
+    
+            </div>
+    
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📌 What is Clone?</h2>
+        
+            <p>
+        
+                Cloning creates a complete copy of an existing GitHub repository
+                on your local computer.
+        
+            </p>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>💡 Why Use Clone?</h2>
+        
+            <div class="feature-grid">
+        
+                <div class="feature-card">
+        
+                    💻 Download Existing Projects
+        
+                </div>
+        
+                <div class="feature-card">
+        
+                    👨‍💻 Start Working Immediately
+        
+                </div>
+        
+                <div class="feature-card">
+        
+                    🤝 Collaborate with Teams
+        
+                </div>
+        
+                <div class="feature-card">
+        
+                    🌍 Access Open Source Projects
+        
+                </div>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🏢 Real World Example</h2>
+        
+            <div class="feature-card">
+        
+                <p>
+        
+                    Your team leader has already created a project on GitHub.
+        
+                </p>
+        
+                <p>
+        
+                    Instead of creating the project again,
+                    you simply clone the repository to your computer
+                    and start working.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>💻 Clone Repository</h2>
+        
+            <div class="feature-card">
+        
+                <p>
+        
+                    Use the following command to clone a repository:
+        
+                </p>
+        
+                <code>git clone https://github.com/username/project.git</code>
+        
+                <p>
+        
+                    This downloads the complete repository,
+                    including all commits and branches.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🔄 What is Pull?</h2>
+        
+            <p>
+        
+                The <strong>git pull</strong> command downloads the latest changes
+                from the remote GitHub repository and updates your local project.
+        
+            </p>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>💻 Pull Latest Changes</h2>
+        
+            <div class="feature-card">
+        
+                <p>
+        
+                    Use the following command to update your local repository:
+        
+                </p>
+        
+                <code>git pull origin main</code>
+        
+                <p>
+        
+                    This fetches and merges the latest changes from GitHub.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>⚖️ Clone vs Pull</h2>
+        
+            <div class="feature-grid">
+        
+                <div class="feature-card">
+        
+                    <h3>📥 Clone</h3>
+        
+                    <p>
+        
+                        Downloads the repository for the first time.
+        
+                    </p>
+        
+                </div>
+        
+                <div class="feature-card">
+        
+                    <h3>🔄 Pull</h3>
+        
+                    <p>
+        
+                        Updates an existing local repository.
+        
+                    </p>
+        
+                </div>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📸 Expected Output</h2>
+        
+            <div class="feature-card">
+        
+                <pre>
+        $ git pull origin main
+        
+        Already up to date.
+        </pre>
+        
+                <p>
+        
+                    If new changes exist, Git downloads and merges them automatically.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>⚠️ Common Mistakes</h2>
+        
+            <div class="feature-card">
+        
+                <ul>
+        
+                    <li>Using the wrong repository URL while cloning.</li>
+        
+                    <li>Running <strong>git pull</strong> before committing local changes.</li>
+        
+                    <li>Pulling from the wrong branch.</li>
+        
+                    <li>Ignoring merge conflicts.</li>
+        
+                </ul>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>💡 Pro Tip</h2>
+        
+            <div class="feature-card">
+        
+                <p>
+        
+                    Before starting your work every day,
+                    run <strong>git pull</strong> to make sure
+                    your local project has the latest updates.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🧠 Common Interview Question</h2>
+        
+            <div class="feature-card">
+        
+                <p>
+        
+                    <strong>Q.</strong> What is the difference between
+                    <strong>git clone</strong> and <strong>git pull</strong>?
+        
+                </p>
+        
+                <p>
+        
+                    <strong>Answer:</strong>
+        
+                    <strong>git clone</strong> downloads a repository for the first time,
+                    while <strong>git pull</strong> updates an existing local repository
+                    with the latest changes.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <div class="feature-card">
+        
+                <h2>💡 Did You Know?</h2>
+        
+                <p>
+        
+                    Open-source developers clone thousands of repositories every day
+                    to contribute to projects from around the world.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📋 Key Points</h2>
+        
+            <ul>
+        
+                <li><strong>git clone</strong> downloads a repository.</li>
+        
+                <li><strong>git pull</strong> updates an existing repository.</li>
+        
+                <li>Clone is used only once for a repository.</li>
+        
+                <li>Pull is used regularly to get new updates.</li>
+        
+            </ul>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📝 Practice</h2>
+        
+            <ol>
+        
+                <li>Clone a public GitHub repository.</li>
+        
+                <li>Open the project in VS Code.</li>
+        
+                <li>Run <strong>git pull</strong>.</li>
+        
+                <li>Verify that your repository is up to date.</li>
+        
+            </ol>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🧠 Quick Quiz</h2>
+        
+            <p>
+        
+                <strong>Q1.</strong> Which command updates your local repository?
+        
+            </p>
+        
+            <div class="quiz-options">
+        
+                <button class="quiz-btn">
+                    git clone
+                </button>
+        
+                <button class="quiz-btn" data-correct="true">
+                    git pull
+                </button>
+        
+                <button class="quiz-btn">
+                    git init
+                </button>
+        
+                <button class="quiz-btn">
+                    git add
+                </button>
+        
+            </div>
+        
+            <p id="quiz-result"></p>
+        
+        </div>
+        <button class="btn btn-primary" id="complete-btn">
+            ✔ Mark as Completed
+        </button>
+        
+        <div class="lesson-navigation">
+        
+            <a href="branching.html" class="btn btn-secondary">
+        
+                ← Previous Lesson
+        
+            </a>
+        
+            <a href="collaboration.html" class="btn btn-primary">
+        
+                Next Lesson →
+        
+            </a>
+        
+        </div>
+        
+        </div>
+        <script>
+
+            // ===============================
+            // Quiz
+            // ===============================
+
+            const quizButtons = document.querySelectorAll(".quiz-btn");
+            const result = document.getElementById("quiz-result");
+
+            quizButtons.forEach(button => {
+
+                button.addEventListener("click", () => {
+
+                    if (button.dataset.correct) {
+
+                        result.innerHTML = "✅ Correct Answer!";
+                        result.style.color = "#22c55e";
+
+                    } else {
+
+                        result.innerHTML = "❌ Wrong Answer!";
+                        result.style.color = "#ef4444";
+
+                    }
+
+                });
+
+            });
+
+
+
+            // ===============================
+            // Mark as Completed
+            // ===============================
+
+            const completeBtn = document.getElementById("complete-btn");
+
+            if (completeBtn) {
+
+                if (localStorage.getItem("gitClonePullCompleted") === "true") {
+
+                    completeBtn.innerText = "✅ Completed";
+                    completeBtn.disabled = true;
+
+                }
+
+                completeBtn.addEventListener("click", () => {
+
+                    localStorage.setItem("gitClonePullCompleted", "true");
+
+                    completeBtn.innerText = "✅ Completed";
+                    completeBtn.disabled = true;
+
+                    alert("Lesson Completed Successfully!");
+
+                });
+
+            }
+
+        </script>
+        
+        </body>
+        
+        </html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Functions | AIPath</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+
+</head>
+
+<body>
+
+    <div class="lesson-page">
+    
+        <a href="../../learn.html" class="btn btn-secondary">
+            ← Back to Dashboard
+        </a>
+    
+        <h1>⚙️ JavaScript Functions</h1>
+        
+        <p class="lesson-intro">
+        
+            Functions are reusable blocks of code that perform a specific task.
+            They help make programs cleaner, organized, and easier to maintain.
+        
+        </p>
+    
+        <div class="progress-section">
+        
+            <p>Lesson 6 of 8</p>
+        
+            <div class="progress-bar">
+        
+                <div class="progress-fill" style="width:75%;"></div>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>⚙️ What is a Function?</h2>
+        
+            <p>
+        
+                A function is a reusable block of code that performs a specific task.
+                Instead of writing the same code again and again, we can place it inside a function and call it whenever needed.
+        
+            </p>
+        
+            <div class="feature-card">
+        
+                <h3>💡 Real Life Example</h3>
+        
+                <p>
+        
+                    Think of a TV Remote 📺.
+        
+                    Every button performs a different task.
+                    Pressing the Volume button always increases or decreases the volume.
+        
+                    Similarly, a function performs the same task whenever it is called.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📝 Function Declaration</h2>
+        
+            <div class="code-header">
+        
+                <h2>💻 Syntax</h2>
+        
+                <button class="copy-btn">
+                    📋 Copy
+                </button>
+        
+            </div>
+        
+            <pre><code id="html-code">
+        function greet(){
+        
+            console.log("Welcome to AIPath!");
+        
+        }
+        
+        greet();
+        </code></pre>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🖥 Output</h2>
+        
+            <div class="output-box">
+        
+                <pre>
+        Welcome to AIPath!
+        </pre>
+        
+            </div>
+        
+        </div>
+        
+        <div class="lesson-section">
+        
+            <h2>📥 Parameters & Arguments</h2>
+        
+            <p>
+        
+                Parameters are variables written inside the function definition.
+                Arguments are the actual values passed when calling the function.
+        
+            </p>
+        
+            <div class="code-header">
+        
+                <h2>💻 Example</h2>
+        
+                <button class="copy-btn">
+                    📋 Copy
+                </button>
+        
+            </div>
+        
+            <pre><code>
+        function greet(name){
+        
+            console.log("Welcome " + name);
+        
+        }
+        
+        greet("Pooja");
+        </code></pre>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🖥 Output</h2>
+        
+            <div class="output-box">
+        
+                <pre>
+        Welcome Pooja
+        </pre>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📤 Return Statement</h2>
+        
+            <p>
+        
+                The <strong>return</strong> statement sends a value back to the place where the function was called.
+        
+            </p>
+        
+            <pre><code>
+        function add(a, b){
+        
+            return a + b;
+        
+        }
+        
+        let result = add(10, 20);
+        
+        console.log(result);
+        </code></pre>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🖥 Output</h2>
+        
+            <div class="output-box">
+        
+                <pre>
+        30
+        </pre>
+        
+            </div>
+        
+        </div>
+        
+        <div class="lesson-section">
+        
+            <h2>🎯 Common Interview Question</h2>
+        
+            <div class="feature-card">
+        
+                <p>
+        
+                    <strong>Q.</strong> What is the difference between a Parameter and an Argument?
+        
+                </p>
+        
+                <p>
+        
+                    <strong>Answer:</strong>
+        
+                    Parameters are variables defined in the function declaration,
+                    while arguments are the actual values passed when the function is called.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <div class="feature-card">
+        
+                <h2>🧠 Did You Know?</h2>
+        
+                <p>
+        
+                    Functions are one of the most important concepts in JavaScript.
+                    Modern frameworks like React, Angular, and Node.js rely heavily on functions.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>💡 Key Points</h2>
+        
+            <ul>
+        
+                <li>Functions help avoid repeating code.</li>
+        
+                <li>A function can accept parameters.</li>
+        
+                <li>Arguments are values passed to a function.</li>
+        
+                <li>The <strong>return</strong> statement sends a value back.</li>
+        
+                <li>Functions make code reusable and easier to maintain.</li>
+        
+            </ul>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📝 Practice</h2>
+        
+            <p>Create the following functions:</p>
+        
+            <ul>
+        
+                <li>A function to add two numbers.</li>
+        
+                <li>A function to calculate the square of a number.</li>
+        
+                <li>A function to display your name.</li>
+        
+            </ul>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🧠 Quick Quiz</h2>
+        
+            <p><strong>Q1.</strong> Which keyword is used to send a value back from a function?</p>
+        
+            <div class="quiz-options">
+        
+                <button class="quiz-btn">break</button>
+        
+                <button class="quiz-btn">continue</button>
+        
+                <button class="quiz-btn" data-correct="true">return</button>
+        
+                <button class="quiz-btn">print</button>
+        
+            </div>
+        
+            <p id="quiz-result"></p>
+        
+        </div>
+        <button class="btn btn-primary" id="complete-btn">
+            ✔ Mark as Completed
+        </button>
+        <div class="lesson-navigation">
+        
+            <a href="loops.html" class="btn btn-secondary">
+        
+                ← Previous Lesson
+        
+            </a>
+        
+            <a href="dom.html" class="btn btn-primary">
+        
+                Next Lesson →
+        
+            </a>
+        
+        </div>
+<script>
+    // Copy Button
+
+        const copyBtn = document.querySelector(".copy-btn");
+
+        copyBtn.addEventListener("click", () => {
+
+            const code = document.getElementById("html-code").innerText;
+
+            navigator.clipboard.writeText(code);
+
+            copyBtn.innerText = "✅ Copied!";
+
+            setTimeout(() => {
+
+                copyBtn.innerText = "📋 Copy";
+
+            }, 2000);
+
+        });
+
+        // Quiz
+
+        const quizButtons = document.querySelectorAll(".quiz-btn");
+        const result = document.getElementById("quiz-result");
+
+        quizButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                if (button.dataset.correct) {
+
+                    result.innerHTML = "✅ Correct Answer!";
+                    result.style.color = "#22c55e";
+
+                } else {
+
+                    result.innerHTML = "❌ Wrong Answer!";
+                    result.style.color = "#ef4444";
+
+                }
+
+            });
+
+        });
+
+        // Mark as Completed
+
+        const completeBtn = document.getElementById("complete-btn");
+
+            if (localStorage.getItem("jsFunctionsCompleted") === "true") {
+
+                completeBtn.innerText = "✅ Completed";
+                completeBtn.disabled = true;
+
+            }
+
+            completeBtn.addEventListener("click", () => {
+
+                localStorage.setItem("jsFunctionsCompleted", "true");
+
+                completeBtn.innerText = "✅ Completed";
+                completeBtn.disabled = true;
+
+                alert("Lesson Completed Successfully!");
+
+            });
+</script>
+</body>
+
+</html>

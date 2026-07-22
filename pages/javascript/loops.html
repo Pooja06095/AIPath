@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Loops | AIPath</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+
+</head>
+
+<body>
+
+    <div class="lesson-page">
+    
+        <a href="../../learn.html" class="btn btn-secondary">
+            ← Back to Dashboard
+        </a>
+    
+        <h1>🔁 JavaScript Loops</h1>
+        
+        <p class="lesson-intro">
+        
+            Loops help us execute the same block of code multiple times
+            without writing it again and again.
+        
+        </p>
+    
+        <div class="progress-section">
+        
+            <p>Lesson 5 of 8</p>
+        
+            <div class="progress-bar">
+        
+                <div class="progress-fill" style="width:62.5%;"></div>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🔁 What are Loops?</h2>
+        
+            <p>
+        
+                A loop repeats a block of code until a condition becomes false.
+        
+            </p>
+        
+            <div class="feature-card">
+        
+                <h3>💡 Real Life Example</h3>
+        
+                <p>
+        
+                    Imagine a teacher taking attendance.
+                    Instead of calling one student manually every time,
+                    the teacher repeats the same process for every student in the class.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        
+        <div class="lesson-section">
+        
+            <h2>📚 Types of Loops</h2>
+        
+            <div class="feature-grid">
+        
+                <div class="feature-card">
+        
+                    🔁 for Loop
+        
+                </div>
+        
+                <div class="feature-card">
+        
+                    🔄 while Loop
+        
+                </div>
+        
+                <div class="feature-card">
+        
+                    🔂 do...while Loop
+        
+                </div>
+        
+                <div class="feature-card">
+        
+                    🎯 for...of Loop
+        
+                </div>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🔁 for Loop</h2>
+        
+            <p>
+        
+                The <strong>for</strong> loop is used when you know how many times
+                you want to repeat a block of code.
+        
+            </p>
+        
+            <div class="code-header">
+        
+                <h2>💻 Example</h2>
+        
+                <button class="copy-btn">
+                    📋 Copy
+                </button>
+        
+            </div>
+        
+            <pre><code id="html-code">
+        for(let i = 1; i <= 5; i++){
+        
+            console.log(i);
+        
+        }
+        </code></pre>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🖥 Output</h2>
+        
+            <div class="output-box">
+        
+                <pre>
+        1
+        2
+        3
+        4
+        5
+        </pre>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🎬 Loop Visualization</h2>
+        
+            <div class="feature-card">
+        
+                <pre>
+        Iteration 1 → i = 1 ✅
+        
+        Iteration 2 → i = 2 ✅
+        
+        Iteration 3 → i = 3 ✅
+        
+        Iteration 4 → i = 4 ✅
+        
+        Iteration 5 → i = 5 ✅
+        
+        Condition becomes FALSE ❌
+        
+        Loop Stops
+        </pre>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🔄 while Loop</h2>
+        
+            <p>
+        
+                The <strong>while</strong> loop runs as long as the condition is true.
+        
+            </p>
+        
+            <pre><code>
+        let i = 1;
+        
+        while(i <= 3){
+        
+            console.log(i);
+        
+            i++;
+        
+        }
+        </code></pre>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🔂 do...while Loop</h2>
+        
+            <p>
+        
+                The <strong>do...while</strong> loop executes the code at least once,
+                even if the condition is false.
+        
+            </p>
+        
+            <pre><code>
+        let i = 1;
+        
+        do{
+        
+            console.log(i);
+        
+            i++;
+        
+        }while(i <= 3);
+        </code></pre>
+        
+        </div>
+        
+        <div class="lesson-section">
+        
+            <h2>🎯 Common Interview Question</h2>
+        
+            <div class="feature-card">
+        
+                <p>
+        
+                    <strong>Q.</strong> What is the difference between
+                    <code>while</code> and <code>do...while</code> loop?
+        
+                </p>
+        
+                <p>
+        
+                    <strong>Answer:</strong>
+        
+                    A <strong>while</strong> loop checks the condition first,
+                    whereas a <strong>do...while</strong> loop executes the code
+                    once before checking the condition.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <div class="feature-card">
+        
+                <h2>🧠 Did You Know?</h2>
+        
+                <p>
+        
+                    Infinite loops can freeze your browser or application.
+                    Always make sure the loop condition eventually becomes false.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>💡 Key Points</h2>
+        
+            <ul>
+        
+                <li>Loops repeat a block of code.</li>
+        
+                <li><strong>for</strong> is best when the number of iterations is known.</li>
+        
+                <li><strong>while</strong> is used when the number of iterations is unknown.</li>
+        
+                <li><strong>do...while</strong> always executes at least once.</li>
+        
+                <li>Avoid infinite loops.</li>
+        
+            </ul>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📝 Practice</h2>
+        
+            <p>Write programs to:</p>
+        
+            <ul>
+        
+                <li>Print numbers from 1 to 10.</li>
+        
+                <li>Print even numbers between 1 and 20.</li>
+        
+                <li>Print the multiplication table of 5.</li>
+        
+            </ul>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🧠 Quick Quiz</h2>
+        
+            <p><strong>Q1.</strong> Which loop executes at least once?</p>
+        
+            <div class="quiz-options">
+        
+                <button class="quiz-btn">for</button>
+        
+                <button class="quiz-btn">while</button>
+        
+                <button class="quiz-btn" data-correct="true">
+                    do...while
+                </button>
+        
+                <button class="quiz-btn">foreach</button>
+        
+            </div>
+        
+            <p id="quiz-result"></p>
+        
+        </div>
+        <button class="btn btn-primary" id="complete-btn">
+            ✔ Mark as Completed
+        </button>
+        <div class="lesson-navigation">
+        
+            <a href="conditions.html" class="btn btn-secondary">
+        
+                ← Previous Lesson
+        
+            </a>
+        
+            <a href="functions.html" class="btn btn-primary">
+        
+                Next Lesson →
+        
+            </a>
+        
+        </div>
+<script>
+    // Copy Button
+
+        const copyBtn = document.querySelector(".copy-btn");
+
+        copyBtn.addEventListener("click", () => {
+
+            const code = document.getElementById("html-code").innerText;
+
+            navigator.clipboard.writeText(code);
+
+            copyBtn.innerText = "✅ Copied!";
+
+            setTimeout(() => {
+
+                copyBtn.innerText = "📋 Copy";
+
+            }, 2000);
+
+        });
+
+        // Quiz
+
+        const quizButtons = document.querySelectorAll(".quiz-btn");
+        const result = document.getElementById("quiz-result");
+
+        quizButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                if (button.dataset.correct) {
+
+                    result.innerHTML = "✅ Correct Answer!";
+                    result.style.color = "#22c55e";
+
+                } else {
+
+                    result.innerHTML = "❌ Wrong Answer!";
+                    result.style.color = "#ef4444";
+
+                }
+
+            });
+
+        });
+
+        // Mark as Completed
+
+        const completeBtn = document.getElementById("complete-btn");
+
+            if (localStorage.getItem("jsLoopsCompleted") === "true") {
+
+                completeBtn.innerText = "✅ Completed";
+                completeBtn.disabled = true;
+
+            }
+
+            completeBtn.addEventListener("click", () => {
+
+                localStorage.setItem("jsLoopsCompleted", "true");
+
+                completeBtn.innerText = "✅ Completed";
+                completeBtn.disabled = true;
+
+                alert("Lesson Completed Successfully!");
+
+            });
+</script>
+</body>
+
+</html>

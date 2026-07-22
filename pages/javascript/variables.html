@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Variables | AIPath</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+
+</head>
+
+<body>
+
+    <div class="lesson-page">
+    
+        <a href="../../learn.html" class="btn btn-secondary">
+            ← Back to Dashboard
+        </a>
+    
+        <h1>📦 JavaScript Variables & Data Types</h1>
+    
+        <p class="lesson-intro">
+            Variables are used to store data in JavaScript.
+            Data Types define what kind of value a variable can hold.
+        </p>
+    
+        <div class="progress-section">
+    
+            <p>Lesson 2 of 8</p>
+    
+            <div class="progress-bar">
+    
+                <div class="progress-fill" style="width:25%;"></div>
+    
+            </div>
+    
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📦 What is a Variable?</h2>
+        
+            <p>
+        
+                A variable is a container that stores data.
+                It allows you to save information and use it later in your program.
+        
+            </p>
+        
+            <div class="feature-card">
+        
+                <h3>💡 Real Life Example</h3>
+        
+                <p>
+        
+                    Think of a variable like a labeled box.
+        
+                    You can store different items inside it and use them whenever you need.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📝 Declaring Variables</h2>
+        
+            <p>
+        
+                JavaScript provides three ways to declare variables.
+        
+            </p>
+        
+            <ul>
+        
+                <li><strong>let</strong> → Modern and recommended.</li>
+        
+                <li><strong>const</strong> → Value cannot be changed.</li>
+        
+                <li><strong>var</strong> → Old method (avoid using in new projects).</li>
+        
+            </ul>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📚 JavaScript Data Types</h2>
+        
+            <div class="feature-grid">
+        
+                <div class="feature-card">
+                    🔤 String
+                </div>
+        
+                <div class="feature-card">
+                    🔢 Number
+                </div>
+        
+                <div class="feature-card">
+                    ✅ Boolean
+                </div>
+        
+                <div class="feature-card">
+                    📦 Object
+                </div>
+        
+                <div class="feature-card">
+                    📋 Array
+                </div>
+        
+                <div class="feature-card">
+                    ❌ Null
+                </div>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <div class="code-header">
+        
+                <h2>💻 Example</h2>
+        
+                <button class="copy-btn">
+                    📋 Copy
+                </button>
+        
+            </div>
+        
+            <pre><code id="html-code">
+        let studentName = "Pooja";
+        let cgpa = 7.4;
+        const college = "BIST";
+        let isPlaced = false;
+        
+        console.log(studentName);
+        console.log(cgpa);
+        console.log(college);
+        console.log(isPlaced);
+        </code></pre>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🖥 Output</h2>
+        
+            <div class="output-box">
+        
+                <pre>
+        Pooja
+        7.4
+        BIST
+        false
+        </pre>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📌 Variable Naming Rules</h2>
+        
+            <ul>
+        
+                <li>✅ Variable names can contain letters, numbers, _ and $.</li>
+        
+                <li>✅ Variable names cannot start with a number.</li>
+        
+                <li>✅ JavaScript is case-sensitive.</li>
+        
+                <li>✅ Use meaningful names like <strong>studentName</strong> instead of <strong>x</strong>.</li>
+        
+            </ul>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <div class="feature-card">
+        
+                <h2>🧠 Did You Know?</h2>
+        
+                <p>
+        
+                    JavaScript was created by Brendan Eich in just 10 days in 1995.
+                    Today, it powers more than 98% of websites on the internet.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>💡 Key Points</h2>
+        
+            <ul>
+        
+                <li>Variables store data.</li>
+        
+                <li><strong>let</strong> is the recommended way to declare variables.</li>
+        
+                <li><strong>const</strong> is used for values that should not change.</li>
+        
+                <li><strong>var</strong> is an older way to declare variables.</li>
+        
+                <li>Always use meaningful variable names.</li>
+        
+            </ul>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📝 Practice</h2>
+        
+            <p>Create variables to store the following information:</p>
+        
+            <ul>
+        
+                <li>Your Name</li>
+        
+                <li>Your Age</li>
+        
+                <li>Your College Name</li>
+        
+                <li>Your CGPA</li>
+        
+            </ul>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🧠 Quick Quiz</h2>
+        
+            <p><strong>Q1.</strong> Which keyword is recommended for declaring variables in modern JavaScript?</p>
+        
+            <div class="quiz-options">
+        
+                <button class="quiz-btn">var</button>
+        
+                <button class="quiz-btn" data-correct="true">let</button>
+        
+                <button class="quiz-btn">int</button>
+        
+                <button class="quiz-btn">float</button>
+        
+            </div>
+        
+            <p id="quiz-result"></p>
+        
+        </div>
+        <button class="btn btn-primary" id="complete-btn">
+            ✔ Mark as Completed
+        </button>
+        <div class="lesson-navigation">
+        
+            <a href="introduction.html" class="btn btn-secondary">
+                ← Previous Lesson
+            </a>
+        
+            <a href="operators.html" class="btn btn-primary">
+                Next Lesson →
+            </a>
+        
+        </div>
+    
+    </div>
+<script>
+    // Copy Button
+
+        const copyBtn = document.querySelector(".copy-btn");
+
+        copyBtn.addEventListener("click", () => {
+
+            const code = document.getElementById("html-code").innerText;
+
+            navigator.clipboard.writeText(code);
+
+            copyBtn.innerText = "✅ Copied!";
+
+            setTimeout(() => {
+
+                copyBtn.innerText = "📋 Copy";
+
+            }, 2000);
+
+        });
+
+        // Quiz
+
+        const quizButtons = document.querySelectorAll(".quiz-btn");
+        const result = document.getElementById("quiz-result");
+
+        quizButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                if (button.dataset.correct) {
+
+                    result.innerHTML = "✅ Correct Answer!";
+                    result.style.color = "#22c55e";
+
+                } else {
+
+                    result.innerHTML = "❌ Wrong Answer!";
+                    result.style.color = "#ef4444";
+
+                }
+
+            });
+
+        });
+
+        // Mark as Completed
+
+        const completeBtn = document.getElementById("complete-btn");
+
+        if (localStorage.getItem("jsVariablesCompleted") === "true") {
+
+            completeBtn.innerText = "✅ Completed";
+            completeBtn.disabled = true;
+
+        }
+
+        completeBtn.addEventListener("click", () => {
+
+            localStorage.setItem("jsVariablesCompleted", "true");
+
+            completeBtn.innerText = "✅ Completed";
+            completeBtn.disabled = true;
+
+            alert("Lesson Completed Successfully!");
+
+        });
+</script>
+</body>
+
+</html>

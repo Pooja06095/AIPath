@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Git Basics | AIPath</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+
+</head>
+
+<body>
+    <div class="lesson-page">
+    
+        <a href="../../learn.html" class="btn btn-secondary">
+            ← Back
+        </a>
+    
+        <h1>📂 Git Basics</h1>
+    
+        <p class="lesson-intro">
+    
+            Learn the basic Git commands used in every software project.
+    
+        </p>
+    
+        <div class="progress-section">
+    
+            <p>Lesson 3 of 8</p>
+    
+            <div class="progress-bar">
+    
+                <div class="progress-fill" style="width:37.5%;"></div>
+    
+            </div>
+    
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📌 What is a Git Repository?</h2>
+        
+            <p>
+        
+                A Git Repository (Repo) is a folder where Git stores all the files,
+                their history, and every change made to the project.
+        
+            </p>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>💻 Initialize a Repository</h2>
+        
+            <div class="feature-card">
+        
+                <p>
+        
+                    To start tracking a project with Git, open the project folder in
+                    Command Prompt or Git Bash and run:
+        
+                </p>
+        
+                <code>git init</code>
+        
+                <p>
+        
+                    This creates a hidden <strong>.git</strong> folder that stores all version history.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📸 Command Preview</h2>
+        
+            <div class="feature-card">
+        
+                <img src="../../images/github/git-init.png" class="lesson-image" alt="Git Init">
+        
+                <p>
+        
+                    After running <strong>git init</strong>, Git initializes the repository
+                    and starts tracking changes.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📄 Check Repository Status</h2>
+        
+            <div class="feature-card">
+        
+                <p>
+        
+                    Use this command to check the current status of your repository.
+        
+                </p>
+        
+                <code>git status</code>
+        
+                <p>
+        
+                    It shows modified files, new files, and files ready to commit.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📂 Add Files to Staging Area</h2>
+        
+            <div class="feature-card">
+        
+                <p>
+        
+                    Before saving changes, Git needs to know which files you want to include in the next commit.
+        
+                </p>
+        
+                <code>git add .</code>
+        
+                <p>
+        
+                    This command adds all modified and new files to the staging area.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📝 Save Changes with Commit</h2>
+        
+            <div class="feature-card">
+        
+                <p>
+        
+                    A commit saves a snapshot of your project. Always write a meaningful commit message.
+        
+                </p>
+        
+                <code>git commit -m "Initial Commit"</code>
+        
+                <p>
+        
+                    This command permanently records your staged changes in Git history.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🔄 Git Workflow</h2>
+        
+            <div class="feature-card">
+        
+                <img src="../../images/github/git-workflow.png" alt="Git Workflow" class="lesson-image">
+        
+                <p>
+        
+                    Basic Git workflow:
+        
+                </p>
+        
+                <code>
+                    Working Directory → git add → Staging Area → git commit → Repository
+                </code>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>⚠️ Common Mistakes</h2>
+        
+            <div class="feature-card">
+        
+                <ul>
+        
+                    <li>Forgetting to run <strong>git add</strong> before committing.</li>
+        
+                    <li>Writing unclear commit messages like "update".</li>
+        
+                    <li>Running Git commands outside the project folder.</li>
+        
+                    <li>Ignoring the output of <strong>git status</strong>.</li>
+        
+                </ul>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>💡 Pro Tip</h2>
+        
+            <div class="feature-card">
+        
+                <p>
+        
+                    Run <strong>git status</strong> before every commit.
+                    It helps you verify which files will be included.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🧠 Common Interview Question</h2>
+        
+            <div class="feature-card">
+        
+                <p>
+        
+                    <strong>Q.</strong> What is the difference between
+                    <strong>git add</strong> and <strong>git commit</strong>?
+        
+                </p>
+        
+                <p>
+        
+                    <strong>Answer:</strong>
+        
+                    <strong>git add</strong> moves files to the staging area,
+                    while <strong>git commit</strong> permanently saves those changes in Git history.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <div class="feature-card">
+        
+                <h2>💡 Did You Know?</h2>
+        
+                <p>
+        
+                    Developers working on large projects may create hundreds of commits every week to track changes efficiently.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📋 Key Points</h2>
+        
+            <ul>
+        
+                <li><strong>git init</strong> creates a new Git repository.</li>
+        
+                <li><strong>git status</strong> checks the repository status.</li>
+        
+                <li><strong>git add .</strong> stages all changes.</li>
+        
+                <li><strong>git commit</strong> saves changes permanently.</li>
+        
+            </ul>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📝 Practice</h2>
+        
+            <ol>
+        
+                <li>Create a new folder named <strong>GitPractice</strong>.</li>
+        
+                <li>Open it in Git Bash.</li>
+        
+                <li>Run <code>git init</code>.</li>
+        
+                <li>Create a file named <strong>notes.txt</strong>.</li>
+        
+                <li>Run <code>git status</code>.</li>
+        
+                <li>Run <code>git add .</code>.</li>
+        
+                <li>Run <code>git commit -m "First Commit"</code>.</li>
+        
+            </ol>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🧠 Quick Quiz</h2>
+        
+            <p>
+        
+                <strong>Q1.</strong> Which command stages all files?
+        
+            </p>
+        
+            <div class="quiz-options">
+        
+                <button class="quiz-btn">
+                    git status
+                </button>
+        
+                <button class="quiz-btn">
+                    git init
+                </button>
+        
+                <button class="quiz-btn" data-correct="true">
+                    git add .
+                </button>
+        
+                <button class="quiz-btn">
+                    git clone
+                </button>
+        
+            </div>
+        
+            <p id="quiz-result"></p>
+        
+        </div>
+        <button class="btn btn-primary" id="complete-btn">
+            ✔ Mark as Completed
+        </button>
+        
+        <div class="lesson-navigation">
+        
+            <a href="installation.html" class="btn btn-secondary">
+        
+                ← Previous Lesson
+        
+            </a>
+        
+            <a href="github-repository.html" class="btn btn-primary">
+        
+                Next Lesson →
+        
+            </a>
+        
+        </div>
+        
+        </div>
+        <script>
+
+            // ===============================
+            // Quiz
+            // ===============================
+
+            const quizButtons = document.querySelectorAll(".quiz-btn");
+            const result = document.getElementById("quiz-result");
+
+            quizButtons.forEach(button => {
+
+                button.addEventListener("click", () => {
+
+                    if (button.dataset.correct) {
+
+                        result.innerHTML = "✅ Correct Answer!";
+                        result.style.color = "#22c55e";
+
+                    } else {
+
+                        result.innerHTML = "❌ Wrong Answer!";
+                        result.style.color = "#ef4444";
+
+                    }
+
+                });
+
+            });
+
+
+
+            // ===============================
+            // Mark as Completed
+            // ===============================
+
+            const completeBtn = document.getElementById("complete-btn");
+
+            if (completeBtn) {
+
+                if (localStorage.getItem("gitBasicsCompleted") === "true") {
+
+                    completeBtn.innerText = "✅ Completed";
+                    completeBtn.disabled = true;
+
+                }
+
+                completeBtn.addEventListener("click", () => {
+
+                    localStorage.setItem("gitBasicsCompleted", "true");
+
+                    completeBtn.innerText = "✅ Completed";
+                    completeBtn.disabled = true;
+
+                    alert("Lesson Completed Successfully!");
+
+                });
+
+            }
+
+        </script>
+        
+        </body>
+        
+        </html>

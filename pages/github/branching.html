@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Branching | AIPath</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+
+</head>
+
+<body>
+    <div class="lesson-page">
+    
+        <a href="../../learn.html" class="btn btn-secondary">
+    
+            ← Back
+    
+        </a>
+    
+        <h1>🌿 Git Branching</h1>
+    
+        <p class="lesson-intro">
+    
+            Learn how Git Branches help developers work on different
+            features independently without affecting the main project.
+    
+        </p>
+    
+        <div class="progress-section">
+    
+            <p>Lesson 5 of 8</p>
+    
+            <div class="progress-bar">
+    
+                <div class="progress-fill" style="width:62.5%;"></div>
+    
+            </div>
+    
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📌 What is a Branch?</h2>
+        
+            <p>
+        
+                A branch is an independent line of development in Git.
+        
+                It allows developers to work on new features or fix bugs
+                without changing the main project.
+        
+            </p>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>💡 Why Use Branches?</h2>
+        
+            <div class="feature-grid">
+        
+                <div class="feature-card">
+        
+                    🚀 Develop Features Safely
+        
+                </div>
+        
+                <div class="feature-card">
+        
+                    🐞 Fix Bugs Separately
+        
+                </div>
+        
+                <div class="feature-card">
+        
+                    👨‍💻 Team Collaboration
+        
+                </div>
+        
+                <div class="feature-card">
+        
+                    🔄 Merge Changes Easily
+        
+                </div>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🏢 Real World Example</h2>
+        
+            <div class="feature-card">
+        
+                <p>
+        
+                    Imagine you are developing an E-commerce website.
+        
+                </p>
+        
+                <ul>
+        
+                    <li>👨 Rahul is working on the Login page.</li>
+        
+                    <li>👩 Priya is working on the Payment page.</li>
+        
+                    <li>👨 Aman is fixing bugs.</li>
+        
+                </ul>
+        
+                <p>
+        
+                    If everyone works on the <strong>main</strong> branch,
+                    they may overwrite each other's work.
+        
+                </p>
+        
+                <p>
+        
+                    Therefore, each developer creates a separate branch
+                    and later merges it into the main branch.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🌳 Branch Diagram</h2>
+        
+            <div class="feature-card">
+        
+                <pre>
+                     main
+                      │
+              ────────┼────────
+                      │
+                login-feature
+                      │
+                      │
+                payment-feature
+                      │
+                      │
+                    Merge
+                      │
+                     main
+        </pre>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🌿 Create a Branch</h2>
+        
+            <div class="feature-card">
+        
+                <p>
+        
+                    Create a new branch using the following command:
+        
+                </p>
+        
+                <code>git branch feature-login</code>
+        
+                <p>
+        
+                    This creates a new branch named
+                    <strong>feature-login</strong>.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🔄 Switch Branch</h2>
+        
+            <div class="feature-card">
+        
+                <p>
+        
+                    Move to another branch using:
+        
+                </p>
+        
+                <code>git switch feature-login</code>
+        
+                <p>
+        
+                    Older Git versions also support:
+        
+                </p>
+        
+                <code>git checkout feature-login</code>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📋 View Branches</h2>
+        
+            <div class="feature-card">
+        
+                <p>
+        
+                    To see all available branches:
+        
+                </p>
+        
+                <code>git branch</code>
+        
+                <p>
+        
+                    The current branch is marked with
+                    <strong>*</strong>.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🔀 Merge Branches</h2>
+        
+            <div class="feature-card">
+        
+                <p>
+        
+                    After completing your work, merge the branch into the main branch.
+        
+                </p>
+        
+                <code>git merge feature-login</code>
+        
+                <p>
+        
+                    This combines the changes from
+                    <strong>feature-login</strong> into the current branch.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📸 Expected Output</h2>
+        
+            <div class="feature-card">
+        
+                <pre>
+        $ git branch
+        
+        * main
+          feature-login
+          payment-feature
+        </pre>
+        
+                <p>
+        
+                    The <strong>*</strong> symbol indicates the current active branch.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>⚠️ Common Mistakes</h2>
+        
+            <div class="feature-card">
+        
+                <ul>
+        
+                    <li>Working directly on the main branch.</li>
+        
+                    <li>Forgetting to switch branches.</li>
+        
+                    <li>Merging the wrong branch.</li>
+        
+                    <li>Deleting a branch before merging.</li>
+        
+                </ul>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>💡 Pro Tip</h2>
+        
+            <div class="feature-card">
+        
+                <p>
+        
+                    Create a separate branch for every new feature or bug fix.
+                    It keeps the main branch clean and stable.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🧠 Common Interview Question</h2>
+        
+            <div class="feature-card">
+        
+                <p>
+        
+                    <strong>Q.</strong> Why do developers use branches in Git?
+        
+                </p>
+        
+                <p>
+        
+                    <strong>Answer:</strong>
+        
+                    Branches allow developers to work on different features or bug fixes independently without affecting the
+                    main project.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <div class="feature-card">
+        
+                <h2>💡 Did You Know?</h2>
+        
+                <p>
+        
+                    Large software companies may have hundreds of active branches at the same time for different teams and
+                    features.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📋 Key Points</h2>
+        
+            <ul>
+        
+                <li><strong>git branch</strong> creates and lists branches.</li>
+        
+                <li><strong>git switch</strong> changes the current branch.</li>
+        
+                <li><strong>git checkout</strong> can also switch branches.</li>
+        
+                <li><strong>git merge</strong> combines branches.</li>
+        
+            </ul>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📝 Practice</h2>
+        
+            <ol>
+        
+                <li>Create a branch named <strong>feature-homepage</strong>.</li>
+        
+                <li>Switch to that branch.</li>
+        
+                <li>Create a new file.</li>
+        
+                <li>Commit the changes.</li>
+        
+                <li>Merge the branch into <strong>main</strong>.</li>
+        
+            </ol>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🧠 Quick Quiz</h2>
+        
+            <p>
+        
+                <strong>Q1.</strong> Which command creates a new branch?
+        
+            </p>
+        
+            <div class="quiz-options">
+        
+                <button class="quiz-btn">
+                    git merge
+                </button>
+        
+                <button class="quiz-btn" data-correct="true">
+                    git branch
+                </button>
+        
+                <button class="quiz-btn">
+                    git push
+                </button>
+        
+                <button class="quiz-btn">
+                    git clone
+                </button>
+        
+            </div>
+        
+            <p id="quiz-result"></p>
+        
+        </div>
+        <button class="btn btn-primary" id="complete-btn">
+            ✔ Mark as Completed
+        </button>
+        
+        <div class="lesson-navigation">
+        
+            <a href="github-respository.html" class="btn btn-secondary">
+        
+                ← Previous Lesson
+        
+            </a>
+        
+            <a href="clone-pull.html" class="btn btn-primary">
+        
+                Next Lesson →
+        
+            </a>
+        
+        </div>
+        
+        </div>
+        <script>
+
+            // ===============================
+            // Quiz
+            // ===============================
+
+            const quizButtons = document.querySelectorAll(".quiz-btn");
+            const result = document.getElementById("quiz-result");
+
+            quizButtons.forEach(button => {
+
+                button.addEventListener("click", () => {
+
+                    if (button.dataset.correct) {
+
+                        result.innerHTML = "✅ Correct Answer!";
+                        result.style.color = "#22c55e";
+
+                    } else {
+
+                        result.innerHTML = "❌ Wrong Answer!";
+                        result.style.color = "#ef4444";
+
+                    }
+
+                });
+
+            });
+
+
+
+            // ===============================
+            // Mark as Completed
+            // ===============================
+
+            const completeBtn = document.getElementById("complete-btn");
+
+            if (completeBtn) {
+
+                if (localStorage.getItem("gitBranchingCompleted") === "true") {
+
+                    completeBtn.innerText = "✅ Completed";
+                    completeBtn.disabled = true;
+
+                }
+
+                completeBtn.addEventListener("click", () => {
+
+                    localStorage.setItem("gitBranchingCompleted", "true");
+
+                    completeBtn.innerText = "✅ Completed";
+                    completeBtn.disabled = true;
+
+                    alert("Lesson Completed Successfully!");
+
+                });
+
+            }
+
+        </script>
+        
+        </body>
+        
+        </html>

@@ -5,11 +5,11 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python OOP | AIPath</title>
+    <title>Python Functions | AIPath</title>
 
-    <link rel="stylesheet" href="../css/variables.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components.css">
 
 </head>
 
@@ -17,33 +17,33 @@
 
     <div class="lesson-page">
     
-        <a href="../learn.html" class="btn btn-secondary">
+        <a href="../../learn.html" class="btn btn-secondary">
             ← Back to Dashboard
         </a>
     
-        <h1>🏛️ Object Oriented Programming</h1>
+        <h1>⚙️ Python Functions</h1>
     
         <div class="progress-section">
     
-            <p>Lesson Progress</p>
+            <p>Lesson 6 of 9</p>
     
             <div class="progress-bar">
-                <div class="progress-fill" style="width:75%;"></div>
+                <div class="progress-fill" style="width:62%;"></div>
             </div>
     
         </div>
-    
             <p class="lesson-intro">
-                Object Oriented Programming (OOP) helps organize code using classes and objects.
+                Functions help us organize reusable blocks of code in Python.
             </p>
+    
 
         <div class="lesson-section">
         
-            <h2>What is Object Oriented Programming?</h2>
+            <h2>What are Functions?</h2>
             
             <p>
-                Object Oriented Programming (OOP) is a programming approach that uses classes and objects to organize code
-                efficiently.
+                A function is a reusable block of code that performs a specific task. It helps make programs shorter, cleaner and
+                easier to maintain.
             </p>
         
         </div>
@@ -61,14 +61,10 @@
             </div>
         
             <pre><code id="python-code">
-        class Student:
+        def greet():
+        print("Welcome to AIPath")
         
-        def __init__(self, name):
-        self.name = name
-        
-        student = Student("Pooja")
-        
-        print(student.name)
+        greet()
             </code></pre>
         
         </div>
@@ -78,7 +74,7 @@
             <h2>Output</h2>
         
             <pre><code>
-        Pooja
+        Welcome to AIPath
             </code></pre>
         
         </div>
@@ -89,13 +85,13 @@
         
             <ul>
             
-                <li>OOP is based on classes and objects.</li>
+                <li>Functions avoid code repetition.</li>
             
-                <li>A class is a blueprint for creating objects.</li>
+                <li>Functions are created using the <strong>def</strong> keyword.</li>
             
-                <li>An object is an instance of a class.</li>
+                <li>A function can accept parameters.</li>
             
-                <li>OOP improves code reusability and organization.</li>
+                <li>A function can return values using <strong>return</strong>.</li>
             
             </ul>
         
@@ -106,15 +102,14 @@
             <h2>📝 Practice</h2>
         
             <p>
-                Create a class named <strong>Car</strong> and print its brand name.
+                Create a function named <strong>add()</strong> that prints the sum of two numbers.
             </p>
         
             <pre><code>
-        class Car:
+        def add():
+        print(10 + 20)
         
-            brand = "Toyota"
-        
-        print(Car.brand)
+        add()
             </code></pre>
         
         </div>
@@ -123,15 +118,15 @@
         
             <h2>🧠 Quick Quiz</h2>
         
-            <p><strong>Q1.</strong> Which keyword is used to create a class in Python?</p>
+            <p><strong>Q1.</strong> Which keyword is used to define a function in Python?</p>
              
             <div class="quiz-options">
             
-                <button class="quiz-btn" data-correct="true">class</button>
+                <button class="quiz-btn" data-correct="true">def</button>
             
-                <button class="quiz-btn">def</button>
+                <button class="quiz-btn">function</button>
             
-                <button class="quiz-btn">object</button>
+                <button class="quiz-btn">class</button>
             
                 <button class="quiz-btn">create</button>
             
@@ -147,11 +142,11 @@
         
         <div class="lesson-navigation">
         
-            <a href="functions.html" class="btn btn-secondary">
+            <a href="loops.html" class="btn btn-secondary">
                 ← Previous Lesson
             </a>
         
-            <a href="filehandling.html" class="btn btn-primary">
+            <a href="oop.html" class="btn btn-primary">
                 Next Lesson →
             </a>
         
@@ -209,7 +204,7 @@
 
     const completeBtn = document.getElementById("complete-btn");
 
-    if (localStorage.getItem("oopCompleted") === "true") {
+    if (localStorage.getItem("functionsCompleted") === "true") {
 
         completeBtn.innerText = "✅ Completed";
         completeBtn.disabled = true;
@@ -218,7 +213,7 @@
 
     completeBtn.addEventListener("click", () => {
 
-        localStorage.setItem("oopCompleted", "true");
+        localStorage.setItem("functionsCompleted", "true");
 
         completeBtn.innerText = "✅ Completed";
         completeBtn.disabled = true;

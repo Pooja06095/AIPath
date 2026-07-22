@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Conditional Statements | AIPath</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+
+</head>
+
+<body>
+
+    <div class="lesson-page">
+    
+        <a href="../../learn.html" class="btn btn-secondary">
+            ← Back to Dashboard
+        </a>
+    
+        <h1>🔀 JavaScript Conditional Statements</h1>
+        
+        <p class="lesson-intro">
+        
+            Conditional statements help a program make decisions.
+            They execute different blocks of code based on whether a condition is true or false.
+        
+        </p>
+    
+        <div class="progress-section">
+        
+            <p>Lesson 4 of 8</p>
+        
+            <div class="progress-bar">
+        
+                <div class="progress-fill" style="width:50%;"></div>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🤔 What are Conditional Statements?</h2>
+        
+            <p>
+        
+                Conditional statements allow JavaScript to make decisions.
+                Different code runs depending on whether a condition is true or false.
+        
+            </p>
+        
+            <div class="feature-card">
+        
+                <h3>💡 Real Life Example</h3>
+        
+                <p>
+        
+                    If it is raining 🌧️, carry an umbrella.
+                    Otherwise ☀️, enjoy your day.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🤔 What are Conditional Statements?</h2>
+        
+            <p>
+        
+                Conditional statements allow JavaScript to make decisions.
+                Different code runs depending on whether a condition is true or false.
+        
+            </p>
+        
+            <div class="feature-card">
+        
+                <h3>💡 Real Life Example</h3>
+        
+                <p>
+        
+                    If it is raining 🌧️, carry an umbrella.
+                    Otherwise ☀️, enjoy your day.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📚 Types of Conditional Statements</h2>
+        
+            <div class="feature-grid">
+        
+                <div class="feature-card">
+                    ✅ if
+                </div>
+        
+                <div class="feature-card">
+                    🔄 if...else
+                </div>
+        
+                <div class="feature-card">
+                    🌟 else if
+                </div>
+        
+                <div class="feature-card">
+                    ❓ switch
+                </div>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>✅ if Statement</h2>
+        
+            <p>
+        
+                The <strong>if</strong> statement executes a block of code only when the condition is true.
+        
+            </p>
+        
+            <div class="code-header">
+        
+                <h2>💻 Example</h2>
+        
+                <button class="copy-btn">
+                    📋 Copy
+                </button>
+        
+            </div>
+        
+            <pre><code id="html-code">
+        let age = 20;
+        
+        if(age >= 18){
+        
+            console.log("You can vote.");
+        
+        }
+        </code></pre>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🖥 Output</h2>
+        
+            <div class="output-box">
+        
+                <pre>
+        You can vote.
+        </pre>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🔄 if...else Statement</h2>
+        
+            <p>
+        
+                If the condition is true, the first block executes.
+                Otherwise, the <strong>else</strong> block runs.
+        
+            </p>
+        
+            <pre><code>
+        let marks = 35;
+        
+        if(marks >= 33){
+        
+            console.log("Pass");
+        
+        }else{
+        
+            console.log("Fail");
+        
+        }
+        </code></pre>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🌟 else if Statement</h2>
+        
+            <pre><code>
+        let marks = 82;
+        
+        if(marks >= 90){
+        
+            console.log("Grade A");
+        
+        }
+        else if(marks >= 75){
+        
+            console.log("Grade B");
+        
+        }
+        else{
+        
+            console.log("Grade C");
+        
+        }
+        </code></pre>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>❓ switch Statement</h2>
+        
+            <pre><code>
+        let day = 2;
+        
+        switch(day){
+        
+            case 1:
+                console.log("Monday");
+                break;
+        
+            case 2:
+                console.log("Tuesday");
+                break;
+        
+            default:
+                console.log("Invalid Day");
+        
+        }
+        </code></pre>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🎯 Common Interview Question</h2>
+        
+            <div class="feature-card">
+        
+                <p>
+        
+                    <strong>Q.</strong> What is the difference between <code>if...else</code> and <code>switch</code>?
+        
+                </p>
+        
+                <p>
+        
+                    <strong>Answer:</strong>
+        
+                    Use <strong>if...else</strong> for complex conditions and comparisons.
+                    Use <strong>switch</strong> when checking one variable against multiple fixed values.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <div class="feature-card">
+        
+                <h2>🧠 Did You Know?</h2>
+        
+                <p>
+        
+                    Large applications use conditional statements thousands of times
+                    to make decisions like login authentication, payment processing,
+                    and form validation.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>💡 Key Points</h2>
+        
+            <ul>
+        
+                <li><strong>if</strong> executes code when a condition is true.</li>
+        
+                <li><strong>if...else</strong> provides an alternative block.</li>
+        
+                <li><strong>else if</strong> checks multiple conditions.</li>
+        
+                <li><strong>switch</strong> is useful for multiple fixed choices.</li>
+        
+                <li>Choose the statement that makes your code simple and readable.</li>
+        
+            </ul>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📝 Practice</h2>
+        
+            <p>Create a program that:</p>
+        
+            <ul>
+        
+                <li>Checks whether a student has passed or failed.</li>
+        
+                <li>Displays grades using <strong>else if</strong>.</li>
+        
+                <li>Uses <strong>switch</strong> to display the day of the week.</li>
+        
+            </ul>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🧠 Quick Quiz</h2>
+        
+            <p><strong>Q1.</strong> Which statement is best for checking multiple fixed values?</p>
+        
+            <div class="quiz-options">
+        
+                <button class="quiz-btn">if</button>
+        
+                <button class="quiz-btn">else</button>
+        
+                <button class="quiz-btn" data-correct="true">switch</button>
+        
+                <button class="quiz-btn">break</button>
+        
+            </div>
+        
+            <p id="quiz-result"></p>
+        
+        </div>
+        <button class="btn btn-primary" id="complete-btn">
+            ✔ Mark as Completed
+        </button>
+        <div class="lesson-navigation">
+        
+            <a href="operators.html" class="btn btn-secondary">
+                ← Previous Lesson
+            </a>
+        
+            <a href="loops.html" class="btn btn-primary">
+                Next Lesson →
+            </a>
+        
+        </div>
+    
+    </div>
+<script>
+    // Copy Button
+
+        const copyBtn = document.querySelector(".copy-btn");
+
+        copyBtn.addEventListener("click", () => {
+
+            const code = document.getElementById("html-code").innerText;
+
+            navigator.clipboard.writeText(code);
+
+            copyBtn.innerText = "✅ Copied!";
+
+            setTimeout(() => {
+
+                copyBtn.innerText = "📋 Copy";
+
+            }, 2000);
+
+        });
+
+        // Quiz
+
+        const quizButtons = document.querySelectorAll(".quiz-btn");
+        const result = document.getElementById("quiz-result");
+
+        quizButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                if (button.dataset.correct) {
+
+                    result.innerHTML = "✅ Correct Answer!";
+                    result.style.color = "#22c55e";
+
+                } else {
+
+                    result.innerHTML = "❌ Wrong Answer!";
+                    result.style.color = "#ef4444";
+
+                }
+
+            });
+
+        });
+
+        // Mark as Completed
+
+        const completeBtn = document.getElementById("complete-btn");
+
+            if (localStorage.getItem("jsConditionsCompleted") === "true") {
+
+                completeBtn.innerText = "✅ Completed";
+                completeBtn.disabled = true;
+
+            }
+
+            completeBtn.addEventListener("click", () => {
+
+                localStorage.setItem("jsConditionsCompleted", "true");
+
+                completeBtn.innerText = "✅ Completed";
+                completeBtn.disabled = true;
+
+                alert("Lesson Completed Successfully!");
+
+            });
+</script>
+</body>
+
+</html>

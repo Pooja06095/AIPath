@@ -5,11 +5,11 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Projects | AIPath</title>
+    <title>Python OOP | AIPath</title>
 
-    <link rel="stylesheet" href="../css/variables.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components.css">
 
 </head>
 
@@ -17,33 +17,33 @@
 
     <div class="lesson-page">
     
-        <a href="../learn.html" class="btn btn-secondary">
+        <a href="../../learn.html" class="btn btn-secondary">
             ← Back to Dashboard
         </a>
     
-        <h1>🚀 Python Projects</h1>
+        <h1>🏛️ Object Oriented Programming</h1>
     
         <div class="progress-section">
     
-            <p>Lesson Progress</p>
+            <p>Lesson 7 of 9</p>
     
             <div class="progress-bar">
-                <div class="progress-fill" style="width:100%;"></div>
+                <div class="progress-fill" style="width:75%;"></div>
             </div>
     
         </div>
     
             <p class="lesson-intro">
-                Build real-world Python projects to strengthen your programming skills.
+                Object Oriented Programming (OOP) helps organize code using classes and objects.
             </p>
 
         <div class="lesson-section">
         
-            <h2>Why Build Projects?</h2>
+            <h2>What is Object Oriented Programming?</h2>
             
             <p>
-                Projects help you apply concepts learned in Python. They improve problem-solving skills, build confidence, and
-                strengthen your portfolio for internships and placements.
+                Object Oriented Programming (OOP) is a programming approach that uses classes and objects to organize code
+                efficiently.
             </p>
         
         </div>
@@ -61,15 +61,14 @@
             </div>
         
             <pre><code id="python-code">
-        # Simple Calculator
+        class Student:
         
-        a = 10
-        b = 5
+        def __init__(self, name):
+        self.name = name
         
-        print("Addition:", a + b)
-        print("Subtraction:", a - b)
-        print("Multiplication:", a * b)
-        print("Division:", a / b)
+        student = Student("Pooja")
+        
+        print(student.name)
             </code></pre>
         
         </div>
@@ -79,10 +78,7 @@
             <h2>Output</h2>
         
             <pre><code>
-        Addition: 15
-        Subtraction: 5
-        Multiplication: 50
-        Division: 2.0
+        Pooja
             </code></pre>
         
         </div>
@@ -93,13 +89,13 @@
         
             <ul>
             
-                <li>Projects improve practical knowledge.</li>
+                <li>OOP is based on classes and objects.</li>
             
-                <li>They help build a strong portfolio.</li>
+                <li>A class is a blueprint for creating objects.</li>
             
-                <li>Projects strengthen problem-solving skills.</li>
+                <li>An object is an instance of a class.</li>
             
-                <li>Practice is the key to becoming a Python developer.</li>
+                <li>OOP improves code reusability and organization.</li>
             
             </ul>
         
@@ -110,11 +106,15 @@
             <h2>📝 Practice</h2>
         
             <p>
-                Create a simple Python project like a Calculator or Number Guessing Game.
+                Create a class named <strong>Car</strong> and print its brand name.
             </p>
         
             <pre><code>
-        print("Start Building Your Python Project 🚀")
+        class Car:
+        
+            brand = "Toyota"
+        
+        print(Car.brand)
             </code></pre>
         
         </div>
@@ -123,17 +123,17 @@
         
             <h2>🧠 Quick Quiz</h2>
         
-            <p><strong>Q1.</strong> What is the best way to improve Python programming skills?</p>
+            <p><strong>Q1.</strong> Which keyword is used to create a class in Python?</p>
              
             <div class="quiz-options">
             
-                <button class="quiz-btn">Watching Videos</button>
+                <button class="quiz-btn" data-correct="true">class</button>
             
-                <button class="quiz-btn">Reading Only</button>
+                <button class="quiz-btn">def</button>
             
-                <button class="quiz-btn" data-correct="true">Building Projects</button>
+                <button class="quiz-btn">object</button>
             
-                <button class="quiz-btn">Memorizing Syntax</button>
+                <button class="quiz-btn">create</button>
             
             </div>
         
@@ -147,12 +147,12 @@
         
         <div class="lesson-navigation">
         
-            <a href="filehandling.html" class="btn btn-secondary">
+            <a href="functions.html" class="btn btn-secondary">
                 ← Previous Lesson
             </a>
         
-            <a href="../learn.html" class="btn btn-primary">
-                🎉 Finish Course
+            <a href="filehandling.html" class="btn btn-primary">
+                Next Lesson →
             </a>
         
         </div>
@@ -209,7 +209,7 @@
 
     const completeBtn = document.getElementById("complete-btn");
 
-    if (localStorage.getItem("pythonprojectsCompleted") === "true") {
+    if (localStorage.getItem("oopCompleted") === "true") {
 
         completeBtn.innerText = "✅ Completed";
         completeBtn.disabled = true;
@@ -218,7 +218,7 @@
 
     completeBtn.addEventListener("click", () => {
 
-        localStorage.setItem("pythonprojectsCompleted", "true");
+        localStorage.setItem("oopCompleted", "true");
 
         completeBtn.innerText = "✅ Completed";
         completeBtn.disabled = true;

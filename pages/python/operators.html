@@ -5,11 +5,11 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Loops | AIPath</title>
+    <title>Python Operators | AIPath</title>
 
-    <link rel="stylesheet" href="../css/variables.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components.css">
 
 </head>
 
@@ -17,34 +17,32 @@
 
     <div class="lesson-page">
     
-        <a href="../learn.html" class="btn btn-secondary">
+        <a href="../../learn.html" class="btn btn-secondary">
             ← Back to Dashboard
         </a>
     
-        <h1>🔁 Python Loops</h1>
+        <h1>➕ Python Operators</h1>
     
         <div class="progress-section">
     
-            <p>Lesson Progress</p>
+            <p>Lesson 3 of 9</p>
     
             <div class="progress-bar">
-                <div class="progress-fill" style="width:50%;"></div>
+                <div class="progress-fill" style="width:25%;"></div>
             </div>
     
         </div>
     
         <p class="lesson-intro">
-            <p class="lesson-intro">
-                Loops are used to execute a block of code repeatedly until a condition is met.
-            </p>
+            Operators are used to perform operations on variables and values.
         </p>
 
         <div class="lesson-section">
         
-            <h2>What are Loops?</h2>
-            
+            <h2>What are Operators?</h2>
+        
             <p>
-                Loops help us repeat the same block of code multiple times without writing it again and again.
+                Operators are symbols that perform operations on variables and values.
             </p>
         
         </div>
@@ -62,8 +60,13 @@
             </div>
         
             <pre><code id="python-code">
-        for i in range(1, 6):
-        print(i)
+        a = 10
+        b = 5
+        
+        print(a + b)
+        print(a - b)
+        print(a * b)
+        print(a / b)
             </code></pre>
         
         </div>
@@ -73,11 +76,10 @@
             <h2>Output</h2>
         
             <pre><code>
-        1
-        2
-        3
-        4
+        15
         5
+        50
+        2.0
             </code></pre>
         
         </div>
@@ -86,18 +88,17 @@
         
             <h2>💡 Key Points</h2>
         
-                <ul>
-                
-                    <li>Loops are used to repeat a block of code.</li>
-                
-                    <li>Python mainly provides <strong>for</strong> and <strong>while</strong> loops.</li>
-                
-                    <li><strong>range()</strong> is commonly used with for loops.</li>
-                
-                    <li>Proper indentation is required inside loops.</li>
-                
-                </ul>
+            <ul>
         
+                <li>Operators perform operations on data.</li>
+        
+                <li>Arithmetic operators include +, -, *, /.</li>
+        
+                <li>Python also supports comparison and logical operators.</li>
+        
+                <li>Operators are widely used in calculations and conditions.</li>
+        
+            </ul>
         
         </div>
         
@@ -105,13 +106,16 @@
         
             <h2>📝 Practice</h2>
         
-            <p>
-                Write a Python program to print numbers from 1 to 10 using a for loop.
-            </p>
+            <p>Create two variables x and y and print their addition, subtraction, multiplication and division.</p>
         
             <pre><code>
-        for i in range(1, 11):
-        print(i)
+        x = 20
+        y = 10
+        
+        print(x + y)
+        print(x - y)
+        print(x * y)
+        print(x / y)
             </code></pre>
         
         </div>
@@ -120,18 +124,18 @@
         
             <h2>🧠 Quick Quiz</h2>
         
-            <p><strong>Q1.</strong> Which loop is mainly used to iterate over a sequence in Python?</p>
+            <p><strong>Q1.</strong> Which operator is used for multiplication?</p>
         
             <div class="quiz-options">
-            
-                <button class="quiz-btn" data-correct="true">for</button>
-            
-                <button class="quiz-btn">switch</button>
-            
-                <button class="quiz-btn">case</button>
-            
-                <button class="quiz-btn">goto</button>
-            
+        
+                <button class="quiz-btn">+</button>
+        
+                <button class="quiz-btn">-</button>
+        
+                <button class="quiz-btn" data-correct="true">*</button>
+        
+                <button class="quiz-btn">/</button>
+        
             </div>
         
             <p id="quiz-result"></p>
@@ -144,11 +148,11 @@
         
         <div class="lesson-navigation">
         
-            <a href="conditions.html" class="btn btn-secondary">
+            <a href="variables.html" class="btn btn-secondary">
                 ← Previous Lesson
             </a>
         
-            <a href="functions.html" class="btn btn-primary">
+            <a href="conditions.html" class="btn btn-primary">
                 Next Lesson →
             </a>
         
@@ -206,7 +210,7 @@
 
     const completeBtn = document.getElementById("complete-btn");
 
-    if (localStorage.getItem("loopsCompleted") === "true") {
+    if (localStorage.getItem("operatorsCompleted") === "true") {
 
         completeBtn.innerText = "✅ Completed";
         completeBtn.disabled = true;
@@ -215,7 +219,7 @@
 
     completeBtn.addEventListener("click", () => {
 
-        localStorage.setItem("loopsCompleted", "true");
+        localStorage.setItem("operatorsCompleted", "true");
 
         completeBtn.innerText = "✅ Completed";
         completeBtn.disabled = true;

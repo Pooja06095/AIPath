@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Mini Projects | AIPath</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+
+</head>
+
+<body>
+
+    <div class="lesson-page">
+    
+        <a href="../../learn.html" class="btn btn-secondary">
+            ← Back to Dashboard
+        </a>
+    
+        <h1>🚀 JavaScript Mini Projects</h1>
+        
+        <p class="lesson-intro">
+        
+            Now it's time to apply everything you've learned by building
+            real JavaScript projects.
+        
+        </p>
+    
+        <div class="progress-section">
+        
+            <p>Lesson 8 of 8</p>
+        
+            <div class="progress-bar">
+        
+                <div class="progress-fill" style="width:100%;"></div>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🎯 Why Mini Projects?</h2>
+        
+            <p>
+        
+                Projects help you combine HTML, CSS and JavaScript
+                to solve real-world problems.
+        
+            </p>
+        
+            <div class="feature-card">
+        
+                <h3>💡 Real Life</h3>
+        
+                <p>
+        
+                    Professional developers improve their skills by
+                    building projects—not just reading theory.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📂 Projects</h2>
+        
+            <div class="feature-grid">
+        
+                <div class="feature-card">
+        
+                    <h3>🧮 Calculator</h3>
+        
+                    <p>
+        
+                        Perform basic arithmetic operations.
+        
+                    </p>
+        
+                    <a href="projects/calculator.html" class="btn btn-primary">
+        
+                        Open Project
+        
+                    </a>
+        
+                </div>
+        
+                <div class="feature-card">
+        
+                    <h3>🎨 Color Changer</h3>
+        
+                    <p>
+        
+                        Change webpage colors dynamically.
+        
+                    </p>
+        
+                    <a href="projects/color-changer.html" class="btn btn-primary">
+        
+                        Open Project
+        
+                    </a>
+        
+                </div>
+        
+                <div class="feature-card">
+        
+                    <h3>⏰ Digital Clock</h3>
+        
+                    <p>
+        
+                        Display live current time using JavaScript.
+        
+                    </p>
+        
+                    <a href="projects/digital-clock.html" class="btn btn-primary">
+        
+                        Open Project
+        
+                    </a>
+        
+                </div>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <div class="feature-card">
+        
+                <h2>🎉 Congratulations!</h2>
+        
+                <p>
+        
+                    You have successfully completed the JavaScript course.
+        
+                    Now it's time to apply your knowledge by building real-world projects.
+        
+                    Complete all three projects to strengthen your JavaScript skills.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <button class="btn btn-primary" id="complete-btn">
+            ✔ Mark as Completed
+        </button>
+        <div class="lesson-navigation">
+        
+            <a href="dom.html" class="btn btn-secondary">
+        
+                ← Previous Lesson
+        
+            </a>
+        
+            <a href="mini-project.html" class="btn btn-primary">
+        
+                Start Projects →
+        
+            </a>
+        
+        </div>
+<script>
+
+        // Mark as Completed
+
+        if (localStorage.getItem("jsMiniProjectsCompleted") === "true") {
+
+                completeBtn.innerText = "✅ Completed";
+
+                completeBtn.disabled = true;
+
+            }
+
+            completeBtn.addEventListener("click", () => {
+
+                localStorage.setItem("jsMiniProjectsCompleted", "true");
+
+                completeBtn.innerText = "✅ Completed";
+
+                completeBtn.disabled = true;
+
+                alert("Lesson Completed Successfully!");
+
+            });
+            
+</script>
+</body>
+
+</html>

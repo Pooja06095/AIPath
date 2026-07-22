@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript DOM Manipulation | AIPath</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+
+</head>
+
+<body>
+
+    <div class="lesson-page">
+    
+        <a href="../../learn.html" class="btn btn-secondary">
+            ← Back to Dashboard
+        </a>
+    
+        <h1>🎨 JavaScript DOM Manipulation</h1>
+        
+        <p class="lesson-intro">
+        
+            The DOM (Document Object Model) allows JavaScript to access,
+            modify and interact with HTML elements dynamically.
+        
+        </p>
+    
+        <div class="progress-section">
+        
+            <p>Lesson 7 of 8</p>
+        
+            <div class="progress-bar">
+        
+                <div class="progress-fill" style="width:87.5%;"></div>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🌐 What is DOM?</h2>
+        
+            <p>
+        
+                DOM stands for <strong>Document Object Model</strong>.
+        
+                It represents the structure of an HTML page as objects,
+                allowing JavaScript to access and modify elements.
+        
+            </p>
+        
+            <div class="feature-card">
+        
+                <h3>💡 Real Life Example</h3>
+        
+                <p>
+        
+                    Imagine your webpage is a house 🏠.
+        
+                    HTML creates the house,
+                    CSS decorates it,
+                    and JavaScript controls everything inside,
+                    like turning lights on/off or opening doors.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🎯 Selecting Elements</h2>
+        
+            <p>
+        
+                JavaScript can select HTML elements in different ways.
+        
+            </p>
+        
+            <div class="feature-grid">
+        
+                <div class="feature-card">
+                    🆔 getElementById()
+                </div>
+        
+                <div class="feature-card">
+                    🔍 querySelector()
+                </div>
+        
+                <div class="feature-card">
+                    📋 querySelectorAll()
+                </div>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🆔 getElementById()</h2>
+        
+            <p>
+        
+                <strong>getElementById()</strong> is used to select an HTML element using its unique id.
+        
+            </p>
+        
+            <div class="code-header">
+        
+                <h2>💻 Example</h2>
+        
+                <button class="copy-btn">
+        
+                    📋 Copy
+        
+                </button>
+        
+            </div>
+        
+            <pre><code id="html-code">
+        <h3 id="demo">Hello Student!</h3>
+        
+        <button onclick="changeText()">
+        Change Text
+        </button>
+        
+        <script>
+
+            function changeText() {
+
+                document.getElementById("demo").innerHTML =
+                    "Welcome to AIPath!";
+
+            }
+
+        </script>
+        </code></pre>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🚀 Live Demo</h2>
+        
+            <div class="feature-card">
+        
+                <h3 id="demo-text">
+        
+                    Hello Student!
+        
+                </h3>
+        
+                <button class="btn btn-primary" onclick="changeText()">
+        
+                    Change Text
+        
+                </button>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🔍 querySelector()</h2>
+        
+            <p>
+        
+                <strong>querySelector()</strong> selects the first HTML element
+                that matches a CSS selector.
+        
+            </p>
+        
+            <div class="code-header">
+        
+                <h2>💻 Example</h2>
+        
+                <button class="copy-btn">
+                    📋 Copy
+                </button>
+        
+            </div>
+        
+            <pre><code>
+        <p class="message">Learning JavaScript</p>
+        
+        <script>
+
+            const text = document.querySelector(".message");
+
+            console.log(text.innerHTML);
+
+        </script>
+        </code></pre>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🎨 Change Color</h2>
+        
+            <div class="feature-card">
+        
+                <h3 id="color-text">
+        
+                    AIPath is Awesome!
+        
+                </h3>
+        
+                <button class="btn btn-primary" onclick="changeColor()">
+        
+                    Change Color
+        
+                </button>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🖱 Click Event</h2>
+        
+            <p>
+        
+                Events allow JavaScript to respond to user actions
+                like clicks, typing and mouse movement.
+        
+            </p>
+        
+            <pre><code>
+        <button onclick="showMessage()">
+        
+        Click Me
+        
+        </button>
+        
+        <script>
+
+            function showMessage() {
+
+                alert("Welcome to AIPath!");
+
+            }
+
+        </script>
+        </code></pre>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🚀 Try It Yourself</h2>
+        
+            <div class="feature-card">
+        
+                <button class="btn btn-primary" onclick="showMessage()">
+        
+                    Click Me
+        
+                </button>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🎬 DOM Flow</h2>
+        
+            <div class="feature-card">
+        
+                <pre>
+        HTML Element
+        
+              ↓
+        
+        JavaScript Selects Element
+        
+              ↓
+        
+        DOM Manipulation
+        
+              ↓
+        
+        Updated Webpage
+        </pre>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🎯 Common Interview Question</h2>
+        
+            <div class="feature-card">
+        
+                <p>
+        
+                    <strong>Q.</strong> What is the DOM?
+        
+                </p>
+        
+                <p>
+        
+                    <strong>Answer:</strong>
+        
+                    DOM (Document Object Model) represents an HTML page as a tree of objects,
+                    allowing JavaScript to access and modify webpage elements dynamically.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <div class="feature-card">
+        
+                <h2>🧠 Did You Know?</h2>
+        
+                <p>
+        
+                    Every interactive website like YouTube, Facebook, Instagram,
+                    Amazon and Netflix uses DOM Manipulation to update content
+                    without reloading the page.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>💡 Key Points</h2>
+        
+            <ul>
+        
+                <li>DOM stands for Document Object Model.</li>
+        
+                <li>JavaScript can access HTML elements using the DOM.</li>
+        
+                <li><strong>getElementById()</strong> selects elements using an id.</li>
+        
+                <li><strong>querySelector()</strong> selects elements using CSS selectors.</li>
+        
+                <li>DOM makes webpages interactive.</li>
+        
+            </ul>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📝 Practice</h2>
+        
+            <p>Create a webpage where:</p>
+        
+            <ul>
+        
+                <li>A button changes the heading text.</li>
+        
+                <li>A button changes the text color.</li>
+        
+                <li>A button displays a welcome message.</li>
+        
+            </ul>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🧠 Quick Quiz</h2>
+        
+            <p>
+        
+                <strong>Q1.</strong>
+        
+                Which method selects an element by its id?
+        
+            </p>
+        
+            <div class="quiz-options">
+        
+                <button class="quiz-btn">
+        
+                    querySelector()
+        
+                </button>
+        
+                <button class="quiz-btn" data-correct="true">
+        
+                    getElementById()
+        
+                </button>
+        
+                <button class="quiz-btn">
+        
+                    innerHTML
+        
+                </button>
+        
+                <button class="quiz-btn">
+        
+                    addEventListener()
+        
+                </button>
+        
+            </div>
+        
+            <p id="quiz-result"></p>
+        
+        </div>
+        
+        
+        <button class="btn btn-primary" id="complete-btn">
+            ✔ Mark as Completed
+        </button>
+        <div class="lesson-navigation">
+        
+            <a href="functions.html" class="btn btn-secondary">
+        
+                ← Previous Lesson
+        
+            </a>
+        
+            <a href="mini-project.html" class="btn btn-primary">
+        
+                Final Lesson →
+        
+            </a>
+        
+        </div>
+<script>
+    // Copy Button
+
+        const copyBtn = document.querySelector(".copy-btn");
+
+        copyBtn.addEventListener("click", () => {
+
+            const code = document.getElementById("html-code").innerText;
+
+            navigator.clipboard.writeText(code);
+
+            copyBtn.innerText = "✅ Copied!";
+
+            setTimeout(() => {
+
+                copyBtn.innerText = "📋 Copy";
+
+            }, 2000);
+
+        });
+
+        // Quiz
+
+        const quizButtons = document.querySelectorAll(".quiz-btn");
+        const result = document.getElementById("quiz-result");
+        const completeBtn = document.getElementById("complete-btn");
+
+        quizButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                if (button.dataset.correct) {
+
+                    result.innerHTML = "✅ Correct Answer!";
+                    result.style.color = "#22c55e";
+
+                } else {
+
+                    result.innerHTML = "❌ Wrong Answer!";
+                    result.style.color = "#ef4444";
+
+                }
+
+            });
+
+        });
+
+        // Mark as Completed
+
+        if (localStorage.getItem("jsDOMCompleted") === "true") {
+
+                completeBtn.innerText = "✅ Completed";
+
+                completeBtn.disabled = true;
+
+            }
+
+            completeBtn.addEventListener("click", () => {
+
+                localStorage.setItem("jsDOMCompleted", "true");
+
+                completeBtn.innerText = "✅ Completed";
+
+                completeBtn.disabled = true;
+
+                alert("Lesson Completed Successfully!");
+
+            });
+            function changeText() {
+
+                    const text = document.getElementById("demo-text");
+
+                    text.innerHTML = "🎉 Welcome to AIPath!";
+
+                    text.style.color = "#2563eb";
+
+                }
+            function changeColor() {
+
+                    const text = document.getElementById("color-text");
+
+                    text.style.color = "#2563eb";
+
+                }
+            function showMessage() {
+
+                    alert("🎉 Welcome to AIPath!");
+
+                }
+</script>
+</body>
+
+</html>

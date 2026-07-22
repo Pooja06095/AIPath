@@ -28,26 +28,7 @@ menuItems.forEach(item => {
 
 const courses = {
 
-    python: {
-
-        title: "🐍 Python Programming",
-
-        description: "Master Python from beginner to advanced.",
-
-        lessons: [
-
-            "Variables & Data Types",
-            "Operators",
-            "Conditional Statements",
-            "Loops",
-            "Functions",
-            "Object Oriented Programming",
-            "File Handling",
-            "Projects"
-
-        ]
-
-    },
+    
 
     html: {
 
@@ -88,18 +69,76 @@ const courses = {
 
     javascript: {
 
-        title: "💻 JavaScript",
+        title: "JavaScript Mastery",
 
-        description: "Learn JavaScript to make websites interactive.",
+        description: "Learn JavaScript from Beginner to Advanced with Practical Examples.",
 
         lessons: [
 
-            "Variables",
+            "Introduction to JavaScript",
+
+            "Variables & Data Types",
+
+            "Operators",
+
+            "Conditional Statements",
+
+            "Loops",
+
             "Functions",
-            "DOM",
-            "Events",
-            "ES6",
+
+            "DOM Manipulation",
+
             "Mini Projects"
+
+        ]
+
+    },
+
+    github: {
+
+        title: "🐙 Git & GitHub",
+
+        description: "Learn Git & GitHub from Beginner to Advanced with Practical Examples.",
+
+        lessons: [
+
+            "Introduction to Git",
+
+            "Installing Git",
+
+            "Git Basics",
+
+            "GitHub Repository",
+
+            "Branching",
+
+            "Clone & Pull",
+
+            "Collaboration",
+
+            "Mini Project"
+
+        ]
+
+    },
+
+    python: {
+
+        title: "🐍 Python Programming",
+
+        description: "Master Python from beginner to advanced.",
+
+        lessons: [
+            "Introduction to Python",
+            "Variables & Data Types",
+            "Operators",
+            "Conditional Statements",
+            "Loops",
+            "Functions",
+            "Object Oriented Programming",
+            "File Handling",
+            "Projects"
 
         ]
 
@@ -210,7 +249,7 @@ function updateCompletedCount(courseName) {
     let completed = 0;
 
     if (courseName === "python") {
-
+        if (localStorage.getItem("pythonIntroductionCompleted") === "true") completed++;
         if (localStorage.getItem("variablesCompleted") === "true") completed++;
         if (localStorage.getItem("operatorsCompleted") === "true") completed++;
         if (localStorage.getItem("conditionsCompleted") === "true") completed++;
@@ -243,6 +282,29 @@ function updateCompletedCount(courseName) {
         if (localStorage.getItem("cssProjectsCompleted") === "true") completed++;
     }
 
+    else if (courseName === "javascript") {
+        
+        if (localStorage.getItem("jsIntroCompleted") === "true") completed++;
+        if (localStorage.getItem("jsVariablesCompleted") === "true") completed++;
+        if (localStorage.getItem("jsOperatorsCompleted") === "true") completed++;
+        if (localStorage.getItem("jsConditionsCompleted") === "true") completed++;
+        if (localStorage.getItem("jsLoopsCompleted") === "true") completed++;
+        if (localStorage.getItem("jsFunctionsCompleted") === "true") completed++;
+        if (localStorage.getItem("jsDOMCompleted") === "true") completed++;
+    }
+
+    else if (courseName === "github") {
+
+        if (localStorage.getItem("gitIntroCompleted") === "true") completed++;
+        if (localStorage.getItem("gitInstallCompleted") === "true") completed++;
+        if (localStorage.getItem("gitBasicsCompleted") === "true") completed++;
+        if (localStorage.getItem("gitRepoCompleted") === "true") completed++;
+        if (localStorage.getItem("gitBranchCompleted") === "true") completed++;
+        if (localStorage.getItem("gitCloneCompleted") === "true") completed++;
+        if (localStorage.getItem("gitCollaborationCompleted") === "true") completed++;
+        if (localStorage.getItem("gitProjectCompleted") === "true") completed++;
+
+    }
     document.getElementById("completed-count").innerText = completed;
 
 }
@@ -294,31 +356,35 @@ function loadCourse(courseName) {
         btn.addEventListener("click", () => {
 
             const lesson = btn.dataset.lesson;
+            if (lesson === "Introduction to Python") {
 
-            if (lesson === "Variables & Data Types") {
+                window.location.href = "pages/python/introduction.html";
 
-                window.location.href = "pages/variables.html";
+            }
+            else if (lesson === "Variables & Data Types") {
+
+                window.location.href = "pages/python/variables.html";
 
             }
             else if (lesson === "Operators") {
 
-                window.location.href = "pages/operators.html";
+                window.location.href = "pages/python/operators.html";
 
             }
             else if (lesson === "Conditional Statements") {
-                window.location.href = "pages/conditions.html";
+                window.location.href = "pages/python/conditions.html";
             }
             else if (lesson === "Loops") {
-                window.location.href = "pages/loops.html";
+                window.location.href = "pages/python/loops.html";
             }
             else if (lesson === "Functions") {
-                window.location.href = "pages/functions.html";
+                window.location.href = "pages/python/functions.html";
             }
             else if (lesson === "Object Oriented Programming") {
-                window.location.href = "pages/oop.html";
+                window.location.href = "pages/python/oop.html";
             }
             else if (lesson === "File Handling") {
-                window.location.href = "pages/filehandling.html";
+                window.location.href = "pages/python/filehandling.html";
             }
             // HTML Course
             else if (lesson === "Introduction to HTML") {
@@ -361,6 +427,81 @@ function loadCourse(courseName) {
             else if (lesson === "CSS Projects") {
                 window.location.href = "pages/css/projects.html";
             }
+            // javascript
+            else if (lesson === "Introduction to JavaScript") {
+                window.location.href = "pages/javascript/introduction.html";
+            }
+            else if (lesson === "Variables & Data Types") {
+                window.location.href = "pages/javascript/variables.html";
+            }
+            else if (lesson === "Operators") {
+                window.location.href = "pages/javascript/operators.html";
+            }
+            else if (lesson === "Conditional Statements") {
+                window.location.href = "pages/javascript/conditions.html";
+            }
+            else if (lesson === "Loops") {
+                window.location.href = "pages/javascript/loops.html";
+            }
+            else if (lesson === "Functions") {
+                window.location.href = "pages/javascript/functions.html";
+            }
+            else if (lesson === "DOM Manipulation") {
+                window.location.href = "pages/javascript/dom.html";
+            }
+            else if (lesson === "Mini Projects") {
+                window.location.href = "pages/javascript/mini-project.html";
+            }
+
+            // Git & GitHub
+
+            else if (lesson === "Introduction to Git") {
+
+                window.location.href = "pages/github/introduction.html";
+
+            }
+
+            else if (lesson === "Installing Git") {
+
+                window.location.href = "pages/github/installation.html";
+
+            }
+
+            else if (lesson === "Git Basics") {
+
+                window.location.href = "pages/github/git-basics.html";
+
+            }
+
+            else if (lesson === "GitHub Repository") {
+
+                window.location.href = "pages/github/github-repository.html";
+
+            }
+
+            else if (lesson === "Branching") {
+
+                window.location.href = "pages/github/branching.html";
+
+            }
+
+            else if (lesson === "Clone & Pull") {
+
+                window.location.href = "pages/github/clone-pull.html";
+
+            }
+
+            else if (lesson === "Collaboration") {
+
+                window.location.href = "pages/github/collaboration.html";
+
+            }
+
+            else if (lesson === "Mini Project") {
+
+                window.location.href = "pages/github/mini-project.html";
+
+            }
 
             else {
 
@@ -382,7 +523,7 @@ function loadCourse(courseName) {
 // Default Course
 // ===============================
 
-loadCourse("python");
+loadCourse("html");
 
 // ===============================
 // Course Search

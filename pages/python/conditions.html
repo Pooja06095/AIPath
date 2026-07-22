@@ -5,11 +5,11 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Functions | AIPath</title>
+    <title>Python Conditional Statements | AIPath</title>
 
-    <link rel="stylesheet" href="../css/variables.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components.css">
 
 </head>
 
@@ -17,33 +17,32 @@
 
     <div class="lesson-page">
     
-        <a href="../learn.html" class="btn btn-secondary">
+        <a href="../../learn.html" class="btn btn-secondary">
             ← Back to Dashboard
         </a>
     
-        <h1>⚙️ Python Functions</h1>
+        <h1>🔀 Conditional Statements</h1>
     
         <div class="progress-section">
     
-            <p>Lesson Progress</p>
+            <p>Lesson 4 of 9</p>
     
             <div class="progress-bar">
-                <div class="progress-fill" style="width:62%;"></div>
+                <div class="progress-fill" style="width:37%;"></div>
             </div>
     
         </div>
-            <p class="lesson-intro">
-                Functions help us organize reusable blocks of code in Python.
-            </p>
     
+        <p class="lesson-intro">
+            Conditional statements help us make decisions in Python.
+        </p>
 
         <div class="lesson-section">
         
-            <h2>What are Functions?</h2>
+            <h2>What are Conditional Statements?</h2>
             
             <p>
-                A function is a reusable block of code that performs a specific task. It helps make programs shorter, cleaner and
-                easier to maintain.
+                Conditional statements allow a program to make decisions based on different conditions.
             </p>
         
         </div>
@@ -61,10 +60,12 @@
             </div>
         
             <pre><code id="python-code">
-        def greet():
-        print("Welcome to AIPath")
+        age = 18
         
-        greet()
+        if age >= 18:
+            print("Eligible to Vote")
+        else:
+        print("Not Eligible")
             </code></pre>
         
         </div>
@@ -74,7 +75,7 @@
             <h2>Output</h2>
         
             <pre><code>
-        Welcome to AIPath
+        Eligible to Vote
             </code></pre>
         
         </div>
@@ -84,15 +85,19 @@
             <h2>💡 Key Points</h2>
         
             <ul>
-            
-                <li>Functions avoid code repetition.</li>
-            
-                <li>Functions are created using the <strong>def</strong> keyword.</li>
-            
-                <li>A function can accept parameters.</li>
-            
-                <li>A function can return values using <strong>return</strong>.</li>
-            
+        
+                <ul>
+                
+                    <li>Use <strong>if</strong> to check a condition.</li>
+                
+                    <li>Use <strong>else</strong> when the condition is false.</li>
+                
+                    <li>Use <strong>elif</strong> to check multiple conditions.</li>
+                
+                    <li>Indentation is mandatory in Python.</li>
+                
+                </ul>
+        
             </ul>
         
         </div>
@@ -102,14 +107,16 @@
             <h2>📝 Practice</h2>
         
             <p>
-                Create a function named <strong>add()</strong> that prints the sum of two numbers.
+                Write a Python program to check whether a student is Pass or Fail.
             </p>
         
             <pre><code>
-        def add():
-        print(10 + 20)
+        marks = 75
         
-        add()
+        if marks >= 40:
+        print("Pass")
+        else:
+        print("Fail")
             </code></pre>
         
         </div>
@@ -118,17 +125,17 @@
         
             <h2>🧠 Quick Quiz</h2>
         
-            <p><strong>Q1.</strong> Which keyword is used to define a function in Python?</p>
-             
+            <p><strong>Q1.</strong> Which keyword is used to check a condition in Python?</p>
+        
             <div class="quiz-options">
             
-                <button class="quiz-btn" data-correct="true">def</button>
+                <button class="quiz-btn" data-correct="true">if</button>
             
-                <button class="quiz-btn">function</button>
+                <button class="quiz-btn">for</button>
             
-                <button class="quiz-btn">class</button>
+                <button class="quiz-btn">while</button>
             
-                <button class="quiz-btn">create</button>
+                <button class="quiz-btn">print</button>
             
             </div>
         
@@ -142,11 +149,11 @@
         
         <div class="lesson-navigation">
         
-            <a href="loops.html" class="btn btn-secondary">
+            <a href="operators.html" class="btn btn-secondary">
                 ← Previous Lesson
             </a>
         
-            <a href="oop.html" class="btn btn-primary">
+            <a href="loops.html" class="btn btn-primary">
                 Next Lesson →
             </a>
         
@@ -204,7 +211,7 @@
 
     const completeBtn = document.getElementById("complete-btn");
 
-    if (localStorage.getItem("functionsCompleted") === "true") {
+    if (localStorage.getItem("conditionsCompleted") === "true") {
 
         completeBtn.innerText = "✅ Completed";
         completeBtn.disabled = true;
@@ -213,7 +220,7 @@
 
     completeBtn.addEventListener("click", () => {
 
-        localStorage.setItem("functionsCompleted", "true");
+        localStorage.setItem("conditionsCompleted", "true");
 
         completeBtn.innerText = "✅ Completed";
         completeBtn.disabled = true;

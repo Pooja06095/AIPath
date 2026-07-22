@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Digital Clock Project | AIPath</title>
+    
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/variables.css">
+
+</head>
+
+<body>
+
+    <div class="lesson-page">
+    
+        <a href="../mini-project.html" class="btn btn-secondary">
+    
+            ← Back to Projects
+    
+        </a>
+    
+        <h1>⏰ Digital Clock</h1>
+    
+        <p class="lesson-intro">
+    
+            Build a live digital clock using JavaScript.
+    
+        </p>
+        <div class="lesson-section">
+        
+            <h2>📌 Project Objective</h2>
+        
+            <p>
+        
+                In this project, you will build a live digital clock that displays
+                the current time using JavaScript.
+        
+            </p>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>✨ Features</h2>
+        
+            <div class="feature-grid">
+        
+                <div class="feature-card">
+                    🕒 Live Time
+                </div>
+        
+                <div class="feature-card">
+                    ⚡ Updates Every Second
+                </div>
+        
+                <div class="feature-card">
+                    📅 Current Date
+                </div>
+        
+                <div class="feature-card">
+                    💻 JavaScript Timer
+                </div>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🧠 Algorithm</h2>
+        
+            <ol>
+        
+                <li>Get the current date and time.</li>
+        
+                <li>Extract hours, minutes and seconds.</li>
+        
+                <li>Display the time on the webpage.</li>
+        
+                <li>Update the time every second using JavaScript.</li>
+        
+            </ol>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <div class="code-header">
+        
+                <h2>💻 Source Code</h2>
+        
+                <button class="copy-btn">
+        
+                    📋 Copy
+        
+                </button>
+        
+            </div>
+        
+            <pre><code id="html-code">
+        // Digital Clock JavaScript Code
+        // (We'll add the complete code later)
+        
+        </code></pre>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>⏰ Live Digital Clock</h2>
+        
+            <div class="feature-card">
+        
+                <h1 id="clock" style="color:#111827; font-size:60px;">
+                
+                    00:00:00
+                
+                </h1>
+        
+                <h3 id="date" style="color:#374151;">
+                
+                    Loading Date...
+                
+                </h3>
+        
+            </div>
+
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>💡 How It Works</h2>
+        
+            <div class="feature-card">
+        
+                <p>
+                    JavaScript creates a new <strong>Date()</strong> object every second.
+                </p>
+        
+                <p>
+                    It extracts the current hours, minutes and seconds.
+                </p>
+        
+                <p>
+                    The webpage updates automatically using
+                    <strong>setInterval()</strong>.
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🎯 Challenge</h2>
+        
+            <div class="feature-card">
+        
+                <p>
+                    Try modifying this project by:
+                </p>
+        
+                <ul>
+        
+                    <li>🌙 Showing AM / PM.</li>
+        
+                    <li>📅 Displaying full date and month.</li>
+        
+                    <li>🎨 Changing clock color every second.</li>
+        
+                </ul>
+        
+            </div>
+        
+        </div>
+        <button class="btn btn-primary" id="complete-btn">
+            ✔ Mark as Completed
+        </button>
+        <div class="lesson-navigation">
+        
+            <a href="color-changer.html" class="btn btn-secondary">
+        
+                ← Previous Project
+        
+            </a>
+        
+            <a href="../../../learn.html" class="btn btn-primary">
+        
+                🎉 Finish JavaScript Course
+        
+            </a>
+        
+        </div>
+
+    <script>
+
+        function updateClock() {
+
+            const now = new Date();
+
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+
+            hours = String(hours).padStart(2, "0");
+            minutes = String(minutes).padStart(2, "0");
+            seconds = String(seconds).padStart(2, "0");
+
+            document.getElementById("clock").innerHTML =
+                `${hours}:${minutes}:${seconds}`;
+
+            document.getElementById("date").innerHTML =
+                now.toDateString();
+
+        }
+
+        updateClock();
+
+        setInterval(updateClock, 1000);
+
+    </script>
+
+</body>
+
+</html>
