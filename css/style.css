@@ -300,61 +300,7 @@ button {
     margin-bottom: 25px;
 }
 
-/* ===========================
-   Features Section
-=========================== */
 
-.features {
-
-    padding: 100px 0;
-
-}
-
-.feature-grid {
-
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 30px;
-
-}
-
-.feature-card {
-
-    background: rgba(30, 41, 59, 0.8);
-
-    border: 1px solid rgba(255, 255, 255, 0.08);
-
-    border-radius: 18px;
-
-    padding: 35px;
-
-    transition: 0.3s;
-
-}
-
-.feature-card:hover {
-
-    transform: translateY(-10px);
-
-    box-shadow: 0 0 30px rgba(108, 99, 255, 0.2);
-
-}
-
-.feature-card h3 {
-
-    color: var(--primary-color);
-
-    margin-bottom: 15px;
-
-}
-
-.feature-card p {
-
-    color: var(--text-light);
-
-}
 
 /* ===========================
    Roadmap
@@ -667,83 +613,7 @@ button {
 
 }
 
-.lesson-card {
 
-    background: white;
-
-    color: black;
-
-    border-radius: 15px;
-
-    padding: 20px;
-
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .08);
-
-    transition: .3s;
-
-}
-
-.lesson-card:hover {
-
-    transform: translateY(-6px);
-
-}
-
-.lesson-card span {
-
-    color: #6366f1;
-
-    font-size: 14px;
-
-}
-
-.lesson-card h3 {
-
-    margin: 15px 0;
-    color: black;
-
-}
-
-.lesson-page {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 40px;
-}
-
-.lesson-page h1 {
-    margin: 20px 0;
-}
-
-.lesson-section {
-    background: #1f2937;
-    padding: 25px;
-    border-radius: 12px;
-    margin-top: 25px;
-}
-
-.lesson-section h2 {
-    margin-bottom: 15px;
-}
-
-.lesson-section pre {
-    background: #0f172a;
-    color: #00ff99;
-    padding: 20px;
-    border-radius: 10px;
-    overflow-x: auto;
-}
-
-.lesson-navigation {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    margin-top: 40px;
-
-    gap: 20px;
-
-}
 .progress-section {
     margin: 25px 0;
 }
@@ -803,4 +673,55 @@ button {
 
 .quiz-btn:hover {
     background: #4b5563;
+}
+.lesson-image {
+
+    width: 100%;
+
+    max-width: 700px;
+
+    display: block;
+
+    margin: 25px auto;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+
+}
+.comparison-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 20px;
+
+}
+
+.comparison-table th,
+.comparison-table td {
+
+    border: 1px solid rgba(255, 255, 255, .15);
+
+    padding: 15px;
+
+    text-align: left;
+
+}
+
+.comparison-table th {
+
+    background: var(--primary-color);
+
+    color: white;
+
+}
+
+.comparison-table tr:nth-child(even) {
+
+    background: rgba(255, 255, 255, .05);
+
 }

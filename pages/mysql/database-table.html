@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Database & Tables | AIPath</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+
+</head>
+
+<body>
+
+    <div class="lesson-page">
+
+        <a href="../../learn.html" class="btn btn-secondary">
+            ← Back to Dashboard
+        </a>
+
+        <header class="lesson-header">
+            <h1>🗄️ Database & Tables</h1>
+            
+            <p>
+            
+                Learn how MySQL stores information using databases, tables, rows, and columns.
+            
+            </p>
+        <p>Lesson 2 of 9</p>
+        
+        <div class="progress-bar">
+        
+            <div class="progress-fill" style="width:22%;"></div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🗂️ What is a Database?</h2>
+        
+            <p>
+        
+                A database is an organized collection of related data that can be stored, managed, and retrieved efficiently.
+        
+            </p>
+        
+            <p>
+        
+                It helps applications store information such as student records, customer details, products, and much more.
+        
+            </p>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📋 What is a Table?</h2>
+        
+            <p>
+        
+                A table is a collection of related data arranged in rows and columns.
+        
+            </p>
+        
+            <p>
+        
+                Each table stores a specific type of information. For example, a Student table stores student details, while a
+                Products table stores product information.
+        
+            </p>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📊 Rows & Columns</h2>
+        
+            <div class="feature-grid">
+        
+                <div class="feature-card">
+        
+                    📄 Row = One Record
+        
+                </div>
+        
+                <div class="feature-card">
+        
+                    📑 Column = One Field
+        
+                </div>
+        
+                <div class="feature-card">
+        
+                    👨 Student Name
+        
+                </div>
+        
+                <div class="feature-card">
+        
+                    🎂 Student Age
+        
+                </div>
+        
+            </div>
+        
+            <p>
+        
+                Each row represents one complete record, while each column represents one type of information about that record.
+        
+            </p>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🖼️ Database Table Example</h2>
+        
+            <img src="../../css/assets/images/mysql/database-table-diagram.png" alt="Database Table Diagram"
+                class="lesson-image">
+        
+            <p>
+        
+                The diagram above shows how data is stored inside a table.
+                Each row represents one record, while each column represents one field of information.
+        
+            </p>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>⚖️ Database vs Table</h2>
+        
+            <table class="comparison-table">
+        
+                <tr>
+        
+                    <th>Database</th>
+        
+                    <th>Table</th>
+        
+                </tr>
+        
+                <tr>
+        
+                    <td>Stores multiple tables.</td>
+        
+                    <td>Stores actual data.</td>
+        
+                </tr>
+        
+                <tr>
+        
+                    <td>Acts like a container.</td>
+        
+                    <td>Acts like a spreadsheet.</td>
+        
+                </tr>
+        
+                <tr>
+        
+                    <td>Example: CollegeDB</td>
+        
+                    <td>Example: Students Table</td>
+        
+                </tr>
+        
+            </table>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🌍 Real World Example</h2>
+        
+            <p>
+        
+                Imagine a school management system.
+        
+            </p>
+        
+            <p>
+        
+                The school has one database named <strong>SchoolDB</strong>.
+        
+                Inside this database, there are multiple tables.
+        
+            </p>
+        
+            <div class="feature-grid">
+        
+                <div class="feature-card">
+                    👨‍🎓 Students
+                </div>
+        
+                <div class="feature-card">
+                    👨‍🏫 Teachers
+                </div>
+        
+                <div class="feature-card">
+                    📚 Courses
+                </div>
+        
+                <div class="feature-card">
+                    📝 Results
+                </div>
+        
+            </div>
+        
+            <p>
+        
+                All these tables together form a complete database for managing the school's information.
+        
+            </p>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>💬 Common Interview Question</h2>
+        
+            <div class="interview-box">
+        
+                <h3>Question</h3>
+        
+                <p>
+        
+                    What is the difference between a Database and a Table?
+        
+                </p>
+        
+                <h3>Answer</h3>
+        
+                <p>
+        
+                    A Database is a collection of multiple tables, whereas a Table stores actual data in rows and columns.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>💡 Did You Know?</h2>
+        
+            <div class="tip-box">
+        
+                <p>
+        
+                    A single MySQL database can store millions of records across multiple tables, making it suitable for both
+                    small and large applications.
+        
+                </p>
+        
+            </div>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📝 Key Points</h2>
+        
+            <ul>
+        
+                <li>✅ A Database is a collection of related tables.</li>
+        
+                <li>✅ A Table stores data in rows and columns.</li>
+        
+                <li>✅ Each row represents one record.</li>
+        
+                <li>✅ Each column represents one field.</li>
+        
+                <li>✅ Databases help organize and manage information efficiently.</li>
+        
+            </ul>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>📖 Practice</h2>
+        
+            <ol>
+        
+                <li>What is a Database?</li>
+        
+                <li>What is a Table?</li>
+        
+                <li>What is the difference between a Row and a Column?</li>
+        
+                <li>Give one real-world example of a database.</li>
+        
+            </ol>
+        
+        </div>
+        <div class="lesson-section">
+        
+            <h2>🧠 Quick Quiz</h2>
+        
+            <p>
+        
+                <strong>Q1.</strong>
+        
+                What does a table store?
+        
+            </p>
+        
+            <div class="quiz-options">
+        
+                <button class="quiz-btn">
+        
+                    Programs
+        
+                </button>
+        
+                <button class="quiz-btn" data-correct="true">
+        
+                    Data in rows and columns
+        
+                </button>
+        
+                <button class="quiz-btn">
+        
+                    Images
+        
+                </button>
+        
+                <button class="quiz-btn">
+        
+                    Operating Systems
+        
+                </button>
+        
+            </div>
+        
+            <p id="quiz-result"></p>
+        
+        </div>
+        <button class="btn btn-primary" id="complete-btn">
+            ✔ Mark as Completed
+        </button>
+        <div class="lesson-navigation">
+        
+            <a href="introduction.html" class="btn btn-secondary">
+        
+                ← Previous Lesson
+        
+            </a>
+        
+            <a href="create-database.html" class="btn btn-primary">
+        
+                Next Lesson →
+        
+            </a>
+        
+        </div>
+        <script>
+
+            // ===============================
+            // Quiz
+            // ===============================
+
+            const quizButtons = document.querySelectorAll(".quiz-btn");
+            const result = document.getElementById("quiz-result");
+
+            quizButtons.forEach(button => {
+
+                button.addEventListener("click", () => {
+
+                    if (button.dataset.correct) {
+
+                        result.innerHTML = "✅ Correct Answer!";
+                        result.style.color = "#22c55e";
+
+                    } else {
+
+                        result.innerHTML = "❌ Wrong Answer!";
+                        result.style.color = "#ef4444";
+
+                    }
+
+                });
+
+            });
+
+
+            // ===============================
+            // Mark as Completed
+            // ===============================
+
+            const completeBtn = document.getElementById("complete-btn");
+
+            if (completeBtn) {
+
+                if (localStorage.getItem("mysqlDatabaseCompleted") === "true") {
+
+                    completeBtn.innerText = "✅ Completed";
+                    completeBtn.disabled = true;
+
+                }
+
+                completeBtn.addEventListener("click", () => {
+
+                    localStorage.setItem("mysqlDatabaseCompleted", "true");
+
+                    completeBtn.innerText = "✅ Completed";
+                    completeBtn.disabled = true;
+
+                    alert("Lesson Completed Successfully!");
+
+                });
+
+            }
+
+        </script>
+</body>
+</html>

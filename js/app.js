@@ -152,12 +152,16 @@ const courses = {
 
         lessons: [
 
-            "Introduction",
-            "DDL",
-            "DML",
+            "Introduction to MySQL",
+            "Database & Tables",
+            "Create Database",
+            "CRUD Operations",
+            "SELECT Queries",
             "Joins",
-            "Constraints",
-            "Projects"
+            "Aggregate Functions",
+            "Constraints & Keys",
+            "Advanced SQL",
+            "MYSQL Mini Project"
 
         ]
 
@@ -304,6 +308,20 @@ function updateCompletedCount(courseName) {
         if (localStorage.getItem("gitCollaborationCompleted") === "true") completed++;
         if (localStorage.getItem("gitProjectCompleted") === "true") completed++;
 
+    }
+
+    else if (courseName === "mysql") {
+
+        if (localStorage.getItem("mysqlIntroCompleted") === "true") completed++;
+        if (localStorage.getItem("mysqlDatabaseCompleted") === "true") completed++;
+        if (localStorage.getItem("mysqlCreateCompleted") === "true") completed++;
+        if (localStorage.getItem("mysqlCRUDCompleted") === "true") completed++;
+        if (localStorage.getItem("mysqlSelectCompleted") === "true") completed++;
+        if (localStorage.getItem("mysqlJoinsCompleted") === "true") completed++;
+        if (localStorage.getItem("mysqlAggregateCompleted") === "true") completed++;
+        if (localStorage.getItem("mysqlConstraintsCompleted") === "true") completed++;
+        if (localStorage.getItem("mysqlAdvancedCompleted") === "true") completed++;
+        if (localStorage.getItem("mysqlProjectCompleted") === "true") completed++;
     }
     document.getElementById("completed-count").innerText = completed;
 
@@ -500,6 +518,71 @@ function loadCourse(courseName) {
             else if (lesson === "Mini Project") {
 
                 window.location.href = "pages/github/mini-project.html";
+
+            }
+
+            // mysql
+            // ===============================
+            // MySQL Course
+            // ===============================
+
+            else if (lesson === "Introduction to MySQL") {
+
+                window.location.href = "pages/mysql/introduction.html";
+
+            }
+
+            else if (lesson === "Database & Tables") {
+
+                window.location.href = "pages/mysql/database-table.html";
+
+            }
+
+            else if (lesson === "Create Database & Table") {
+
+                window.location.href = "pages/mysql/create-database.html";
+
+            }
+
+            else if (lesson === "CRUD Operations") {
+
+                window.location.href = "pages/mysql/crud.html";
+
+            }
+
+            else if (lesson === "SELECT Queries") {
+
+                window.location.href = "pages/mysql/select.html";
+
+            }
+
+            else if (lesson === "Joins") {
+
+                window.location.href = "pages/mysql/joins.html";
+
+            }
+
+            else if (lesson === "Aggregate Functions") {
+
+                window.location.href = "pages/mysql/aggregate.html";
+
+            }
+
+            else if (lesson === "Constraints & Keys") {
+
+                window.location.href = "pages/mysql/constraints.html";
+
+            }
+
+            else if (lesson === "Advanced SQL") {
+
+                window.location.href = "pages/mysql/advanced.html";
+
+            }
+
+            else if (lesson === "MYSQL Mini Project") {
+
+                window.location.href = "pages/mysql/mysql-project.html";
 
             }
 

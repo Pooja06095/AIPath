@@ -119,3 +119,424 @@
     transition: 0.3s;
 
 }
+/* ===========================
+Lesson Cards
+=========================== */
+
+.lesson-card {
+
+    background: rgba(30, 41, 59, .92);
+
+    color: #e5e7eb;
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .18);
+
+    transition: .35s;
+
+}
+
+.lesson-card:hover {
+
+    transform: translateY(-6px);
+
+}
+
+.lesson-card span {
+
+    color: #6366f1;
+
+    font-size: 14px;
+
+}
+
+.lesson-card h3 {
+
+    margin: 15px 0;
+
+    color: white;
+
+}
+
+.lesson-card p {
+
+    color: var(--text-light);
+
+}
+
+.lesson-page {
+
+    max-width: 1000px;
+
+    margin: 40px auto;
+
+    padding: 50px;
+
+    animation: fadeUp .7s ease;
+
+}
+
+.lesson-page h1 {
+    margin: 20px 0;
+}
+
+.lesson-section {
+
+    background: rgba(30, 41, 59, .92);
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(12px);
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    margin-top: 28px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .18);
+
+    transition: .35s;
+
+}
+
+.lesson-section:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 18px 45px rgba(108, 99, 255, .18);
+
+}
+
+.lesson-section h2 {
+
+    color: var(--primary-color);
+
+    margin-bottom: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+.lesson-section pre {
+
+    background: #0d1117;
+
+    color: #e5e7eb;
+
+    padding: 25px;
+
+    border-radius: 14px;
+
+    overflow-x: auto;
+
+    font-family: "Fira Code", monospace;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    border: 1px solid rgba(255, 255, 255, .1);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+
+}
+
+.lesson-section code {
+
+    color: #00ff99;
+
+    font-family: "Fira Code", monospace;
+
+}
+
+.lesson-navigation {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 40px;
+
+    gap: 20px;
+
+}
+/* ===========================
+Feature Cards
+=========================== */
+/* ===========================
+   Features Section
+=========================== */
+
+.features {
+
+    padding: 100px 0;
+
+}
+
+.feature-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+}
+
+.feature-card {
+
+    background: rgba(30, 41, 59, .92);
+
+    color: #e5e7eb;
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .18);
+
+    transition: .35s;
+
+}
+
+.feature-card p,
+.feature-card li {
+
+    color: var(--text-light);
+
+}
+
+
+.feature-card strong {
+
+    color: white;
+
+}
+
+.feature-card:hover {
+
+    transform: translateY(-5px);
+
+}
+/* ===========================
+VS Code Code Block
+=========================== */
+
+.code-editor {
+
+    background: #1e1e1e;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    margin: 25px 0;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .25);
+
+}
+
+.code-header {
+
+    background: #2d2d2d;
+
+    padding: 12px 18px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.code-buttons {
+
+    display: flex;
+
+    gap: 8px;
+
+}
+
+.code-buttons span {
+
+    width: 12px;
+
+    height: 12px;
+
+    border-radius: 50%;
+
+    display: block;
+
+}
+
+.code-buttons span:nth-child(1) {
+
+    background: #ff5f57;
+
+}
+
+.code-buttons span:nth-child(2) {
+
+    background: #febc2e;
+
+}
+
+.code-buttons span:nth-child(3) {
+
+    background: #28c840;
+
+}
+
+.file-name {
+
+    color: #ccc;
+
+    font-size: 14px;
+
+    font-family: monospace;
+
+}
+
+.code-editor pre {
+
+    margin: 0;
+
+    padding: 20px;
+
+    overflow-x: auto;
+
+    color: #d4d4d4;
+
+    font-size: 15px;
+
+    font-family: "Consolas", "Courier New", monospace;
+
+    line-height: 1.7;
+
+}
+/* ===========================
+Output Box
+=========================== */
+
+.output-box {
+
+    background: #f8fafc;
+
+    border-left: 6px solid #22c55e;
+
+    border-radius: 14px;
+
+    padding: 18px 22px;
+
+    margin: 20px 0;
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .08);
+
+}
+
+.output-box h3 {
+
+    color: #16a34a;
+
+    margin-bottom: 10px;
+
+}
+
+.output-box pre {
+
+    margin: 0;
+
+    font-family: Consolas, monospace;
+
+    color: #111827;
+
+}
+/* ===========================
+Tip Card
+=========================== */
+
+.tip-card {
+
+    background: rgba(30, 41, 59, .92);
+
+    color: #e5e7eb;
+
+    border-left: 6px solid #10b981;
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+    margin: 20px 0;
+
+}
+/* ===========================
+Warning Card
+=========================== */
+
+.warning-card {
+
+    background: rgba(30, 41, 59, .92);
+    
+    color: #e5e7eb;
+
+    border-left: 6px solid #f59e0b;
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+    margin: 20px 0;
+
+}
+/* ===========================
+Interview Card
+=========================== */
+
+.interview-card {
+
+    background: rgba(30, 41, 59, .92);
+    
+    color: #e5e7eb;
+
+    border-left: 6px solid #6366f1;
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+    margin: 20px 0;
+
+}
+/* ===========================
+Practice Card
+=========================== */
+
+.practice-card {
+
+    background: rgba(30, 41, 59, .92);
+    
+    color: #e5e7eb;
+
+    border: 2px dashed var(--primary-color);
+
+    border-radius: 14px;
+
+    padding: 22px;
+
+    margin: 20px 0;
+
+}
