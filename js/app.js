@@ -538,7 +538,7 @@ function loadCourse(courseName) {
 
             }
 
-            else if (lesson === "Create Database & Table") {
+            else if (lesson === "Create Database") {
 
                 window.location.href = "pages/mysql/create-database.html";
 
@@ -552,7 +552,7 @@ function loadCourse(courseName) {
 
             else if (lesson === "SELECT Queries") {
 
-                window.location.href = "pages/mysql/select.html";
+                window.location.href = "pages/mysql/select-queries.html";
 
             }
 

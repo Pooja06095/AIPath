@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CRUD Operations | AIPath</title>
+    <title>Select Queries | AIPath</title>
 
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/components.css">
@@ -24,65 +24,57 @@
         </a>
 
         <header class="lesson-header">
-            <h1>📝 CRUD Operations</h1>
+            <h1>🔍 SELECT Queries</h1>
             
             <p>
             
-                Learn how to Create, Read, Update, and Delete data using SQL commands in MySQL.
+                Learn how to retrieve data from MySQL tables using different SELECT statements.
             
             </p>
-            <p>Lesson 4 of 10</p>
+            <p>Lesson 5 of 10</p>
             
             <div class="progress-bar">
             
-                <div class="progress-fill" style="width:40%;"></div>
+                <div class="progress-fill" style="width:50%;"></div>
             
             </div>
             <div class="lesson-section">
             
-                <h2>📚 What is CRUD?</h2>
+                <h2>🔍 What is SELECT?</h2>
             
                 <p>
             
-                    CRUD represents the four basic operations used to manage data in a database.
+                    The <strong>SELECT</strong> statement is used to retrieve data from one or more tables in a MySQL database.
             
                 </p>
             
                 <p>
             
-                    These operations allow users to add new data, view existing data, modify records, and remove unwanted data.
+                    It is one of the most frequently used SQL commands because it allows users to view stored information.
             
                 </p>
             
             </div>
             <div class="lesson-section">
             
-                <h2>🔤 Full Form of CRUD</h2>
+                <h2>💡 Why Use SELECT?</h2>
             
                 <div class="feature-grid">
             
                     <div class="feature-card">
-            
-                        ➕ C = Create
-            
+                        👀 View Records
                     </div>
             
                     <div class="feature-card">
-            
-                        👀 R = Read
-            
+                        🔍 Search Data
                     </div>
             
                     <div class="feature-card">
-            
-                        ✏️ U = Update
-            
+                        📊 Analyze Information
                     </div>
             
                     <div class="feature-card">
-            
-                        ❌ D = Delete
-            
+                        📋 Generate Reports
                     </div>
             
                 </div>
@@ -90,47 +82,13 @@
             </div>
             <div class="lesson-section">
             
-                <h2>💡 Why CRUD is Important?</h2>
+                <h2>💻 Basic Syntax</h2>
             
-                <div class="feature-grid">
-            
-                    <div class="feature-card">
-            
-                        ➕ Add New Records
-            
-                    </div>
-            
-                    <div class="feature-card">
-            
-                        🔍 View Information
-            
-                    </div>
-            
-                    <div class="feature-card">
-            
-                        ✏️ Edit Existing Records
-            
-                    </div>
-            
-                    <div class="feature-card">
-            
-                        🗑️ Remove Unwanted Data
-            
-                    </div>
-            
-                </div>
-            
-            </div>
-            <div class="lesson-section">
-            
-                <h2>🖼️ CRUD Operations Diagram</h2>
-            
-                <img src="../../css/assets/images/mysql/crud-diagram.png" alt="CRUD Operations Diagram" class="lesson-image">
+                <pre><code>SELECT * FROM table_name;</code></pre>
             
                 <p>
             
-                    CRUD represents the complete lifecycle of managing data in a database.
-                    Every database application uses these four operations to interact with stored information.
+                    Replace <strong>table_name</strong> with the name of the table from which you want to retrieve data.
             
                 </p>
             
@@ -141,72 +99,96 @@
             
                 <pre><code>Students
             
-            +----+--------+-----+
-            | ID | Name   | Age |
-            +----+--------+-----+
-            | 1  | Pooja  | 20  |
-            | 2  | Rahul  | 21  |
-            +----+--------+-----+</code></pre>
+            +----+---------+-----+-----------+
+            | ID | Name    | Age | Course    |
+            +----+---------+-----+-----------+
+            | 1  | Pooja   | 20  | CSE       |
+            | 2  | Rahul   | 21  | IT        |
+            | 3  | Aman    | 22  | AIML      |
+            | 4  | Neha    | 20  | CSE       |
+            +----+---------+-----+-----------+</code></pre>
             
                 <p>
             
-                    We will use this Students table to understand all CRUD operations.
+                    We will use this Students table to understand different SELECT queries.
             
                 </p>
             
             </div>
             <div class="lesson-section">
             
-                <h2>➕ CREATE (INSERT)</h2>
-            
-                <pre><code>INSERT INTO Students
-            VALUES (3, 'Aman', 22);</code></pre>
-            
-                <p>
-            
-                    INSERT is used to add a new record into a table.
-            
-                </p>
-            
-            </div>
-            <div class="lesson-section">
-            
-                <h2>👀 READ (SELECT)</h2>
+                <h2>⭐ SELECT *</h2>
             
                 <pre><code>SELECT * FROM Students;</code></pre>
             
+                <img src="../../css/assets/images/mysql/select-query-output.png" alt="SELECT Query Output" class="lesson-image">
+            
                 <p>
             
-                    SELECT retrieves data stored inside the table.
+                    The <strong>*</strong> symbol means "all columns". This query displays every record and every column from the
+                    Students table.
             
                 </p>
             
             </div>
             <div class="lesson-section">
             
-                <h2>✏️ UPDATE</h2>
+                <h2>📄 Select Specific Columns</h2>
             
-                <pre><code>UPDATE Students
-            SET Age = 21
-            WHERE ID = 1;</code></pre>
+                <pre><code>SELECT Name, Course
+            FROM Students;</code></pre>
             
                 <p>
             
-                    UPDATE modifies existing records in a table.
+                    This query displays only the <strong>Name</strong> and <strong>Course</strong> columns instead of showing the
+                    complete table.
             
                 </p>
             
             </div>
             <div class="lesson-section">
             
-                <h2>❌ DELETE</h2>
+                <h2>🎯 WHERE Clause</h2>
             
-                <pre><code>DELETE FROM Students
-            WHERE ID = 3;</code></pre>
+                <pre><code>SELECT *
+            FROM Students
+            WHERE Course = 'CSE';</code></pre>
             
                 <p>
             
-                    DELETE removes unwanted records from a table.
+                    The <strong>WHERE</strong> clause filters records and returns only the rows that match the given condition.
+            
+                </p>
+            
+            </div>
+            <div class="lesson-section">
+            
+                <h2>📊 ORDER BY</h2>
+            
+                <pre><code>SELECT *
+            FROM Students
+            ORDER BY Age;</code></pre>
+            
+                <p>
+            
+                    <strong>ORDER BY</strong> sorts the records in ascending order by default. You can also use
+                    <strong>DESC</strong> to sort in descending order.
+            
+                </p>
+            
+            </div>
+            <div class="lesson-section">
+            
+                <h2>🔢 LIMIT</h2>
+            
+                <pre><code>SELECT *
+            FROM Students
+            LIMIT 2;</code></pre>
+            
+                <p>
+            
+                    The <strong>LIMIT</strong> clause restricts the number of rows returned by the query. Here, only the first two
+                    records are displayed.
             
                 </p>
             
@@ -217,33 +199,33 @@
             
                 <p>
             
-                    Imagine you are managing a college database.
+                    Imagine you are working in a college management system.
             
                 </p>
             
                 <div class="feature-grid">
             
                     <div class="feature-card">
-                        ➕ Add New Student
+                        👨‍🎓 View All Students
                     </div>
             
                     <div class="feature-card">
-                        👀 View Student Details
+                        🎯 Find CSE Students
                     </div>
             
                     <div class="feature-card">
-                        ✏️ Update Student Marks
+                        📊 Sort by Age
                     </div>
             
                     <div class="feature-card">
-                        ❌ Delete Student Record
+                        🔍 Display Top 5 Records
                     </div>
             
                 </div>
             
                 <p>
             
-                    These four tasks are performed using CRUD operations every day in real-world applications.
+                    All these tasks are performed using different SELECT queries.
             
                 </p>
             
@@ -258,7 +240,7 @@
             
                     <p>
             
-                        What does CRUD stand for?
+                        What is the difference between <strong>SELECT *</strong> and selecting specific columns?
             
                     </p>
             
@@ -266,8 +248,8 @@
             
                     <p>
             
-                        CRUD stands for Create, Read, Update, and Delete. These are the four basic operations performed on database
-                        records.
+                        <strong>SELECT *</strong> retrieves all columns, whereas selecting specific columns returns only the
+                        required data, making the query faster and more efficient.
             
                     </p>
             
@@ -282,8 +264,8 @@
             
                     <p>
             
-                        Almost every application such as Instagram, Facebook, Amazon, Banking Systems, and College Portals uses CRUD
-                        operations to manage data.
+                        Professional developers avoid using <strong>SELECT *</strong> in large projects because retrieving only the
+                        required columns improves performance.
             
                     </p>
             
@@ -296,15 +278,15 @@
             
                 <ul>
             
-                    <li>✅ CRUD is the foundation of database management.</li>
+                    <li>✅ SELECT retrieves data from tables.</li>
             
-                    <li>✅ INSERT is used to add records.</li>
+                    <li>✅ SELECT * displays all columns.</li>
             
-                    <li>✅ SELECT is used to retrieve records.</li>
+                    <li>✅ WHERE filters records.</li>
             
-                    <li>✅ UPDATE modifies existing records.</li>
+                    <li>✅ ORDER BY sorts the result.</li>
             
-                    <li>✅ DELETE removes records from a table.</li>
+                    <li>✅ LIMIT restricts the number of rows.</li>
             
                 </ul>
             
@@ -315,13 +297,13 @@
             
                 <ol>
             
-                    <li>Insert a new student into the Students table.</li>
+                    <li>Display all records from the Students table.</li>
             
-                    <li>Display all student records.</li>
+                    <li>Display only Name and Course columns.</li>
             
-                    <li>Update the age of one student.</li>
+                    <li>Find all students whose course is CSE.</li>
             
-                    <li>Delete a student record using ID.</li>
+                    <li>Display only the first three student records.</li>
             
                 </ol>
             
@@ -334,26 +316,34 @@
             
                     <strong>Q1.</strong>
             
-                    Which SQL command is used to retrieve data from a table?
+                    Which clause is used to filter records?
             
                 </p>
             
                 <div class="quiz-options">
             
                     <button class="quiz-btn">
-                        INSERT
+            
+                        ORDER BY
+            
                     </button>
             
                     <button class="quiz-btn">
-                        UPDATE
+            
+                        LIMIT
+            
                     </button>
             
                     <button class="quiz-btn" data-correct="true">
-                        SELECT
+            
+                        WHERE
+            
                     </button>
             
                     <button class="quiz-btn">
-                        DELETE
+            
+                        GROUP BY
+            
                     </button>
             
                 </div>
@@ -366,13 +356,13 @@
             </button>
             <div class="lesson-navigation">
             
-                <a href="create-database.html" class="btn btn-secondary">
+                <a href="crud.html" class="btn btn-secondary">
             
                     ← Previous Lesson
             
                 </a>
             
-                <a href="select-queries.html" class="btn btn-primary">
+                <a href="joins.html" class="btn btn-primary">
             
                     Next Lesson →
             
@@ -417,7 +407,7 @@
 
                 if (completeBtn) {
 
-                    if (localStorage.getItem("mysqlCRUDCompleted") === "true") {
+                    if (localStorage.getItem("mysqlSelectCompleted") === "true") {
 
                         completeBtn.innerText = "✅ Completed";
                         completeBtn.disabled = true;
@@ -426,7 +416,7 @@
 
                     completeBtn.addEventListener("click", () => {
 
-                        localStorage.setItem("mysqlCRUDCompleted", "true");
+                        localStorage.setItem("mysqlSelectCompleted", "true");
 
                         completeBtn.innerText = "✅ Completed";
                         completeBtn.disabled = true;
